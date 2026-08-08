@@ -745,7 +745,7 @@
                                     <div class="info-item-value" id="profHousing">--</div>
                                 </div>
                             </div>
-
+                            
                             <!-- Card 3: Academics -->
                             <div class="info-card">
                                 <h3><i class="fas fa-microscope"></i> Academics & Links</h3>
@@ -755,6 +755,7 @@
                                 </div>
                                 <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
                                     <a id="linkOfficial" href="#" target="_blank" class="action-btn" style="text-decoration: none;"><i class="fas fa-globe"></i> Official Site</a>
+                                    <a id="linkAppily" href="#" target="_blank" class="action-btn" style="text-decoration: none; background-color: #f39c12;"><i class="fas fa-school"></i> Appily</a>
                                     <a id="linkAdmissions" href="#" target="_blank" class="action-btn secondary-btn" style="text-decoration: none;">Admissions</a>
                                     <a id="linkBio" href="#" target="_blank" class="action-btn secondary-btn" style="text-decoration: none;">Bio Dept</a>
                                 </div>
@@ -901,7 +902,7 @@
                         videoUrl: values[5], topology: values[6], airport: values[7],
                         transit: values[8], vibe: values[9], housing: values[10],
                         medical: values[11], linkAdmissions: values[12], linkBio: values[13],
-                        linkOfficial: values[14], schoolLogo: values[15]
+                        linkOfficial: values[14], schoolLogo: values[15], linkAppily: values[16]
                     };
                 }
             }
@@ -1203,6 +1204,7 @@
             document.getElementById('profMedical').textContent = data.medical || '--';
 
             document.getElementById('linkOfficial').href = data.linkOfficial || '#';
+            document.getElementById('linkAppily').href = data.linkAppily || '#';
             document.getElementById('linkAdmissions').href = data.linkAdmissions || '#';
             document.getElementById('linkBio').href = data.linkBio || '#';
 
