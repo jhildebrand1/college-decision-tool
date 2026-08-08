@@ -758,7 +758,7 @@
         let metricReversals = {};
         let metricWeights = {}; 
         let hiddenSchools = new Set();
-        let currentCalculatedRankings = []; // Caches live ranks and scores
+        let currentCalculatedRankings = []; 
         let isAxisFlipped = false;
         let activeMetricId = null;
         let activeSchoolName = null;
@@ -804,7 +804,7 @@
 
                 populateSchoolDropdown();
                 renderSchoolFilterCheckboxes();
-                calculateRankings(); // Calculates first so rankings exist for the spotlight
+                calculateRankings(); 
                 renderTable();
                 setupListeners();
             } catch (error) {
@@ -1010,7 +1010,6 @@
             let html = '';
 
             if (!isAxisFlipped) {
-                // Standard Layout: Metrics on Y-axis, Visible Schools on X-axis header row (using Short Name)
                 html += `<thead><tr><th>Metric</th>`;
                 visibleSchools.forEach(s => { 
                     html += `<th class="col-compact" style="cursor: pointer;" onclick="openSchoolDrawer('${s.fullName.replace(/'/g, "\\'")}')">${s.shortName} <i class="fas fa-info-circle" style="font-size: 11px; opacity: 0.6; margin-left: 2px;"></i></th>`; 
@@ -1043,7 +1042,6 @@
                 });
                 html += `</tbody>`;
             } else {
-                // Flipped Layout: Visible Schools on Y-axis (using Short Name), Metrics on X-axis header row
                 html += `<thead><tr><th>School</th>`;
                 metricsList.forEach(m => {
                     const currentWeightVal = metricWeights[m.id];
@@ -1078,7 +1076,6 @@
             table.innerHTML = html;
         }
 
-        /* School Spotlight Drawer (Includes Live Ranking Position and Weighted Score Percentage) */
         function openSchoolDrawer(schoolFullName) {
             activeSchoolName = schoolFullName;
             const s = schools.find(item => item.fullName === schoolFullName);
@@ -1092,7 +1089,6 @@
             const title = document.getElementById('schoolDrawerTitle');
             const body = document.getElementById('schoolDrawerBody');
 
-            // Find current calculated rank and score percentage for this school
             const rankData = currentCalculatedRankings.find(r => r.name === schoolFullName);
             const rankDisplay = rankData ? `#${rankData.rank} of ${schools.length}` : 'Unranked';
             const percentageDisplay = rankData ? `${rankData.score}%` : 'N/A';
@@ -1179,7 +1175,6 @@
             }
         }
 
-        /* Global Metric Actions */
         function setAllWeights(val) {
             if (val === "") return;
             const weightInt = parseInt(val);
@@ -1198,16 +1193,24 @@
             if (setAll) setAll.value = "";
         }
 
+        /* Reset All Defaults: Resets weights, grade reversals, and unhides all schools */
         function resetMetricsToDefault() {
             metricsList.forEach(m => {
                 metricWeights[m.id] = 3;
                 metricReversals[m.id] = false;
             });
 
+            hiddenSchools.clear(); // Unhides all schools
+
             if (activeMetricId) {
                 openMetricDrawer(activeMetricId);
             }
 
+            closeSchoolDrawer();
+            closeDetailDrawer();
+            closeSchoolFilterDropdown();
+
+            renderSchoolFilterCheckboxes();
             calculateRankings();
             renderTable();
 
@@ -1215,7 +1218,6 @@
             if (setAll) setAll.value = "";
         }
 
-        /* Metric Drawer Controls */
         function openMetricDrawer(metricId) {
             activeMetricId = metricId;
             closeSchoolDrawer();
@@ -1308,7 +1310,6 @@
                 totalWeight += importanceMap[val] ? importanceMap[val].weight : 0;
             });
 
-            // Calculate scores for ALL schools to establish absolute rankings
             const results = schools.map(school => {
                 let score = 0;
                 let dealbreakerFailed = false;
@@ -1336,7 +1337,6 @@
                     score = score * 0.2;
                 }
 
-                // Convert absolute score out of 10 points into a percentage (max 10 points = 100%)
                 const percentageScore = ((score / 10) * 100).toFixed(1);
 
                 return {
@@ -1348,7 +1348,6 @@
 
             results.sort((a, b) => b.score - a.score);
 
-            // Assign numerical rank positions
             currentCalculatedRankings = results.map((res, idx) => ({
                 rank: idx + 1,
                 name: res.name,
@@ -1356,7 +1355,6 @@
                 dealbreakerFailed: res.dealbreakerFailed
             }));
 
-            // Filter out hidden schools for the bottom ranking list view
             const visibleResults = currentCalculatedRankings.filter(r => !hiddenSchools.has(r.name));
 
             const container = document.getElementById('rankingList');
