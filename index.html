@@ -24,10 +24,6 @@
             height: 100vh;
         }
 
-        .sidebar {
-            display: none;
-        }
-
         .main-content {
             flex: 1;
             display: flex;
@@ -99,6 +95,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
         }
 
         .action-btn:hover {
@@ -148,7 +145,6 @@
             background-color: #ffffff;
         }
 
-        /* Sticky Header Rows - Clean White Background */
         .comparison-table thead th {
             position: sticky;
             top: 0;
@@ -158,22 +154,12 @@
             user-select: none;
         }
 
-        /* Hover Effect for Top Row & Metric/School Headers */
         .comparison-table thead th:hover,
         .comparison-table tbody th:first-child:hover {
             background-color: #f5f5f5;
         }
 
-        /* Sticky First Column Body Cells - Clean White Background */
-        .comparison-table tbody td:first-child {
-            position: sticky;
-            left: 0;
-            z-index: 2;
-            background-color: #ffffff;
-            font-weight: 600;
-            color: var(--text-primary, #1a1a1a);
-        }
-
+        .comparison-table tbody td:first-child,
         .comparison-table tbody th:first-child {
             position: sticky;
             left: 0;
@@ -183,7 +169,6 @@
             color: var(--text-primary, #1a1a1a);
         }
 
-        /* Top-Left Corner Header Cell */
         .comparison-table thead th:first-child {
             position: sticky;
             top: 0;
@@ -243,7 +228,7 @@
         .score.very-low { background-color: #F4CCCC; color: #660000; }
         .score.good { background-color: #D0E0E3; color: #1C4587; }
 
-        /* Top Drawers (Metric Info, School Spotlight & Detail View) */
+        /* Drawers */
         .detail-drawer {
             background-color: #ffffff;
             border: 1px solid var(--border, #e0e0e0);
@@ -294,7 +279,7 @@
             padding: 0 4px;
         }
 
-        /* School Filter Dropdown Styling */
+        /* Filter Dropdown */
         .school-filter-container {
             position: relative;
             display: inline-block;
@@ -391,6 +376,27 @@
             animation: highlightUpdate 0.3s ease-out;
         }
 
+        /* Profile Styles */
+        .profile-header-card {
+            background-color: var(--surface-2, #ffffff);
+            border: 1px solid var(--border, #e0e0e0);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #f0f0f0;
+            padding: 4px;
+        }
+
         .profile-section {
             background-color: var(--surface-2, #ffffff);
             border: 1px solid var(--border, #e0e0e0);
@@ -399,36 +405,8 @@
             overflow: hidden;
         }
 
-        .profile-header {
-            padding: 16px;
-            background-color: var(--surface-1, #f5f5f5);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: var(--text-primary, #1a1a1a);
-        }
-
-        .profile-header:hover {
-            background-color: var(--bg-accent, #e6f0ff);
-        }
-
         .profile-content {
             padding: 20px;
-            display: none;
-        }
-
-        .profile-content.open {
-            display: block;
-        }
-
-        .toggle-icon {
-            transition: transform 0.2s;
-        }
-
-        .profile-content.open .toggle-icon {
-            transform: rotate(180deg);
         }
 
         .gallery {
@@ -457,6 +435,45 @@
             object-fit: cover;
         }
 
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox-modal.open {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
         .video-player {
             margin-bottom: 15px;
             border-radius: 6px;
@@ -468,31 +485,6 @@
             width: 100%;
             height: 100%;
             border: none;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .info-item {
-            background-color: var(--surface-1, #f5f5f5);
-            padding: 12px;
-            border-radius: 6px;
-        }
-
-        .info-item-label {
-            font-size: 12px;
-            color: var(--text-secondary, #666);
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .info-item-value {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary, #1a1a1a);
         }
 
         .major-selector {
@@ -517,43 +509,53 @@
             color: var(--text-primary, #1a1a1a);
         }
 
-        .class-list {
-            list-style: none;
-            margin: 10px 0;
+        /* Profile Info Cards */
+        .info-card {
+            background-color: var(--surface-2, #ffffff);
+            border: 1px solid var(--border, #e0e0e0);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .class-list li {
-            padding: 8px;
-            margin-bottom: 6px;
-            background-color: var(--surface-1, #f5f5f5);
-            border-radius: 4px;
-            border-left: 3px solid var(--text-accent, #0066cc);
+        .info-card h3 {
+            font-size: 16px;
+            color: var(--text-accent, #0066cc);
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--border, #e0e0e0);
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card .info-item {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .info-card .info-item-label {
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .info-card .info-item-value {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--text-primary, #1a1a1a);
         }
 
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
             }
-
-            .sidebar {
-                width: 100%;
-                max-height: 150px;
-                border-right: none;
-                border-bottom: 1px solid var(--border, #e0e0e0);
-                display: flex;
-                gap: 10px;
-                overflow-x: auto;
-            }
-
-            .school-card {
-                flex-shrink: 0;
-                width: 120px;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
             .gallery {
                 grid-template-columns: 1fr;
             }
@@ -590,7 +592,6 @@
                         </div>
                         
                         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-                            <!-- Manage Schools Filter Dropdown -->
                             <div class="school-filter-container">
                                 <button id="manageSchoolsBtn" class="action-btn secondary-btn" onclick="toggleSchoolFilterDropdown(event)">
                                     <i class="fas fa-filter"></i> <span id="schoolFilterBtnText">Manage Schools</span>
@@ -620,7 +621,6 @@
                         </div>
                     </div>
 
-                    <!-- Sub-helper text made bolder and slightly larger -->
                     <div class="sub-toolbar-helper">
                         Grading Scale (A = Highest, F = Lowest) • <span style="color: #0066cc;">Click headers to configure metrics or view school spotlight</span>
                     </div>
@@ -657,7 +657,7 @@
                         </div>
                     </div>
 
-                    <!-- Detail Drawer (Populates when clicking any grade cell) -->
+                    <!-- Detail Drawer -->
                     <div class="detail-drawer" id="detailDrawer">
                         <h4 id="drawerTitle"><span>Detail Evaluation</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i></h4>
                         <p id="drawerText">Click any grade in the table above to view specific evaluation details here.</p>
@@ -670,7 +670,7 @@
                         </table>
                     </div>
 
-                    <!-- Overall Ranking (Updates Live with Flash Animation) -->
+                    <!-- Overall Ranking -->
                     <div class="overall-ranking">
                         <h3 style="margin-bottom: 15px;">Overall ranking (based on weights)</h3>
                         <div id="rankingList">
@@ -681,76 +681,106 @@
 
                 <!-- TAB 2: School Profile -->
                 <div class="tab-content" id="profile">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 20px;">
                         <div class="major-selector">
-                            <label for="schoolSelect">Select school:</label>
-                            <select id="selectProfileSchool">
-                                <!-- Populated dynamically -->
-                            </select>
-                        </div>
-                        <div class="major-selector">
-                            <label for="majorSelect">Viewing as major:</label>
-                            <select id="majorSelect">
-                                <option value="bio">Biology</option>
-                                <option value="eng">Engineering</option>
-                                <option value="chem">Chemistry</option>
-                                <option value="psych">Psychology</option>
-                            </select>
+                            <label for="selectProfileSchool">Select school to view profile:</label>
+                            <select id="selectProfileSchool" style="max-width: 400px; font-weight: 600;"></select>
                         </div>
                     </div>
 
-                    <div class="profile-section">
-                        <div class="profile-header">
-                            <span>School Profile & Campus</span>
-                            <i class="fas fa-chevron-down toggle-icon"></i>
+                    <!-- Dynamic Profile Dashboard -->
+                    <div id="profileDashboard" style="display: none;">
+                        
+                        <!-- Profile Header Card with Logo and Full Name -->
+                        <div class="profile-header-card">
+                            <img id="profLogoImg" src="" alt="School Logo" class="profile-logo" style="display: none;">
+                            <div>
+                                <h2 id="profSchoolTitle" style="font-size: 20px; color: var(--text-primary, #1a1a1a);">--</h2>
+                                <p style="font-size: 13px; color: var(--text-secondary, #666);">Campus Overview & Logistics Dashboard</p>
+                            </div>
                         </div>
-                        <div class="profile-content open">
-                            <div class="gallery">
-                                <div class="gallery-item">
-                                    <img src="https://via.placeholder.com/300x200/3366cc/ffffff?text=Campus+Photo" alt="Campus">
+
+                        <!-- Hero Section -->
+                        <div class="profile-section">
+                            <div class="profile-content open" style="display: block;">
+                                <div class="gallery" id="profileGallery">
+                                    <!-- Images injected here -->
                                 </div>
-                                <div class="gallery-item">
-                                    <img src="https://via.placeholder.com/300x200/3366cc/ffffff?text=Library" alt="Library">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="https://via.placeholder.com/300x200/3366cc/ffffff?text=Dorm+Life" alt="Dorm">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="https://via.placeholder.com/300x200/3366cc/ffffff?text=Campus+Quad" alt="Campus quad">
-                                </div>
-                            </div>
-                            <h4 style="font-size: 14px; margin-bottom: 10px; color: var(--text-primary, #1a1a1a);">Campus Tour Video</h4>
-                            <div class="video-player">
-                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                            </div>
-                            <div class="info-grid">
-                                <div class="info-item">
-                                    <div class="info-item-label">Location</div>
-                                    <div class="info-item-value" id="profileLocationVal">Palo Alto, CA</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-item-label">Campus Size</div>
-                                    <div class="info-item-value">8,180 acres</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-item-label">Enrollment</div>
-                                    <div class="info-item-value" id="profileEnrollmentVal">17,570</div>
-                                </div>
-                                <div class="info-item">
-                                    <div class="info-item-label">Average Weather</div>
-                                    <div class="info-item-value">70°F, Sunny</div>
+                                <h4 style="font-size: 14px; margin-bottom: 10px; color: var(--text-primary, #1a1a1a);">Campus Tour</h4>
+                                <div class="video-player">
+                                    <iframe id="profileVideo" src="" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Cards Grid -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                            
+                            <!-- Card 1: Logistics -->
+                            <div class="info-card">
+                                <h3><i class="fas fa-map-marked-alt"></i> Travel & Logistics</h3>
+                                <div class="info-item">
+                                    <div class="info-item-label">Airport Access</div>
+                                    <div class="info-item-value" id="profAirport">--</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-item-label">Public Transit</div>
+                                    <div class="info-item-value" id="profTransit">--</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-item-label">Campus Topology</div>
+                                    <div class="info-item-value" id="profTopology">--</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Environment -->
+                            <div class="info-card">
+                                <h3><i class="fas fa-tree"></i> Environment & Housing</h3>
+                                <div class="info-item">
+                                    <div class="info-item-label">Neighborhood Vibe</div>
+                                    <div class="info-item-value" id="profVibe">--</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-item-label">Housing Status</div>
+                                    <div class="info-item-value" id="profHousing">--</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Academics -->
+                            <div class="info-card">
+                                <h3><i class="fas fa-microscope"></i> Academics & Links</h3>
+                                <div class="info-item">
+                                    <div class="info-item-label">Clinical / Medical Access</div>
+                                    <div class="info-item-value" id="profMedical">--</div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+                                    <a id="linkOfficial" href="#" target="_blank" class="action-btn" style="text-decoration: none;"><i class="fas fa-globe"></i> Official Site</a>
+                                    <a id="linkAdmissions" href="#" target="_blank" class="action-btn secondary-btn" style="text-decoration: none;">Admissions</a>
+                                    <a id="linkBio" href="#" target="_blank" class="action-btn secondary-btn" style="text-decoration: none;">Bio Dept</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div id="noProfileMsg" style="text-align: center; padding: 40px; color: #666; font-size: 15px;">
+                        Select a school to load its profile.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Lightbox Modal for Full-Size Images -->
+    <div id="imageLightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightboxImg" class="lightbox-content" src="" alt="Full Size Preview">
+    </div>
+
     <script>
         const sheetCsvUrl = "data.csv";
         const metricsCsvUrl = "metrics.csv";
+        const profilesCsvUrl = "profiles.csv";
 
         let schools = [];
         let metricsList = [];
@@ -758,17 +788,14 @@
         let metricReversals = {};
         let metricWeights = {}; 
         let hiddenSchools = new Set();
+        let profilesData = {};
         let currentCalculatedRankings = []; 
         let isAxisFlipped = false;
         let activeMetricId = null;
         let activeSchoolName = null;
 
         const scoreClassMap = {
-            'A': 'high',
-            'B': 'good',
-            'C': 'medium',
-            'D': 'low',
-            'F': 'very-low'
+            'A': 'high', 'B': 'good', 'C': 'medium', 'D': 'low', 'F': 'very-low'
         };
 
         const importanceMap = {
@@ -785,21 +812,24 @@
 
         async function loadCSVData() {
             try {
-                const [dataRes, metricsRes] = await Promise.all([
+                const [dataRes, metricsRes, profilesRes] = await Promise.all([
                     fetch(sheetCsvUrl),
-                    fetch(metricsCsvUrl).catch(() => null)
+                    fetch(metricsCsvUrl).catch(() => null),
+                    fetch(profilesCsvUrl).catch(() => null)
                 ]);
                 
-                if (!dataRes.ok) {
-                    throw new Error(`HTTP error loading data.csv! status: ${dataRes.status}`);
-                }
-                
+                if (!dataRes.ok) throw new Error(`HTTP error loading data.csv`);
                 const csvText = await dataRes.text();
                 parseCSV(csvText);
 
                 if (metricsRes && metricsRes.ok) {
                     const metricsText = await metricsRes.text();
                     parseMetricsCSV(metricsText);
+                }
+
+                if (profilesRes && profilesRes.ok) {
+                    const profilesText = await profilesRes.text();
+                    parseProfilesCSV(profilesText);
                 }
 
                 populateSchoolDropdown();
@@ -817,7 +847,6 @@
             }
         }
 
-        // Fully compliant RFC 4180 CSV line parser handling quotes, escaped quotes, and commas
         function parseCSVLine(text) {
             let ret = [];
             let inQuote = false;
@@ -828,7 +857,7 @@
                 if (char === '"') {
                     if (inQuote && text[i + 1] === '"') {
                         value += '"';
-                        i++; // Skip escaped quote
+                        i++; 
                     } else {
                         inQuote = !inQuote;
                     }
@@ -850,12 +879,30 @@
 
             for (let i = 1; i < lines.length; i++) {
                 const values = parseCSVLine(lines[i]);
-                const displayName = values[0];
-                const description = values[1];
+                if (values[0] && values[1]) {
+                    const key = cleanMetricKey(values[0]);
+                    metricsHelpMap[key] = values[1];
+                }
+            }
+        }
 
-                if (displayName && description) {
-                    const key = cleanMetricKey(displayName);
-                    metricsHelpMap[key] = description;
+        function parseProfilesCSV(csvText) {
+            const lines = csvText.trim().split('\n');
+            if (lines.length < 2) return;
+
+            for (let i = 1; i < lines.length; i++) {
+                const values = parseCSVLine(lines[i]);
+                const schoolKey = values[0];
+                
+                if (schoolKey) {
+                    profilesData[schoolKey.toLowerCase()] = {
+                        fullName: values[1],
+                        photo1: values[2], photo2: values[3], photo3: values[4],
+                        videoUrl: values[5], topology: values[6], airport: values[7],
+                        transit: values[8], vibe: values[9], housing: values[10],
+                        medical: values[11], linkAdmissions: values[12], linkBio: values[13],
+                        linkOfficial: values[14], schoolLogo: values[15]
+                    };
                 }
             }
         }
@@ -869,13 +916,11 @@
             const scoreIndices = {};
             const detailIndices = {};
             let nameIdx = -1;
-            let shortNameIdx = -1;
             let locationIdx = -1;
             let enrollmentIdx = -1;
 
             headers.forEach((header, idx) => {
                 if (header === 'School') nameIdx = idx;
-                if (header === 'Short_Name') shortNameIdx = idx;
                 if (header === 'Location') locationIdx = idx;
                 if (header === 'Enrollment') enrollmentIdx = idx;
                 if (header.includes('_Score')) {
@@ -890,35 +935,25 @@
             metricsList = Object.keys(scoreIndices).map(id => {
                 if (metricWeights[id] === undefined) metricWeights[id] = 3;
                 let formattedName = id === 'cls' ? 'CLS' : id.charAt(0).toUpperCase() + id.slice(1).replace(/_/g, ' ');
-                return {
-                    id: id,
-                    name: formattedName
-                };
+                return { id: id, name: formattedName };
             });
             
             schools = [];
             for (let i = 1; i < lines.length; i++) {
                 const values = parseCSVLine(lines[i]);
                 const fullName = nameIdx !== -1 ? values[nameIdx] : '';
-                
                 if (!fullName) continue;
                 
-                const shortName = shortNameIdx !== -1 ? values[shortNameIdx] : fullName;
-                const location = locationIdx !== -1 ? values[locationIdx] : 'Unknown Location';
+                const location = locationIdx !== -1 ? values[locationIdx] : 'Unknown';
                 const enrollment = enrollmentIdx !== -1 ? values[enrollmentIdx] : 'Unknown';
 
                 const grades = {};
                 const details = {};
 
-                Object.entries(scoreIndices).forEach(([metricId, idx]) => {
-                    grades[metricId] = values[idx] || 'C';
-                });
-
-                Object.entries(detailIndices).forEach(([metricId, idx]) => {
-                    details[metricId] = values[idx] || 'No details available.';
-                });
+                Object.entries(scoreIndices).forEach(([metricId, idx]) => grades[metricId] = values[idx] || 'C');
+                Object.entries(detailIndices).forEach(([metricId, idx]) => details[metricId] = values[idx] || 'No details available.');
                 
-                schools.push({ fullName, shortName, location, enrollment, grades, details });
+                schools.push({ fullName, location, enrollment, grades, details });
             }
         }
 
@@ -928,7 +963,7 @@
             select.innerHTML = '';
             schools.forEach(s => {
                 const opt = document.createElement('option');
-                opt.value = s.fullName.toLowerCase();
+                opt.value = s.fullName;
                 opt.textContent = s.fullName;
                 select.appendChild(opt);
             });
@@ -945,38 +980,31 @@
             listContainer.innerHTML = '';
             schools.forEach(s => {
                 const isChecked = !hiddenSchools.has(s.fullName);
+                const safeId = s.fullName.replace(/[^a-zA-Z0-9]/g, '');
                 const div = document.createElement('div');
                 div.className = 'school-filter-item';
                 div.innerHTML = `
-                    <input type="checkbox" id="filter-school-${s.shortName}" ${isChecked ? 'checked' : ''} onchange="toggleSchoolVisibility('${s.fullName.replace(/'/g, "\\'")}', this.checked)" style="cursor: pointer; width: 15px; height: 15px;">
-                    <label for="filter-school-${s.shortName}" style="cursor: pointer; flex: 1; user-select: none;">${s.fullName}</label>
+                    <input type="checkbox" id="filter-school-${safeId}" ${isChecked ? 'checked' : ''} onchange="toggleSchoolVisibility('${s.fullName.replace(/'/g, "\\'")}', this.checked)" style="cursor: pointer; width: 15px; height: 15px;">
+                    <label for="filter-school-${safeId}" style="cursor: pointer; flex: 1; user-select: none;">${s.fullName}</label>
                 `;
                 listContainer.appendChild(div);
             });
 
             const activeCount = schools.length - hiddenSchools.size;
-            if (btnText) {
-                btnText.textContent = `Manage Schools (${activeCount}/${schools.length})`;
-            }
+            if (btnText) btnText.textContent = `Manage Schools (${activeCount}/${schools.length})`;
         }
 
         function toggleSchoolVisibility(schoolName, isVisible) {
-            if (isVisible) {
-                hiddenSchools.delete(schoolName);
-            } else {
-                hiddenSchools.add(schoolName);
-            }
+            if (isVisible) hiddenSchools.delete(schoolName);
+            else hiddenSchools.add(schoolName);
             renderSchoolFilterCheckboxes();
             calculateRankings();
             renderTable();
         }
 
         function setAllSchoolsVisibility(isVisible) {
-            if (isVisible) {
-                hiddenSchools.clear();
-            } else {
-                schools.forEach(s => hiddenSchools.add(s.fullName));
-            }
+            if (isVisible) hiddenSchools.clear();
+            else schools.forEach(s => hiddenSchools.add(s.fullName));
             renderSchoolFilterCheckboxes();
             calculateRankings();
             renderTable();
@@ -985,9 +1013,7 @@
         function toggleSchoolFilterDropdown(event) {
             event.stopPropagation();
             const dropdown = document.getElementById('schoolFilterDropdown');
-            if (dropdown) {
-                dropdown.classList.toggle('open');
-            }
+            if (dropdown) dropdown.classList.toggle('open');
             closeMetricDrawer();
             closeDetailDrawer();
             closeSchoolDrawer();
@@ -998,9 +1024,7 @@
             if (dropdown) dropdown.classList.remove('open');
         }
 
-        window.addEventListener('click', function() {
-            closeSchoolFilterDropdown();
-        });
+        window.addEventListener('click', closeSchoolFilterDropdown);
 
         function renderTable() {
             const table = document.getElementById('comparisonTable');
@@ -1012,7 +1036,7 @@
             if (!isAxisFlipped) {
                 html += `<thead><tr><th>Metric</th>`;
                 visibleSchools.forEach(s => { 
-                    html += `<th class="col-compact" style="cursor: pointer;" onclick="openSchoolDrawer('${s.fullName.replace(/'/g, "\\'")}')">${s.shortName} <i class="fas fa-info-circle" style="font-size: 11px; opacity: 0.6; margin-left: 2px;"></i></th>`; 
+                    html += `<th class="col-compact" style="cursor: pointer;" onclick="openSchoolDrawer('${s.fullName.replace(/'/g, "\\'")}')">${s.fullName} <i class="fas fa-info-circle" style="font-size: 11px; opacity: 0.6; margin-left: 2px;"></i></th>`; 
                 });
                 html += `</tr></thead><tbody>`;
 
@@ -1026,15 +1050,11 @@
                     html += `<div class="metric-th-content">`;
                     html += `<span>${m.name} <i class="fas fa-sliders-h" style="font-size: 11px; opacity: 0.6; margin-left: 4px;"></i></span>`;
                     html += `<span class="metric-badge">${weightMultiplier}x</span>`;
-                    html += `</div>`;
-                    html += `</th>`;
+                    html += `</div></th>`;
 
                     visibleSchools.forEach(s => {
                         let grade = s.grades[m.id] || 'C';
-                        if (isReversed) {
-                            const rev = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'};
-                            grade = rev[grade] || grade;
-                        }
+                        if (isReversed) grade = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'}[grade] || grade;
                         const cls = scoreClassMap[grade] || 'medium';
                         html += `<td class="col-compact"><span class="score ${cls}" onclick="showDetail('${s.fullName.replace(/'/g, "\\'")}', '${m.name}', '${grade}', '${encodeURIComponent(s.details[m.id] || '')}', this)">${grade}</span></td>`;
                     });
@@ -1046,25 +1066,20 @@
                 metricsList.forEach(m => {
                     const currentWeightVal = metricWeights[m.id];
                     const weightMultiplier = importanceMap[currentWeightVal] ? importanceMap[currentWeightVal].weight : 3;
-
                     html += `<th class="col-compact" style="cursor: pointer;" onclick="openMetricDrawer('${m.id}')">`;
                     html += `<div style="display: flex; align-items: center; justify-content: center; gap: 6px;">`;
                     html += `<span>${m.name}</span> <span class="metric-badge">${weightMultiplier}x</span>`;
-                    html += `</div>`;
-                    html += `</th>`;
+                    html += `</div></th>`;
                 });
                 html += `</tr></thead><tbody>`;
 
                 visibleSchools.forEach(s => {
                     html += `<tr>`;
-                    html += `<th style="cursor: pointer;" onclick="openSchoolDrawer('${s.fullName.replace(/'/g, "\\'")}')">${s.shortName} <i class="fas fa-info-circle" style="font-size: 11px; opacity: 0.6; margin-left: 4px;"></i></th>`;
+                    html += `<th style="cursor: pointer;" onclick="openSchoolDrawer('${s.fullName.replace(/'/g, "\\'")}')">${s.fullName} <i class="fas fa-info-circle" style="font-size: 11px; opacity: 0.6; margin-left: 4px;"></i></th>`;
                     
                     metricsList.forEach(m => {
                         let grade = s.grades[m.id] || 'C';
-                        if (metricReversals[m.id]) {
-                            const rev = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'};
-                            grade = rev[grade] || grade;
-                        }
+                        if (metricReversals[m.id]) grade = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'}[grade] || grade;
                         const cls = scoreClassMap[grade] || 'medium';
                         html += `<td class="col-compact"><span class="score ${cls}" onclick="showDetail('${s.fullName.replace(/'/g, "\\'")}', '${m.name}', '${grade}', '${encodeURIComponent(s.details[m.id] || '')}', this)">${grade}</span></td>`;
                     });
@@ -1072,7 +1087,6 @@
                 });
                 html += `</tbody>`;
             }
-            
             table.innerHTML = html;
         }
 
@@ -1095,20 +1109,12 @@
 
             title.innerHTML = `<span><i class="fas fa-university" style="margin-right: 8px;"></i>${s.fullName} Spotlight</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>`;
 
-            let strengths = [];
-            let concerns = [];
-
+            let strengths = [], concerns = [];
             metricsList.forEach(m => {
                 let grade = s.grades[m.id] || 'C';
-                if (metricReversals[m.id]) {
-                    const rev = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'};
-                    grade = rev[grade] || grade;
-                }
-                if (grade === 'A' || grade === 'B') {
-                    strengths.push(`${m.name} (${grade})`);
-                } else if (grade === 'D' || grade === 'F') {
-                    concerns.push(`${m.name} (${grade})`);
-                }
+                if (metricReversals[m.id]) grade = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'}[grade] || grade;
+                if (grade === 'A' || grade === 'B') strengths.push(`${m.name} (${grade})`);
+                else if (grade === 'D' || grade === 'F') concerns.push(`${m.name} (${grade})`);
             });
 
             body.innerHTML = `
@@ -1132,7 +1138,6 @@
                     <i class="fas fa-external-link-alt"></i> View Full Profile & Campus Tour
                 </button>
             `;
-
             drawer.classList.add('open');
             drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
@@ -1165,57 +1170,92 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function updateProfileInfo(schoolFullName) {
-            const s = schools.find(item => item.fullName.toLowerCase() === schoolFullName.toLowerCase());
-            if (s) {
-                const locVal = document.getElementById('profileLocationVal');
-                const enrVal = document.getElementById('profileEnrollmentVal');
-                if (locVal) locVal.textContent = s.location;
-                if (enrVal) enrVal.textContent = Number(s.enrollment).toLocaleString();
+        function updateProfileInfo(schoolKey) {
+            const data = profilesData[schoolKey.toLowerCase()];
+            const dashboard = document.getElementById('profileDashboard');
+            const noMsg = document.getElementById('noProfileMsg');
+
+            if (!data) {
+                dashboard.style.display = 'none';
+                noMsg.style.display = 'block';
+                noMsg.textContent = `No detailed profile data available yet for ${schoolKey}.`;
+                return;
             }
+
+            dashboard.style.display = 'block';
+            noMsg.style.display = 'none';
+
+            document.getElementById('profSchoolTitle').textContent = data.fullName || schoolKey;
+            
+            const logoImg = document.getElementById('profLogoImg');
+            if (data.schoolLogo && data.schoolLogo.trim() !== '') {
+                logoImg.src = data.schoolLogo;
+                logoImg.style.display = 'block';
+            } else {
+                logoImg.style.display = 'none';
+            }
+
+            document.getElementById('profAirport').textContent = data.airport || '--';
+            document.getElementById('profTransit').textContent = data.transit || '--';
+            document.getElementById('profTopology').textContent = data.topology || '--';
+            document.getElementById('profVibe').textContent = data.vibe || '--';
+            document.getElementById('profHousing').textContent = data.housing || '--';
+            document.getElementById('profMedical').textContent = data.medical || '--';
+
+            document.getElementById('linkOfficial').href = data.linkOfficial || '#';
+            document.getElementById('linkAdmissions').href = data.linkAdmissions || '#';
+            document.getElementById('linkBio').href = data.linkBio || '#';
+
+            document.getElementById('profileVideo').src = data.videoUrl || '';
+
+            const gallery = document.getElementById('profileGallery');
+            gallery.innerHTML = '';
+            [data.photo1, data.photo2, data.photo3].forEach(imgSrc => {
+                if (imgSrc && imgSrc.trim() !== '') {
+                    const div = document.createElement('div');
+                    div.className = 'gallery-item';
+                    div.innerHTML = `<img src="${imgSrc}" alt="Campus Image" onclick="openLightbox('${imgSrc}')">`;
+                    gallery.appendChild(div);
+                }
+            });
+        }
+
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('open');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('imageLightbox');
+            lightbox.classList.remove('open');
         }
 
         function setAllWeights(val) {
             if (val === "") return;
             const weightInt = parseInt(val);
-            metricsList.forEach(m => {
-                metricWeights[m.id] = weightInt;
-            });
-
-            if (activeMetricId) {
-                openMetricDrawer(activeMetricId);
-            }
-
+            metricsList.forEach(m => metricWeights[m.id] = weightInt);
+            if (activeMetricId) openMetricDrawer(activeMetricId);
             calculateRankings();
             renderTable();
-
-            const setAll = document.getElementById('setAllSelect');
-            if (setAll) setAll.value = "";
+            document.getElementById('setAllSelect').value = "";
         }
 
-        /* Reset All Defaults: Resets weights, grade reversals, and unhides all schools */
         function resetMetricsToDefault() {
             metricsList.forEach(m => {
                 metricWeights[m.id] = 3;
                 metricReversals[m.id] = false;
             });
-
-            hiddenSchools.clear(); // Unhides all schools
-
-            if (activeMetricId) {
-                openMetricDrawer(activeMetricId);
-            }
-
+            hiddenSchools.clear();
+            if (activeMetricId) openMetricDrawer(activeMetricId);
             closeSchoolDrawer();
             closeDetailDrawer();
             closeSchoolFilterDropdown();
-
             renderSchoolFilterCheckboxes();
             calculateRankings();
             renderTable();
-
-            const setAll = document.getElementById('setAllSelect');
-            if (setAll) setAll.value = "";
+            document.getElementById('setAllSelect').value = "";
         }
 
         function openMetricDrawer(metricId) {
@@ -1233,17 +1273,11 @@
             const isReversed = Boolean(metricReversals[m.id]);
 
             const drawer = document.getElementById('metricDrawer');
-            const title = document.getElementById('metricDrawerTitle');
-            const desc = document.getElementById('metricDrawerDesc');
-            const slider = document.getElementById('drawerWeightSlider');
-            const weightText = document.getElementById('drawerWeightText');
-            const checkbox = document.getElementById('drawerReverseCheck');
-
-            title.innerHTML = `<span><i class="fas fa-sliders-h" style="margin-right: 8px;"></i>${m.name} Settings & Info</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeMetricDrawer()"></i>`;
-            desc.textContent = helpText;
-            slider.value = currentWeightVal;
-            weightText.textContent = importanceMap[currentWeightVal].label;
-            checkbox.checked = isReversed;
+            document.getElementById('metricDrawerTitle').innerHTML = `<span><i class="fas fa-sliders-h" style="margin-right: 8px;"></i>${m.name} Settings & Info</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeMetricDrawer()"></i>`;
+            document.getElementById('metricDrawerDesc').textContent = helpText;
+            document.getElementById('drawerWeightSlider').value = currentWeightVal;
+            document.getElementById('drawerWeightText').textContent = importanceMap[currentWeightVal].label;
+            document.getElementById('drawerReverseCheck').checked = isReversed;
 
             drawer.classList.add('open');
             drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1258,12 +1292,7 @@
             if (!activeMetricId) return;
             const weightInt = parseInt(val);
             metricWeights[activeMetricId] = weightInt;
-
-            const weightText = document.getElementById('drawerWeightText');
-            if (weightText) {
-                weightText.textContent = importanceMap[weightInt].label;
-            }
-
+            document.getElementById('drawerWeightText').textContent = importanceMap[weightInt].label;
             calculateRankings();
             renderTable();
         }
@@ -1271,7 +1300,6 @@
         function handleDrawerReverseChange(isReversed) {
             if (!activeMetricId) return;
             metricReversals[activeMetricId] = isReversed;
-
             calculateRankings();
             renderTable();
         }
@@ -1279,19 +1307,13 @@
         function showDetail(schoolName, metricName, grade, encodedDetail, element) {
             document.querySelectorAll('.score').forEach(el => el.classList.remove('active-cell'));
             element.classList.add('active-cell');
-
             closeSchoolDrawer();
             closeMetricDrawer();
             closeSchoolFilterDropdown();
 
             const drawer = document.getElementById('detailDrawer');
-            const title = document.getElementById('drawerTitle');
-            const text = document.getElementById('drawerText');
-
-            const decodedDetail = decodeURIComponent(encodedDetail);
-
-            title.innerHTML = `<span>${schoolName} — ${metricName} (Grade: ${grade})</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i>`;
-            text.textContent = decodedDetail;
+            document.getElementById('drawerTitle').innerHTML = `<span>${schoolName} — ${metricName} (Grade: ${grade})</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i>`;
+            document.getElementById('drawerText').textContent = decodeURIComponent(encodedDetail);
             drawer.classList.add('open');
             drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
@@ -1303,99 +1325,46 @@
 
         function calculateRankings() {
             const gradeValues = { 'A': 10, 'B': 8, 'C': 6, 'D': 4, 'F': 2 };
-            
             let totalWeight = 0;
-            metricsList.forEach(m => {
-                const val = metricWeights[m.id] !== undefined ? metricWeights[m.id] : 3;
-                totalWeight += importanceMap[val] ? importanceMap[val].weight : 0;
-            });
+            metricsList.forEach(m => totalWeight += importanceMap[metricWeights[m.id] !== undefined ? metricWeights[m.id] : 3].weight);
 
             const results = schools.map(school => {
-                let score = 0;
-                let dealbreakerFailed = false;
-
+                let score = 0, dealbreakerFailed = false;
                 for (const metric in school.grades) {
                     let grade = school.grades[metric] || 'C';
-                    if (metricReversals[metric]) {
-                        const rev = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'};
-                        grade = rev[grade] || grade;
-                    }
-                    let points = gradeValues[grade] || 6;
-                    
+                    if (metricReversals[metric]) grade = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'}[grade] || grade;
                     const sliderVal = metricWeights[metric] !== undefined ? metricWeights[metric] : 3;
-                    const wVal = importanceMap[sliderVal] ? importanceMap[sliderVal].weight : 0;
-                    
-                    if (sliderVal === 4 && (grade === 'D' || grade === 'F')) {
-                        dealbreakerFailed = true;
-                    }
-
-                    const w = totalWeight > 0 ? wVal / totalWeight : 0;
-                    score += points * w;
+                    if (sliderVal === 4 && (grade === 'D' || grade === 'F')) dealbreakerFailed = true;
+                    score += (gradeValues[grade] || 6) * (totalWeight > 0 ? importanceMap[sliderVal].weight / totalWeight : 0);
                 }
+                if (dealbreakerFailed) score *= 0.2;
+                return { name: school.fullName, score: ((score / 10) * 100).toFixed(1), dealbreakerFailed };
+            }).sort((a, b) => b.score - a.score);
 
-                if (dealbreakerFailed) {
-                    score = score * 0.2;
-                }
-
-                const percentageScore = ((score / 10) * 100).toFixed(1);
-
-                return {
-                    name: school.fullName,
-                    score: percentageScore,
-                    dealbreakerFailed: dealbreakerFailed
-                };
-            });
-
-            results.sort((a, b) => b.score - a.score);
-
-            currentCalculatedRankings = results.map((res, idx) => ({
-                rank: idx + 1,
-                name: res.name,
-                score: res.score,
-                dealbreakerFailed: res.dealbreakerFailed
-            }));
-
+            currentCalculatedRankings = results.map((res, idx) => ({ rank: idx + 1, ...res }));
             const visibleResults = currentCalculatedRankings.filter(r => !hiddenSchools.has(r.name));
 
             const container = document.getElementById('rankingList');
             if (!container) return;
-            
             container.classList.remove('flash-update');
             void container.offsetWidth; 
+            container.innerHTML = visibleResults.length === 0 ? `<div style="font-size: 13px; color: #666; text-align: center; padding: 10px;">All schools are currently hidden.</div>` : '';
             
-            container.innerHTML = '';
-            if (visibleResults.length === 0) {
-                container.innerHTML = `<div style="font-size: 13px; color: #666; text-align: center; padding: 10px;">All schools are currently hidden. Use "Manage Schools" to show them.</div>`;
-                return;
-            }
-
             visibleResults.forEach((res) => {
                 const div = document.createElement('div');
                 div.className = 'ranking-item';
-                
-                const warningBadge = res.dealbreakerFailed 
-                    ? `<span style="font-size: 11px; background: #fce8e6; color: #c5221f; padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 8px;"><i class="fas fa-exclamation-triangle"></i> Dealbreaker Failed</span>`
-                    : '';
-
-                div.innerHTML = `
-                    <span class="ranking-position">${res.rank}</span>
+                const warningBadge = res.dealbreakerFailed ? `<span style="font-size: 11px; background: #fce8e6; color: #c5221f; padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 8px;"><i class="fas fa-exclamation-triangle"></i> Dealbreaker Failed</span>` : '';
+                div.innerHTML = `<span class="ranking-position">${res.rank}</span>
                     <span class="ranking-school" style="cursor: pointer;" onclick="openSchoolDrawer('${res.name.replace(/'/g, "\\'")}')">${res.name} ${warningBadge} <i class="fas fa-info-circle" style="font-size: 12px; color: #0066cc; margin-left: 6px;"></i></span>
-                    <span class="ranking-score">${res.score}%</span>
-                `;
+                    <span class="ranking-score">${res.score}%</span>`;
                 container.appendChild(div);
             });
-            
             container.classList.add('flash-update');
         }
 
         function setupListeners() {
             const flipBtn = document.getElementById('flipAxisBtn');
-            if(flipBtn) {
-                flipBtn.addEventListener('click', function() {
-                    isAxisFlipped = !isAxisFlipped;
-                    renderTable();
-                });
-            }
+            if(flipBtn) flipBtn.addEventListener('click', () => { isAxisFlipped = !isAxisFlipped; renderTable(); });
 
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.addEventListener('click', function() {
@@ -1406,18 +1375,8 @@
                 });
             });
 
-            document.querySelectorAll('.profile-header').forEach(h => {
-                h.addEventListener('click', function() {
-                    this.nextElementSibling.classList.toggle('open');
-                });
-            });
-
             const schoolSelect = document.getElementById('selectProfileSchool');
-            if (schoolSelect) {
-                schoolSelect.addEventListener('change', function() {
-                    updateProfileInfo(this.options[this.selectedIndex].text);
-                });
-            }
+            if (schoolSelect) schoolSelect.addEventListener('change', function() { updateProfileInfo(this.value); });
         }
 
         window.addEventListener('load', loadCSVData);
