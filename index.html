@@ -757,6 +757,19 @@
                             </div>
 
                         </div>
+
+                        <!-- Full-Width Campus Map Section -->
+                        <div class="profile-section" style="margin-top: 20px;">
+                            <div class="profile-content" style="padding: 20px;">
+                                <h3 style="font-size: 16px; color: var(--text-accent, #0066cc); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fas fa-map-marked-alt"></i> Campus Location & Map
+                                </h3>
+                                <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid var(--border, #e0e0e0); height: 450px;">
+                                    <iframe id="profMapFrame" width="100%" height="100%" style="border:0;" loading="lazy" src=""></iframe>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     
                     <div id="noProfileMsg" style="text-align: center; padding: 40px; color: #666; font-size: 15px;">
@@ -800,7 +813,7 @@
             4: { label: 'Dealbreaker', weight: 15 }
         };
 
-async function loadJSONData() {
+        async function loadJSONData() {
             try {
                 const response = await fetch(jsonUrl);
                 if (!response.ok) throw new Error(`HTTP error loading college_data.json`);
@@ -857,7 +870,7 @@ async function loadJSONData() {
                     };
                 });
 
-                // 💡 Calculate rankings FIRST so they are ready for the profile view
+                // Calculate rankings first so they are ready for the profile tab views
                 calculateRankings(); 
                 populateSchoolDropdown();
                 renderSchoolFilterCheckboxes();
@@ -1145,9 +1158,16 @@ async function loadJSONData() {
 
             document.getElementById('profSchoolTitle').textContent = data.fullName || schoolKey;
             
-            // Robust matching against schools and calculated rankings
-            const sObj = schools.find(item => item.fullName.toLowerCase() === schoolKey.toLowerCase() || item.displayName.toLowerCase() === schoolKey.toLowerCase());
-            const rankData = currentCalculatedRankings.find(r => r.name.toLowerCase() === schoolKey.toLowerCase() || (r.displayName && r.displayName.toLowerCase() === schoolKey.toLowerCase()));
+            const sObj = schools.find(item => 
+                item.fullName.toLowerCase() === schoolKey.toLowerCase() || 
+                (item.displayName && item.displayName.toLowerCase() === schoolKey.toLowerCase())
+            );
+            
+            const rankData = currentCalculatedRankings.find(r => 
+                r.name.toLowerCase() === schoolKey.toLowerCase() || 
+                (r.displayName && r.displayName.toLowerCase() === schoolKey.toLowerCase()) ||
+                (profilesData[r.name.toLowerCase()] && profilesData[r.name.toLowerCase()].fullName.toLowerCase() === schoolKey.toLowerCase())
+            );
             
             const quickStatsEl = document.getElementById('profQuickStats');
             if (quickStatsEl && sObj) {
@@ -1179,6 +1199,15 @@ async function loadJSONData() {
             document.getElementById('linkBio').href = data.linkBio || '#';
 
             document.getElementById('profileVideo').src = data.videoUrl || '';
+
+            // Update Full-Screen Campus Map
+            const mapFrame = document.getElementById('profMapFrame');
+            if (mapFrame) {
+                const officialTitle = data.fullName || (sObj ? sObj.displayName : schoolKey);
+                const locationStr = sObj ? sObj.location : '';
+                const query = encodeURIComponent(`${officialTitle} ${locationStr} campus`);
+                mapFrame.src = `https://maps.google.com/maps?q=${query}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+            }
 
             const gallery = document.getElementById('profileGallery');
             gallery.innerHTML = '';
