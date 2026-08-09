@@ -910,6 +910,9 @@
                     };
                 });
 
+                // Automatically sort schools alphabetically by their display name
+                schools.sort((a, b) => a.displayName.localeCompare(b.displayName));
+
                 calculateRankings(); 
                 populateSchoolDropdown();
                 renderSchoolFilterCheckboxes();

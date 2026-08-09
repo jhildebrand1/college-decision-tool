@@ -50,7 +50,7 @@
         "CLS": "D",
         "Spirit": "C",
         "Happiness": "B",
-        "Admissions": "D"
+        "Admissions": "F"
       },
       "details": {
         "Cost": "$42,000 In-State COA. In-state UC tuition plus high Santa Barbara housing; ineligible for WUE.",
@@ -315,7 +315,7 @@
         "CLS": "B",
         "Spirit": "A",
         "Happiness": "B",
-        "Admissions": "B"
+        "Admissions": "D"
       },
       "details": {
         "Cost": "$54,000 Out-of-State COA. Standard non-resident base tuition; no WUE; limited out-of-state merit.",
@@ -368,7 +368,7 @@
         "CLS": "A",
         "Spirit": "B",
         "Happiness": "B",
-        "Admissions": "A"
+        "Admissions": "B"
       },
       "details": {
         "Cost": "$54,000 Out-of-State COA. WUE eligible (3.0+ GPA) or Golden State merit award for CA applicants.",
@@ -421,7 +421,7 @@
         "CLS": "A",
         "Spirit": "B",
         "Happiness": "B",
-        "Admissions": "C"
+        "Admissions": "F"
       },
       "details": {
         "Cost": "$33,000 In-State COA. Lowest total cost on list (~$21k if living at home); in-state rate.",
@@ -474,7 +474,7 @@
         "CLS": "A",
         "Spirit": "B",
         "Happiness": "B",
-        "Admissions": "A"
+        "Admissions": "B"
       },
       "details": {
         "Cost": "$51,000 Out-of-State COA. Moderate non-resident base; WUE eligible with a 3.3+ UN GPA.",
@@ -527,7 +527,7 @@
         "CLS": "B",
         "Spirit": "A",
         "Happiness": "A",
-        "Admissions": "C"
+        "Admissions": "D"
       },
       "details": {
         "Cost": "$56,000 Out-of-State COA. High non-resident cost; strict out-of-state merit tiers; no WUE.",
@@ -633,7 +633,7 @@
         "CLS": "A",
         "Spirit": "A",
         "Happiness": "C",
-        "Admissions": "A"
+        "Admissions": "C"
       },
       "details": {
         "Cost": "$51,000 Out-of-State COA. Lower out-of-state tuition base keeps cost reasonable; non-resident merit eligible.",
@@ -686,7 +686,7 @@
         "CLS": "B",
         "Spirit": "D",
         "Happiness": "D",
-        "Admissions": "A"
+        "Admissions": "C"
       },
       "details": {
         "Cost": "$42,000 Out-of-State COA. Exceptional bargain for non-residents; low base tuition; no WUE needed.",
