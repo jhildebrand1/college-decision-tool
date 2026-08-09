@@ -38,7 +38,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-california-santa-barbara"
       },
       "grades": {
-        "Cost": "B",
+        "Cost": "A",
         "Difficulty": "F",
         "Support": "C",
         "Adjustment": "A",
@@ -53,7 +53,7 @@
         "Admissions": "F"
       },
       "details": {
-        "Cost": "$42,000 In-State COA. In-state UC tuition plus high Santa Barbara housing; ineligible for WUE.",
+        "Cost": "Est. Total COA: ~$43,937 (In-State CA). Final cost is largely fixed unless eligible for need-based aid.",
         "Difficulty": "Strict Pre-Bio GPA gatekeeping, brutal weed-out curves in Gen/Org Chem, and fast 10-week quarter pace.",
         "Support": "Fast quarter pace and overcrowded advising force high self-advocacy; help centers exist but are heavily TA-driven.",
         "Adjustment": "Identical coastal SoCal beach culture (Isla Vista), outdoorsy lifestyle, and easy drive/flight home.",
@@ -91,7 +91,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-colorado-boulder"
       },
       "grades": {
-        "Cost": "F",
+        "Cost": "D",
         "Difficulty": "C",
         "Support": "B",
         "Adjustment": "B",
@@ -106,7 +106,7 @@
         "Admissions": "B"
       },
       "details": {
-        "Cost": "$65,000 Out-of-State COA. Most expensive option; no WUE for main campus, modest merit.",
+        "Cost": "Est. Total COA: ~$64,452 - $68,440 (Out-of-State). Does not participate in WUE, but offers automatic non-resident merit scholarships based on GPA. Cost could lower slightly.",
         "Difficulty": "Rigorous Bio/Chem screening courses; strong R1 resources but requires heavy self-advocacy to get help.",
         "Support": "Good Science Learning Center tutoring and peer support hubs, though large lectures require self-driven outreach.",
         "Adjustment": "High sun and huge SoCal outdoor match (hiking/skiing); very smooth transition despite altitude.",
@@ -159,7 +159,7 @@
         "Admissions": "A"
       },
       "details": {
-        "Cost": "$58,000 Out-of-State COA. High base non-resident tuition; no WUE; potential for Wildcat merit.",
+        "Cost": "Est. Total COA: ~$65,900 - $67,770 (Out-of-State). Offers the Arizona Excellence Award ($6k-$18k/yr) for non-residents based on GPA. Cost could lower.",
         "Difficulty": "Massive intro lecture halls and self-driven environment; great research labs if you seek them out.",
         "Support": "Strong \"Think Tank\" tutoring network and Pre-Health advising, though massive intro halls require student initiative.",
         "Adjustment": "Desert sun, palm trees, and massive California student population; seamless cultural transition.",
@@ -197,7 +197,7 @@
         "link_appily": "https://www.appily.com/colleges/arizona-state-university-campus-immersion"
       },
       "grades": {
-        "Cost": "D",
+        "Cost": "C",
         "Difficulty": "B",
         "Support": "A",
         "Adjustment": "A",
@@ -212,7 +212,7 @@
         "Admissions": "A"
       },
       "details": {
-        "Cost": "$57,000 Out-of-State COA. High base cost; WUE excluded at Tempe main campus; New American merit eligible.",
+        "Cost": "Est. Total COA: ~$55,091 - $57,000 (Out-of-State). Tempe main campus does NOT offer WUE, but provides generous New American University merit scholarships based on GPA.",
         "Difficulty": "Early-warning tracking tech, 24/7 tutoring, and structured SI sessions keep large STEM classes manageable.",
         "Support": "Industry-leading eAdvising tech with automated early-warning flags, 24/7 tutoring, and proactive SI study sessions.",
         "Adjustment": "Sunny year-round, giant SoCal transplant crowd, and familiar desert/coastal lifestyle blend.",
@@ -250,7 +250,7 @@
         "link_appily": "https://www.appily.com/colleges/colorado-state-university-fort-collins"
       },
       "grades": {
-        "Cost": "C",
+        "Cost": "B",
         "Difficulty": "A",
         "Support": "A",
         "Adjustment": "B",
@@ -265,7 +265,7 @@
         "Admissions": "A"
       },
       "details": {
-        "Cost": "$52,000 Out-of-State COA. Moderate non-resident base; WUE eligible (3.0+ GPA requirement).",
+        "Cost": "Est. Total COA: ~$50,000 - $53,294 (Out-of-State). Participates in WUE (3.2+ GPA required). High likelihood of cost lowering.",
         "Difficulty": "Premier vet/life-science teaching focus; peer mentoring and collaborative labs minimize weed-out stress.",
         "Support": "Dedicated STEM peer-mentoring, highly accessible faculty, and learning communities built around undergrad retention.",
         "Adjustment": "Great laid-back outdoor culture; feels slightly more local/traditional Colorado than Boulder.",
@@ -318,7 +318,7 @@
         "Admissions": "D"
       },
       "details": {
-        "Cost": "$54,000 Out-of-State COA. Standard non-resident base tuition; no WUE; limited out-of-state merit.",
+        "Cost": "Est. Total COA: ~$55,800 (Out-of-State). Offers aggressive non-resident merit scholarships for high GPAs that can lower out-of-state tuition close to in-state rates.",
         "Difficulty": "Nationally top-ranked advising network with structured Supplemental Instruction (SI) in tough sciences.",
         "Support": "Nationally top-ranked Student Success Center with extensive Supplemental Instruction (SI) and hands-on academic coaching.",
         "Adjustment": "Significant shift to SEC Greek life, traditional Southern pacing, and a completely different social ecosystem.",
@@ -371,7 +371,7 @@
         "Admissions": "B"
       },
       "details": {
-        "Cost": "$54,000 Out-of-State COA. WUE eligible (3.0+ GPA) or Golden State merit award for CA applicants.",
+        "Cost": "Est. Total COA: ~$58,668 (Out-of-State). Participates in WUE based on high school GPA. High likelihood of cost lowering.",
         "Difficulty": "Dedicated Science Success Center tutoring and early paid research access (URSA-Engage) drive high retention.",
         "Support": "Science Success Center offers dedicated STEM tutoring and early paid research mentorship (URSA-Engage).",
         "Adjustment": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
@@ -424,7 +424,7 @@
         "Admissions": "F"
       },
       "details": {
-        "Cost": "$33,000 In-State COA. Lowest total cost on list (~$21k if living at home); in-state rate.",
+        "Cost": "Est. Total COA: ~$37,324 - $38,938 (In-State CA). Final cost is largely fixed unless eligible for local/need-based aid.",
         "Difficulty": "Impacted biology major; large intro lectures and high demand require proactive office hour visits.",
         "Support": "Impacted biology major causes advising slots to fill fast; resources exist but the system wont hunt you down.",
         "Adjustment": "Zero adjustment; home turf in San Diego with familiar local network, weather, and coastal lifestyle.",
@@ -462,7 +462,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-utah"
       },
       "grades": {
-        "Cost": "C",
+        "Cost": "B",
         "Difficulty": "B",
         "Support": "B",
         "Adjustment": "C",
@@ -477,7 +477,7 @@
         "Admissions": "B"
       },
       "details": {
-        "Cost": "$51,000 Out-of-State COA. Moderate non-resident base; WUE eligible with a 3.3+ UN GPA.",
+        "Cost": "Est. Total COA: ~$45,415 - $51,135 (Out-of-State). Eligible for WUE with a 3.30+ GPA, capping tuition at 150% of in-state. High likelihood of cost lowering.",
         "Difficulty": "Direct med center access with funded undergrad research (UROP) and collaborative STEM support.",
         "Support": "Well-funded STEM tutoring hubs and direct Health Sciences advising with accessible undergrad research mentors.",
         "Adjustment": "Progressive college pockets, but embedded in a distinct regional and religious cultural backdrop.",
@@ -515,7 +515,7 @@
         "link_appily": "https://www.appily.com/colleges/auburn-university"
       },
       "grades": {
-        "Cost": "D",
+        "Cost": "C",
         "Difficulty": "B",
         "Support": "A",
         "Adjustment": "D",
@@ -530,7 +530,7 @@
         "Admissions": "D"
       },
       "details": {
-        "Cost": "$56,000 Out-of-State COA. High non-resident cost; strict out-of-state merit tiers; no WUE.",
+        "Cost": "Est. Total COA: ~$56,706 - $58,000 (Out-of-State). Offers structured non-resident merit scholarships based on GPA and test scores. Cost could lower.",
         "Difficulty": "Dedicated COSAm STEM tutoring centers, strong pre-health advising, and accessible faculty mentorship.",
         "Support": "COSAM features structured drop-in STEM tutoring centers, dedicated pre-health advisors, and close faculty ties.",
         "Adjustment": "Significant shift to SEC Greek life, traditional Southern pacing, and a completely different social ecosystem.",
@@ -583,7 +583,7 @@
         "Admissions": "B"
       },
       "details": {
-        "Cost": "$58,000 Out-of-State COA. High non-resident tuition; no WUE; merit awards require higher GPA tiers.",
+        "Cost": "Est. Total COA: ~$68,931 - $74,325 (Out-of-State). Does not participate in WUE, but offers automatic Apex/Summit merit scholarships based on GPA. Cost could lower.",
         "Difficulty": "Smaller STEM class sizes than massive land-grants and good tutoring, but moderate local clinical access.",
         "Support": "Solid support via the Tutoring & Academic Engagement Center; smaller STEM scale allows better advisor access.",
         "Adjustment": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
@@ -636,7 +636,7 @@
         "Admissions": "C"
       },
       "details": {
-        "Cost": "$51,000 Out-of-State COA. Lower out-of-state tuition base keeps cost reasonable; non-resident merit eligible.",
+        "Cost": "Est. Total COA: ~$56,122 - $58,256 (Out-of-State). Offers automatic non-resident merit scholarships and fee waivers for high GPAs and test scores. Cost could lower.",
         "Difficulty": "High DFW (Drop/Fail/Withdraw) rates in General & Organic Chem with traditional sink-or-swim dynamics.",
         "Support": "Center for Academic Success provides solid SI study sessions, though main academic advising is more reactive.",
         "Adjustment": "Largest cultural shift on the list: heavy Cajun/subtropical environment, unique local customs, and deep-rooted SEC identity.",
@@ -689,7 +689,7 @@
         "Admissions": "C"
       },
       "details": {
-        "Cost": "$42,000 Out-of-State COA. Exceptional bargain for non-residents; low base tuition; no WUE needed.",
+        "Cost": "Est. Total COA: ~$42,382 - $46,422 (Out-of-State). Offers non-resident merit scholarships based on GPA. Cost could lower after admission.",
         "Difficulty": "Dedicated B.S. in Medical Bio track with Peer-Led Team Learning (PLTL) support in tough O-Chem sequences.",
         "Support": "Strong Center for Learning and Student Success (CLASS) utilizing Peer-Led Team Learning (PLTL) in tough STEM series.",
         "Adjustment": "Familiar sunny coastal/beach lifestyle, but a distinct East Coast/suburban adjustment away from the West Coast vibe.",
