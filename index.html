@@ -267,12 +267,12 @@
         }
 
         /* Filter Dropdown */
-        .school-filter-container {
+        .school-filter-container, .metric-filter-container {
             position: relative;
             display: inline-block;
         }
 
-        .school-filter-dropdown {
+        .school-filter-dropdown, .metric-filter-dropdown {
             display: none;
             position: absolute;
             top: 100%;
@@ -287,11 +287,11 @@
             margin-top: 6px;
         }
 
-        .school-filter-dropdown.open {
+        .school-filter-dropdown.open, .metric-filter-dropdown.open {
             display: block;
         }
 
-        .school-filter-list {
+        .school-filter-list, .metric-filter-list {
             max-height: 200px;
             overflow-y: auto;
             margin-bottom: 10px;
@@ -300,7 +300,7 @@
             padding: 6px;
         }
 
-        .school-filter-item {
+        .school-filter-item, .metric-filter-item {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -310,7 +310,7 @@
             border-radius: 4px;
         }
 
-        .school-filter-item:hover {
+        .school-filter-item:hover, .metric-filter-item:hover {
             background: #f5f5f5;
         }
 
@@ -579,7 +579,6 @@
                             <label for="setAllSelect" style="font-weight: 600; white-space: nowrap;">Set All Weights:</label>
                             <select id="setAllSelect" onchange="setAllWeights(this.value)" style="padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border, #e0e0e0); font-size: 13px; cursor: pointer; background: #ffffff; font-weight: 500;">
                                 <option value="" disabled selected>Select level...</option>
-                                <option value="0">Not Factored (0x)</option>
                                 <option value="1">Not Important (1x)</option>
                                 <option value="2">Somewhat (2x)</option>
                                 <option value="3">Very Important (3x)</option>
@@ -588,6 +587,7 @@
                         </div>
                         
                         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                            <!-- Manage Schools Dropdown -->
                             <div class="school-filter-container">
                                 <button id="manageSchoolsBtn" class="action-btn secondary-btn" onclick="toggleSchoolFilterDropdown(event)">
                                     <i class="fas fa-filter"></i> <span id="schoolFilterBtnText">Manage Schools</span>
@@ -603,6 +603,26 @@
                                     <div style="display: flex; justify-content: space-between; font-size: 12px;">
                                         <span style="color: #0066cc; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(true)">Select All</span>
                                         <span style="color: #c5221f; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(false)">Deselect All</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Manage Metrics Dropdown -->
+                            <div class="metric-filter-container">
+                                <button id="manageMetricsBtn" class="action-btn secondary-btn" onclick="toggleMetricFilterDropdown(event)">
+                                    <i class="fas fa-columns"></i> <span id="metricFilterBtnText">Manage Metrics</span>
+                                </button>
+                                <div class="metric-filter-dropdown" id="metricFilterDropdown" onclick="event.stopPropagation()">
+                                    <div style="font-weight: 700; font-size: 13px; margin-bottom: 8px; color: #0066cc; display: flex; justify-content: space-between; align-items: center;">
+                                        <span>Filter Metrics</span>
+                                        <i class="fas fa-times" style="cursor: pointer;" onclick="closeMetricFilterDropdown()"></i>
+                                    </div>
+                                    <div class="metric-filter-list" id="metricFilterList">
+                                        <!-- Injected by JS -->
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                        <span style="color: #0066cc; cursor: pointer; font-weight: 600;" onclick="setAllMetricsVisibility(true)">Select All</span>
+                                        <span style="color: #c5221f; cursor: pointer; font-weight: 600;" onclick="setAllMetricsVisibility(false)">Deselect All</span>
                                     </div>
                                 </div>
                             </div>
@@ -644,7 +664,7 @@
                                     <span>Importance Weight:</span> 
                                     <span id="drawerWeightText" style="color: #0066cc; font-weight: 700;"></span>
                                 </label>
-                                <input type="range" id="drawerWeightSlider" min="0" max="4" step="1" oninput="handleDrawerWeightChange(this.value)" style="width: 100%; cursor: pointer;">
+                                <input type="range" id="drawerWeightSlider" min="1" max="4" step="1" oninput="handleDrawerWeightChange(this.value)" style="width: 100%; cursor: pointer;">
                             </div>
                             <div style="display: flex; align-items: center; gap: 8px; margin-top: 14px;">
                                 <input type="checkbox" id="drawerReverseCheck" onchange="handleDrawerReverseChange(this.checked)" style="width: 16px; height: 16px; cursor: pointer;">
@@ -815,6 +835,7 @@
         let metricReversals = {};
         let metricWeights = {}; 
         let hiddenSchools = new Set();
+        let hiddenMetrics = new Set();
         let profilesData = {};
         let currentCalculatedRankings = []; 
         let isAxisFlipped = false;
@@ -826,7 +847,6 @@
         };
 
         const importanceMap = {
-            0: { label: 'Not Factored', weight: 0 },
             1: { label: 'Not Important', weight: 1 },
             2: { label: 'Somewhat', weight: 2 },
             3: { label: 'Very Important', weight: 3 },
@@ -890,10 +910,10 @@
                     };
                 });
 
-                // Calculate rankings first so they are ready for the profile tab views
                 calculateRankings(); 
                 populateSchoolDropdown();
                 renderSchoolFilterCheckboxes();
+                renderMetricFilterCheckboxes();
                 renderTable();
                 setupListeners();
             } catch (error) {
@@ -943,6 +963,28 @@
             if (btnText) btnText.textContent = `Manage Schools (${activeCount}/${schools.length})`;
         }
 
+        function renderMetricFilterCheckboxes() {
+            const listContainer = document.getElementById('metricFilterList');
+            const btnText = document.getElementById('metricFilterBtnText');
+            if (!listContainer) return;
+
+            listContainer.innerHTML = '';
+            metricsList.forEach(m => {
+                const isChecked = !hiddenMetrics.has(m.id);
+                const safeId = m.id.replace(/[^a-zA-Z0-9]/g, '');
+                const div = document.createElement('div');
+                div.className = 'metric-filter-item';
+                div.innerHTML = `
+                    <input type="checkbox" id="filter-metric-${safeId}" ${isChecked ? 'checked' : ''} onchange="toggleMetricVisibility('${m.id}', this.checked)" style="cursor: pointer; width: 15px; height: 15px;">
+                    <label for="filter-metric-${safeId}" style="cursor: pointer; flex: 1; user-select: none;">${m.name}</label>
+                `;
+                listContainer.appendChild(div);
+            });
+
+            const activeCount = metricsList.length - hiddenMetrics.size;
+            if (btnText) btnText.textContent = `Manage Metrics (${activeCount}/${metricsList.length})`;
+        }
+
         function toggleSchoolVisibility(schoolName, isVisible) {
             if (isVisible) hiddenSchools.delete(schoolName);
             else hiddenSchools.add(schoolName);
@@ -959,9 +1001,27 @@
             renderTable();
         }
 
+        function toggleMetricVisibility(metricId, isVisible) {
+            if (isVisible) hiddenMetrics.delete(metricId);
+            else hiddenMetrics.add(metricId);
+            renderMetricFilterCheckboxes();
+            calculateRankings();
+            renderTable();
+        }
+
+        function setAllMetricsVisibility(isVisible) {
+            if (isVisible) hiddenMetrics.clear();
+            else metricsList.forEach(m => hiddenMetrics.add(m.id));
+            renderMetricFilterCheckboxes();
+            calculateRankings();
+            renderTable();
+        }
+
         function toggleSchoolFilterDropdown(event) {
             event.stopPropagation();
             const dropdown = document.getElementById('schoolFilterDropdown');
+            const metricDropdown = document.getElementById('metricFilterDropdown');
+            if (metricDropdown) metricDropdown.classList.remove('open');
             if (dropdown) dropdown.classList.toggle('open');
             closeMetricDrawer();
             closeDetailDrawer();
@@ -973,13 +1033,33 @@
             if (dropdown) dropdown.classList.remove('open');
         }
 
-        window.addEventListener('click', closeSchoolFilterDropdown);
+        function toggleMetricFilterDropdown(event) {
+            event.stopPropagation();
+            const dropdown = document.getElementById('metricFilterDropdown');
+            const schoolDropdown = document.getElementById('schoolFilterDropdown');
+            if (schoolDropdown) schoolDropdown.classList.remove('open');
+            if (dropdown) dropdown.classList.toggle('open');
+            closeMetricDrawer();
+            closeDetailDrawer();
+            closeSchoolDrawer();
+        }
+
+        function closeMetricFilterDropdown() {
+            const dropdown = document.getElementById('metricFilterDropdown');
+            if (dropdown) dropdown.classList.remove('open');
+        }
+
+        window.addEventListener('click', () => {
+            closeSchoolFilterDropdown();
+            closeMetricFilterDropdown();
+        });
 
         function renderTable() {
             const table = document.getElementById('comparisonTable');
             if (!table || schools.length === 0) return;
             
             const visibleSchools = schools.filter(s => !hiddenSchools.has(s.fullName));
+            const visibleMetrics = metricsList.filter(m => !hiddenMetrics.has(m.id));
             let html = '';
 
             if (!isAxisFlipped) {
@@ -989,7 +1069,7 @@
                 });
                 html += `</tr></thead><tbody>`;
 
-                metricsList.forEach(m => {
+                visibleMetrics.forEach(m => {
                     const currentWeightVal = metricWeights[m.id];
                     const weightMultiplier = importanceMap[currentWeightVal] ? importanceMap[currentWeightVal].weight : 3;
                     const isReversed = Boolean(metricReversals[m.id]);
@@ -1012,7 +1092,7 @@
                 html += `</tbody>`;
             } else {
                 html += `<thead><tr><th>School</th>`;
-                metricsList.forEach(m => {
+                visibleMetrics.forEach(m => {
                     const currentWeightVal = metricWeights[m.id];
                     const weightMultiplier = importanceMap[currentWeightVal] ? importanceMap[currentWeightVal].weight : 3;
                     html += `<th class="col-compact" style="cursor: pointer;" onclick="openMetricDrawer('${m.id}')">`;
@@ -1026,7 +1106,7 @@
                     html += `<tr>`;
                     html += `<th style="cursor: pointer;" onclick="openSchoolDrawer('${s.fullName.replace(/'/g, "\\'")}')">${s.fullName} <i class="fas fa-info-circle" style="font-size: 11px; opacity: 0.6; margin-left: 4px;"></i></th>`;
                     
-                    metricsList.forEach(m => {
+                    visibleMetrics.forEach(m => {
                         let grade = s.grades[m.id] || 'C';
                         if (metricReversals[m.id]) grade = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'}[grade] || grade;
                         const cls = scoreClassMap[grade] || 'medium';
@@ -1047,6 +1127,7 @@
             closeMetricDrawer();
             closeDetailDrawer();
             closeSchoolFilterDropdown();
+            closeMetricFilterDropdown();
 
             const drawer = document.getElementById('schoolDrawer');
             const title = document.getElementById('schoolDrawerTitle');
@@ -1096,7 +1177,6 @@
             drawer.classList.add('open');
             drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-            // Render Radar Chart
             setTimeout(() => {
                 const ctx = document.getElementById('spotlightRadarChart');
                 if (ctx) {
@@ -1218,20 +1298,14 @@
             document.getElementById('linkAdmissions').href = data.linkAdmissions || '#';
             document.getElementById('linkBio').href = data.linkBio || '#';
 
-            // --- Programmatic Smart Links (Zero JSON work required) ---
             const officialTitle = data.fullName || (sObj ? sObj.displayName : schoolKey);
             const queryTitle = encodeURIComponent(officialTitle);
 
             document.getElementById('linkRMP').href = `https://www.ratemyprofessors.com/search/professors?q=${queryTitle}`;
             document.getElementById('linkUSNews').href = `https://www.google.com/search?q=${queryTitle}+US+News+college+ranking`;
-            
-            // Link directly to a Reddit search specifically filtering for Communities (Subreddits)
             document.getElementById('linkReddit').href = `https://www.reddit.com/search/?q=${queryTitle}&type=sr`;
-
-            // Link directly to a TikTok search for student tours and day-in-the-life vlogs
             document.getElementById('linkTikTok').href = `https://www.tiktok.com/search?q=${queryTitle}+college+tour`;
 
-            // --- Live College Scorecard API Fetch ---
             document.getElementById('apiGradRate').textContent = 'Fetching...';
             document.getElementById('apiAcceptance').textContent = 'Fetching...';
 
@@ -1240,12 +1314,9 @@
                 .then(scorecardData => {
                     if (scorecardData.results && scorecardData.results.length > 0) {
                         const schoolMatch = scorecardData.results[0];
-                        
-                        // Completion / Grad Rate
                         const gradRate = schoolMatch['latest.completion.rate_suppressed.overall'];
                         document.getElementById('apiGradRate').textContent = gradRate ? `${(gradRate * 100).toFixed(1)}%` : 'Data Not Reported';
 
-                        // Acceptance Rate
                         const acceptRate = schoolMatch['latest.admissions.admission_rate.overall'];
                         document.getElementById('apiAcceptance').textContent = acceptRate ? `${(acceptRate * 100).toFixed(1)}%` : 'Data Not Reported';
                     } else {
@@ -1261,7 +1332,6 @@
 
             document.getElementById('profileVideo').src = data.videoUrl || '';
 
-            // Update Full-Screen Campus Map
             const mapFrame = document.getElementById('profMapFrame');
             if (mapFrame) {
                 const locationStr = sObj ? sObj.location : '';
@@ -1309,11 +1379,15 @@
                 metricReversals[m.id] = false;
             });
             hiddenSchools.clear();
+            hiddenMetrics.clear();
             if (activeMetricId) openMetricDrawer(activeMetricId);
             closeSchoolDrawer();
+            closeMetricDrawer();
             closeDetailDrawer();
             closeSchoolFilterDropdown();
+            closeMetricFilterDropdown();
             renderSchoolFilterCheckboxes();
+            renderMetricFilterCheckboxes();
             calculateRankings();
             renderTable();
             document.getElementById('setAllSelect').value = "";
@@ -1324,6 +1398,7 @@
             closeSchoolDrawer();
             closeDetailDrawer();
             closeSchoolFilterDropdown();
+            closeMetricFilterDropdown();
 
             const m = metricsList.find(item => item.id === metricId);
             if (!m) return;
@@ -1370,6 +1445,7 @@
             closeSchoolDrawer();
             closeMetricDrawer();
             closeSchoolFilterDropdown();
+            closeMetricFilterDropdown();
 
             const drawer = document.getElementById('detailDrawer');
             const profileObj = profilesData[schoolName.toLowerCase()];
@@ -1388,12 +1464,15 @@
 
         function calculateRankings() {
             const gradeValues = { 'A': 10, 'B': 8, 'C': 6, 'D': 4, 'F': 2 };
+            const visibleMetrics = metricsList.filter(m => !hiddenMetrics.has(m.id));
+            
             let totalWeight = 0;
-            metricsList.forEach(m => totalWeight += importanceMap[metricWeights[m.id] !== undefined ? metricWeights[m.id] : 3].weight);
+            visibleMetrics.forEach(m => totalWeight += importanceMap[metricWeights[m.id] !== undefined ? metricWeights[m.id] : 3].weight);
 
             const results = schools.map(school => {
                 let score = 0, dealbreakerFailed = false;
-                for (const metric in school.grades) {
+                for (const m of visibleMetrics) {
+                    const metric = m.id;
                     let grade = school.grades[metric] || 'C';
                     if (metricReversals[metric]) grade = {'A':'F', 'B':'D', 'C':'C', 'D':'B', 'F':'A'}[grade] || grade;
                     const sliderVal = metricWeights[metric] !== undefined ? metricWeights[metric] : 3;
