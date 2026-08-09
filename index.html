@@ -115,16 +115,14 @@
             background-color: #484e53;
         }
 
-        /* Sticky Scrolling Table Container */
+        /* Fully Un-stuck Scrolling Table Container */
         .table-responsive {
             width: 100%;
-            max-height: 550px;
-            overflow: auto;
+            overflow-x: auto;
             margin-bottom: 20px;
             background-color: var(--surface-2, #ffffff);
             border: 1px solid var(--border, #e0e0e0);
             border-radius: 8px;
-            position: relative;
         }
 
         .comparison-table {
@@ -143,12 +141,10 @@
             border-right: 1px solid var(--border, #f0f0f0);
             white-space: nowrap; 
             background-color: #ffffff;
+            position: static !important;
         }
 
         .comparison-table thead th {
-            position: sticky;
-            top: 0;
-            z-index: 3;
             background-color: #ffffff;
             cursor: pointer;
             user-select: none;
@@ -161,21 +157,8 @@
 
         .comparison-table tbody td:first-child,
         .comparison-table tbody th:first-child {
-            position: sticky;
-            left: 0;
-            z-index: 2;
-            background-color: #ffffff;
             font-weight: 600;
             color: var(--text-primary, #1a1a1a);
-        }
-
-        .comparison-table thead th:first-child {
-            position: sticky;
-            top: 0;
-            left: 0;
-            z-index: 4;
-            background-color: #ffffff !important;
-            cursor: default;
         }
 
         .comparison-table th.col-compact,
@@ -663,7 +646,7 @@
                         <p id="drawerText">Click any grade in the table above to view specific evaluation details here.</p>
                     </div>
 
-                    <!-- Sticky Comparison Table -->
+                    <!-- Un-stuck Comparison Table Container -->
                     <div class="table-responsive">
                         <table class="comparison-table" id="comparisonTable">
                             <!-- Rendered by JavaScript -->
@@ -1091,25 +1074,28 @@
             table.innerHTML = html;
         }
 
-        function openSchoolDrawer(schoolFullName) {
-            activeSchoolName = schoolFullName;
-            const s = schools.find(item => item.fullName === schoolFullName);
-            if (!s) return;
+function openSchoolDrawer(schoolFullName) {
+    activeSchoolName = schoolFullName;
+    const s = schools.find(item => item.fullName === schoolFullName);
+    if (!s) return;
 
-            closeMetricDrawer();
-            closeDetailDrawer();
-            closeSchoolFilterDropdown();
+    closeMetricDrawer();
+    closeDetailDrawer();
+    closeSchoolFilterDropdown();
 
-            const drawer = document.getElementById('schoolDrawer');
-            const title = document.getElementById('schoolDrawerTitle');
-            const body = document.getElementById('schoolDrawerBody');
+    const drawer = document.getElementById('schoolDrawer');
+    const title = document.getElementById('schoolDrawerTitle');
+    const body = document.getElementById('schoolDrawerBody');
 
-            const rankData = currentCalculatedRankings.find(r => r.name === schoolFullName);
-            const rankDisplay = rankData ? `#${rankData.rank} of ${schools.length}` : 'Unranked';
-            const percentageDisplay = rankData ? `${rankData.score}%` : 'N/A';
+    // Automatically fetch the official full name from profilesData using the short code
+    const profileObj = profilesData[schoolFullName.toLowerCase()];
+    const officialName = (profileObj && profileObj.fullName) ? profileObj.fullName : schoolFullName;
 
-            title.innerHTML = `<span><i class="fas fa-university" style="margin-right: 8px;"></i>${s.fullName} Spotlight</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>`;
+    const rankData = currentCalculatedRankings.find(r => r.name === schoolFullName);
+    const rankDisplay = rankData ? `#${rankData.rank} of ${schools.length}` : 'Unranked';
+    const percentageDisplay = rankData ? `${rankData.score}%` : 'N/A';
 
+    title.innerHTML = `<span><i class="fas fa-university" style="margin-right: 8px;"></i>${officialName} Spotlight</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>`;
             let strengths = [], concerns = [];
             metricsList.forEach(m => {
                 let grade = s.grades[m.id] || 'C';
@@ -1328,6 +1314,7 @@
         function calculateRankings() {
             const gradeValues = { 'A': 10, 'B': 8, 'C': 6, 'D': 4, 'F': 2 };
             let totalWeight = 0;
+            metricsList.locals ||= [];
             metricsList.forEach(m => totalWeight += importanceMap[metricWeights[m.id] !== undefined ? metricWeights[m.id] : 3].weight);
 
             const results = schools.map(school => {
