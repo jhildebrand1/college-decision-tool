@@ -769,9 +769,7 @@
     </div>
 
     <script>
-        const sheetCsvUrl = "data.csv";
-        const metricsCsvUrl = "metrics.csv";
-        const profilesCsvUrl = "profiles.csv";
+        const jsonUrl = "college_data.json";
 
         let schools = [];
         let metricsList = [];
@@ -797,31 +795,65 @@
             4: { label: 'Dealbreaker', weight: 15 }
         };
 
-        function cleanMetricKey(rawKey) {
-            return rawKey.replace(/_Score|_Details|_score|_details/i, '').replace(/[\s_]+/g, '').toLowerCase();
-        }
-
-        async function loadCSVData() {
+        async function loadJSONData() {
             try {
-                const [dataRes, metricsRes, profilesRes] = await Promise.all([
-                    fetch(sheetCsvUrl),
-                    fetch(metricsCsvUrl).catch(() => null),
-                    fetch(profilesCsvUrl).catch(() => null)
-                ]);
+                const response = await fetch(jsonUrl);
+                if (!response.ok) throw new Error(`HTTP error loading college_data.json`);
+                const jsonData = await response.json();
+
+                // 1. Load metrics descriptions
+                metricsHelpMap = jsonData.metrics_descriptions || {};
                 
-                if (!dataRes.ok) throw new Error(`HTTP error loading data.csv`);
-                const csvText = await dataRes.text();
-                parseCSV(csvText);
+                // Extract unique metric keys from metrics_descriptions or first school grades
+                const metricKeys = Object.keys(metricsHelpMap);
+                metricsList = metricKeys.map(id => {
+                    if (metricWeights[id] === undefined) metricWeights[id] = 3;
+                    let formattedName = id === 'CLS' ? 'CLS' : id.charAt(0).toUpperCase() + id.slice(1).replace(/_/g, ' ');
+                    return { id: id, name: formattedName };
+                });
 
-                if (metricsRes && metricsRes.ok) {
-                    const metricsText = await metricsRes.text();
-                    parseMetricsCSV(metricsText);
-                }
+                // 2. Load schools and profiles data
+                schools = [];
+                profilesData = {};
 
-                if (profilesRes && profilesRes.ok) {
-                    const profilesText = await profilesRes.text();
-                    parseProfilesCSV(profilesText);
-                }
+                (jsonData.schools || []).forEach(item => {
+                    const schoolCode = item.school; // e.g. "UCSB"
+                    const location = item.location;
+                    const enrollment = item.enrollment;
+                    const grades = item.grades || {};
+                    const details = item.details || {};
+                    const prof = item.profile || {};
+
+                    const fullName = prof.full_name || schoolCode;
+
+                    schools.push({
+                        fullName: schoolCode, // Use school code as identifier in table
+                        displayName: fullName,
+                        location,
+                        enrollment,
+                        grades,
+                        details
+                    });
+
+                    profilesData[schoolCode.toLowerCase()] = {
+                        fullName: fullName,
+                        photo1: prof.photo_1,
+                        photo2: prof.photo_2,
+                        photo3: prof.photo_3,
+                        videoUrl: prof.video_url,
+                        topology: prof.topology,
+                        airport: prof.airport_distance,
+                        transit: prof.transit_options,
+                        vibe: prof.neighborhood_vibe,
+                        housing: prof.housing_status,
+                        medical: prof.medical_access,
+                        linkAdmissions: prof.link_admissions,
+                        linkBio: prof.link_bio_dept,
+                        linkOfficial: prof.link_official_site,
+                        schoolLogo: prof.school_logo,
+                        linkAppily: prof.link_appily
+                    };
+                });
 
                 populateSchoolDropdown();
                 renderSchoolFilterCheckboxes();
@@ -829,122 +861,12 @@
                 renderTable();
                 setupListeners();
             } catch (error) {
-                console.error('Error loading data:', error);
+                console.error('Error loading JSON data:', error);
                 const errorMsg = document.createElement('p');
                 errorMsg.style.cssText = 'color: red; margin-top: 20px; font-weight: bold;';
                 errorMsg.textContent = 'Could not load data: ' + error.message;
                 const content = document.querySelector('.content');
                 if (content) content.insertBefore(errorMsg, content.firstChild);
-            }
-        }
-
-        function parseCSVLine(text) {
-            let ret = [];
-            let inQuote = false;
-            let value = '';
-            
-            for (let i = 0; i < text.length; i++) {
-                let char = text[i];
-                if (char === '"') {
-                    if (inQuote && text[i + 1] === '"') {
-                        value += '"';
-                        i++; 
-                    } else {
-                        inQuote = !inQuote;
-                    }
-                } else if (char === ',' && !inQuote) {
-                    ret.push(value.trim());
-                    value = '';
-                } else {
-                    value += char;
-                }
-            }
-            ret.push(value.trim());
-            return ret;
-        }
-
-        function parseMetricsCSV(csvText) {
-            metricsHelpMap = {};
-            const lines = csvText.trim().split('\n');
-            if (lines.length < 2) return;
-
-            for (let i = 1; i < lines.length; i++) {
-                const values = parseCSVLine(lines[i]);
-                if (values[0] && values[1]) {
-                    const key = cleanMetricKey(values[0]);
-                    metricsHelpMap[key] = values[1];
-                }
-            }
-        }
-
-        function parseProfilesCSV(csvText) {
-            const lines = csvText.trim().split('\n');
-            if (lines.length < 2) return;
-
-            for (let i = 1; i < lines.length; i++) {
-                const values = parseCSVLine(lines[i]);
-                const schoolKey = values[0];
-                
-                if (schoolKey) {
-                    profilesData[schoolKey.toLowerCase()] = {
-                        fullName: values[1],
-                        photo1: values[2], photo2: values[3], photo3: values[4],
-                        videoUrl: values[5], topology: values[6], airport: values[7],
-                        transit: values[8], vibe: values[9], housing: values[10],
-                        medical: values[11], linkAdmissions: values[12], linkBio: values[13],
-                        linkOfficial: values[14], schoolLogo: values[15], linkAppily: values[16]
-                    };
-                }
-            }
-        }
-
-        function parseCSV(csvText) {
-            const lines = csvText.trim().split('\n');
-            if (lines.length < 2) throw new Error('Data is empty');
-            
-            const headers = parseCSVLine(lines[0]);
-            
-            const scoreIndices = {};
-            const detailIndices = {};
-            let nameIdx = -1;
-            let locationIdx = -1;
-            let enrollmentIdx = -1;
-
-            headers.forEach((header, idx) => {
-                if (header === 'School') nameIdx = idx;
-                if (header === 'Location') locationIdx = idx;
-                if (header === 'Enrollment') enrollmentIdx = idx;
-                if (header.includes('_Score')) {
-                    const metricId = header.replace('_Score', '').toLowerCase();
-                    scoreIndices[metricId] = idx;
-                } else if (header.includes('_Details')) {
-                    const metricId = header.replace('_Details', '').toLowerCase();
-                    detailIndices[metricId] = idx;
-                }
-            });
-            
-            metricsList = Object.keys(scoreIndices).map(id => {
-                if (metricWeights[id] === undefined) metricWeights[id] = 3;
-                let formattedName = id === 'cls' ? 'CLS' : id.charAt(0).toUpperCase() + id.slice(1).replace(/_/g, ' ');
-                return { id: id, name: formattedName };
-            });
-            
-            schools = [];
-            for (let i = 1; i < lines.length; i++) {
-                const values = parseCSVLine(lines[i]);
-                const fullName = nameIdx !== -1 ? values[nameIdx] : '';
-                if (!fullName) continue;
-                
-                const location = locationIdx !== -1 ? values[locationIdx] : 'Unknown';
-                const enrollment = enrollmentIdx !== -1 ? values[enrollmentIdx] : 'Unknown';
-
-                const grades = {};
-                const details = {};
-
-                Object.entries(scoreIndices).forEach(([metricId, idx]) => grades[metricId] = values[idx] || 'C');
-                Object.entries(detailIndices).forEach(([metricId, idx]) => details[metricId] = values[idx] || 'No details available.');
-                
-                schools.push({ fullName, location, enrollment, grades, details });
             }
         }
 
@@ -955,8 +877,7 @@
             schools.forEach(s => {
                 const opt = document.createElement('option');
                 opt.value = s.fullName;
-                const profileObj = profilesData[s.fullName.toLowerCase()];
-                opt.textContent = (profileObj && profileObj.fullName) ? profileObj.fullName : s.fullName;
+                opt.textContent = s.displayName;
                 select.appendChild(opt);
             });
             if (schools.length > 0) {
@@ -977,7 +898,7 @@
                 div.className = 'school-filter-item';
                 div.innerHTML = `
                     <input type="checkbox" id="filter-school-${safeId}" ${isChecked ? 'checked' : ''} onchange="toggleSchoolVisibility('${s.fullName.replace(/'/g, "\\'")}', this.checked)" style="cursor: pointer; width: 15px; height: 15px;">
-                    <label for="filter-school-${safeId}" style="cursor: pointer; flex: 1; user-select: none;">${s.fullName}</label>
+                    <label for="filter-school-${safeId}" style="cursor: pointer; flex: 1; user-select: none;">${s.displayName}</label>
                 `;
                 listContainer.appendChild(div);
             });
@@ -1096,7 +1017,7 @@
             const body = document.getElementById('schoolDrawerBody');
 
             const profileObj = profilesData[schoolFullName.toLowerCase()];
-            const officialName = (profileObj && profileObj.fullName) ? profileObj.fullName : schoolFullName;
+            const officialName = profileObj ? profileObj.fullName : s.displayName;
 
             const rankData = currentCalculatedRankings.find(r => r.name === schoolFullName);
             const rankDisplay = rankData ? `#${rankData.rank} of ${schools.length}` : 'Unranked';
@@ -1153,12 +1074,7 @@
 
             const select = document.getElementById('selectProfileSchool');
             if (select) {
-                for (let opt of select.options) {
-                    if (opt.text.toLowerCase() === schoolFullName.toLowerCase() || opt.value.toLowerCase() === schoolFullName.toLowerCase()) {
-                        select.value = opt.value;
-                        break;
-                    }
-                }
+                select.value = schoolFullName;
             }
 
             updateProfileInfo(schoolFullName);
@@ -1263,8 +1179,7 @@
             const m = metricsList.find(item => item.id === metricId);
             if (!m) return;
 
-            const key = cleanMetricKey(m.name);
-            const helpText = metricsHelpMap[key] || 'No metric description available.';
+            const helpText = metricsHelpMap[m.id] || metricsHelpMap[m.id.toLowerCase()] || 'No metric description available.';
             const currentWeightVal = metricWeights[m.id] !== undefined ? metricWeights[m.id] : 3;
             const isReversed = Boolean(metricReversals[m.id]);
 
@@ -1309,7 +1224,7 @@
 
             const drawer = document.getElementById('detailDrawer');
             const profileObj = profilesData[schoolName.toLowerCase()];
-            const officialName = (profileObj && profileObj.fullName) ? profileObj.fullName : schoolName;
+            const officialName = profileObj ? profileObj.fullName : schoolName;
 
             document.getElementById('drawerTitle').innerHTML = `<span>${officialName} — ${metricName} (Grade: ${grade})</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i>`;
             document.getElementById('drawerText').textContent = decodeURIComponent(encodedDetail);
@@ -1337,7 +1252,7 @@
                     score += (gradeValues[grade] || 6) * (totalWeight > 0 ? importanceMap[sliderVal].weight / totalWeight : 0);
                 }
                 if (dealbreakerFailed) score *= 0.2;
-                return { name: school.fullName, score: ((score / 10) * 100).toFixed(1), dealbreakerFailed };
+                return { name: school.fullName, displayName: school.displayName, score: ((score / 10) * 100).toFixed(1), dealbreakerFailed };
             }).sort((a, b) => b.score - a.score);
 
             currentCalculatedRankings = results.map((res, idx) => ({ rank: idx + 1, ...res }));
@@ -1355,7 +1270,7 @@
                 const warningBadge = res.dealbreakerFailed ? `<span style="font-size: 11px; background: #fce8e6; color: #c5221f; padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 8px;"><i class="fas fa-exclamation-triangle"></i> Dealbreaker Failed</span>` : '';
                 
                 const profileObj = profilesData[res.name.toLowerCase()];
-                const officialName = (profileObj && profileObj.fullName) ? profileObj.fullName : res.name;
+                const officialName = profileObj ? profileObj.fullName : res.displayName;
 
                 div.innerHTML = `<span class="ranking-position">${res.rank}</span>
                     <span class="ranking-school" style="cursor: pointer;" onclick="openSchoolDrawer('${res.name.replace(/'/g, "\\'")}')">${officialName} ${warningBadge} <i class="fas fa-info-circle" style="font-size: 12px; color: #0066cc; margin-left: 6px;"></i></span>
@@ -1382,7 +1297,7 @@
             if (schoolSelect) schoolSelect.addEventListener('change', function() { updateProfileInfo(this.value); });
         }
 
-        window.addEventListener('load', loadCSVData);
+        window.addEventListener('load', loadJSONData);
     </script>
 </body>
 </html>
