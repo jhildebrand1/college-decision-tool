@@ -22,6 +22,31 @@ def get_metric_keys(data):
         return list(data["schools"][0].get("grades", {}).keys())
     return ["Cost", "Difficulty", "Support", "Adjustment", "Home", "Social", "Environment", "Weather", "Biology", "CLS", "Spirit", "Happiness", "Admissions"]
 
+def show_editable_fields(data):
+    print("\n--- Editable Fields Reference Guide ---")
+    print("1. Root Fields:")
+    print("   - location")
+    print("   - enrollment")
+    
+    print("\n2. Profile Fields (under 'profile'):")
+    sample_prof = data["schools"][0]["profile"] if data.get("schools") else {
+        "full_name": "", "photo_1": "", "photo_2": "", "photo_3": "",
+        "video_url": "", "topology": "", "airport_distance": "", "transit_options": "",
+        "neighborhood_vibe": "", "housing_status": "", "medical_access": "",
+        "link_admissions": "", "link_bio_dept": "", "link_official_site": "",
+        "school_logo": "", "link_appily": ""
+    }
+    for key in sample_prof.keys():
+        print(f"   - profile.{key}")
+
+    print("\n3. Grade & Detail Metrics (replace <metric> with metric name, e.g., biology):")
+    metrics = get_metric_keys(data)
+    for m in metrics:
+        print(f"   - grades.{m}")
+        print(f"   - details.{m}")
+    print("\nExample usage: python script.py --school UCLA --field location --value \"Los Angeles, CA\"")
+    print("Example usage for metrics: python script.py --school UCLA --field grades.biology --value A")
+
 def add_school_interactive(data):
     print("\n--- Add New School (Interactive) ---")
     school_code = input("Enter School Code (e.g., UCLA): ").strip().upper()
@@ -143,14 +168,64 @@ def main():
     parser = argparse.ArgumentParser(description="Manage college data JSON.")
     parser.add_argument("--add", metavar="CODE", help="Quickly add a new school code with empty/default template.")
     parser.add_argument("--list", action="store_true", help="List all schools in the database.")
+    parser.add_argument("--fields", action="store_true", help="Display all editable fields and paths.")
+    parser.add_argument("--school", metavar="CODE", help="Specify school code to edit via command line.")
+    parser.add_argument("--field", metavar="PATH", help="Specify field path to update (e.g., location, profile.topology, grades.biology).")
+    parser.add_argument("--value", metavar="VAL", help="New value to assign to the specified field.")
     args = parser.parse_args()
 
     data = load_data()
+
+    if args.fields:
+        show_editable_fields(data)
+        return
 
     if args.list:
         print("\n--- Current Schools ---")
         for s in data.get("schools", []):
             print(f"- {s['school']}: {s.get('profile', {}).get('full_name', '')} ({s.get('location', 'No location')})")
+        return
+
+    if args.school and args.field and args.value is not None:
+        school_code = args.school.strip().upper()
+        target_school = None
+        for s in data["schools"]:
+            if s["school"].upper() == school_code:
+                target_school = s
+                break
+        
+        if not target_school:
+            print(f"Error: School '{school_code}' not found.")
+            return
+
+        path = args.field.strip()
+        val = args.value.strip()
+
+        # Handle dot notations (e.g., profile.topology, grades.biology, details.biology)
+        if path.startswith("profile."):
+            prof_key = path.split(".")[1]
+            if prof_key in target_school["profile"]:
+                target_school["profile"][prof_key] = val
+                save_data(data)
+                print(f"Updated profile.{prof_key} for {school_code} to: {val}")
+            else:
+                print(f"Error: Profile key '{prof_key}' does not exist. Use --fields to check valid fields.")
+        elif path.startswith("grades."):
+            grade_key = path.split(".")[1]
+            target_school.setdefault("grades", {})[grade_key] = val.upper()
+            save_data(data)
+            print(f"Updated grades.{grade_key} for {school_code} to: {val.upper()}")
+        elif path.startswith("details."):
+            detail_key = path.split(".")[1]
+            target_school.setdefault("details", {})[detail_key] = val
+            save_data(data)
+            print(f"Updated details.{detail_key} for {school_code} to: {val}")
+        elif path in ["location", "enrollment"]:
+            target_school[path] = val
+            save_data(data)
+            print(f"Updated {path} for {school_code} to: {val}")
+        else:
+            print(f"Error: Unknown field path '{path}'. Run with --fields to see available fields.")
         return
 
     if args.add:
