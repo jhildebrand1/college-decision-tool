@@ -48,7 +48,7 @@
         "Weather": "A",
         "Biology": "A",
         "CLS": "D",
-        "Spirit": "C",
+        "Spirit": "D",
         "Happiness": "B",
         "Admissions": "F"
       },
@@ -63,7 +63,7 @@
         "Weather": "~220 nice days. Mild coastal sun, minimal bad days",
         "Biology": "Top-tier R1 research; world-class molecular, cellular, and marine biology labs with strong West Coast biotech placement.",
         "CLS": "Pure theoretical bio; lacks clinical electives like Hematology and Quant Chem.",
-        "Spirit": "Solid Gaucho pride and soccer culture, but lacks big-time D1 football and stadium tailgating.",
+        "Spirit": "No football team, but partially salvaged by a surprisingly massive, rowdy D1 men soccer culture that pulls thousands of students to Harder Stadium.",
         "Happiness": "86 - High student satisfaction, beach setting, and strong campus community.",
         "Admissions": "Hard (F Grade): Selective UC system (~30% acceptance rate) heavily caps unweighted GPA and lacks test options, placing her UN GPA below the median admitted tier."
       }
@@ -260,7 +260,7 @@
         "Weather": "C",
         "Biology": "B",
         "CLS": "B",
-        "Spirit": "B",
+        "Spirit": "C",
         "Happiness": "B",
         "Admissions": "A"
       },
@@ -275,7 +275,7 @@
         "Weather": "~155 nice days. Cold winters and high plains wind offset the sun",
         "Biology": "Legendary vet-med, microbiology, and animal science programs; exceptional hands-on labs across the Front Range.",
         "CLS": "Microbiology BS has strong clinical tracks and a direct feeder partnership with CCMLS.",
-        "Spirit": "Loud, loyal Ram pride with a great modern on-campus stadium, though not SEC-level madness.",
+        "Spirit": "Loud Ram pride with a modern on-campus stadium, but regional and lacks the massive, all-consuming SEC game-day culture.",
         "Happiness": "89 - Excellent college town environment, high student well-being, and outdoor access.",
         "Admissions": "Easy (A Grade): Highly accessible (~90% acceptance rate); admissions criteria readily admit students clearing a 3.0+ GPA threshold."
       }
@@ -366,7 +366,7 @@
         "Weather": "D",
         "Biology": "B",
         "CLS": "A",
-        "Spirit": "B",
+        "Spirit": "C",
         "Happiness": "B",
         "Admissions": "B"
       },
@@ -381,7 +381,7 @@
         "Weather": "~105 nice days. Relentless PNW grey and rain",
         "Biology": "Elite ag/forestry research with massive federal grants; top-tier environmental biology and biochemistry labs.",
         "CLS": "Features a dedicated BioHealth Sciences major with an official Pre-Clinical Lab Science option.",
-        "Spirit": "Deep Beaver pride and loyal Reser Stadium culture, though slightly overshadowed regionally by UO.",
+        "Spirit": "Loyal Reser Stadium culture and proud Beaver backing, but quiet nationally and overshadowed by larger regional powerhouses.",
         "Happiness": "82 - High marks for campus safety, friendly community, and outdoor culture.",
         "Admissions": "Target (B Grade): Accessible admissions (~78% acceptance rate); holistic but accessible admissions where her 3.5+ W GPA and AP background put her in a great spot."
       }
@@ -419,7 +419,7 @@
         "Weather": "A",
         "Biology": "A",
         "CLS": "A",
-        "Spirit": "B",
+        "Spirit": "C",
         "Happiness": "B",
         "Admissions": "F"
       },
@@ -434,7 +434,7 @@
         "Weather": "~250 nice days. Peak SoCal perfection, minimal bad days",
         "Biology": "Leverages San Diego’s top-3 global biotech hub (Torrey Pines Mesa) for unmatched local interning and lab access.",
         "CLS": "Microbiology BS offers an explicit Clinical Lab Science emphasis including Hematology.",
-        "Spirit": "Strong Aztec basketball energy and new Snapdragon Stadium tailgating, but competes with SD lifestyle.",
+        "Spirit": "Good basketball energy and new Snapdragon Stadium tailgating, but heavily diluted by the broader San Diego lifestyle.",
         "Happiness": "84 - Strong local lifestyle, high campus satisfaction, and great climate.",
         "Admissions": "Hard (F Grade): Highly impacted (~36% acceptance rate); CSUs use a strict numerical algorithm weighted on raw GPA without essays; impacted Bio major keeps entry tight."
       }
@@ -487,7 +487,7 @@
         "Weather": "~150 nice days. Cold winters plus inversions hurt air quality badly",
         "Biology": "World-renowned genetics and biochemistry labs with direct ties to U of U Health and Intermountain West biotech.",
         "CLS": "Features a direct, NAACLS-accredited BS in Medical Laboratory Science with clinical rotations.",
-        "Spirit": "Loud, passionate Utes fanbase and elite football atmosphere in Rice-Eccles, backed by deep regional loyalty.",
+        "Spirit": "Passionate Utes fanbase and elite football atmosphere in Rice-Eccles, though slightly more regional compared to elite SEC flagships.",
         "Happiness": "87 - Excellent campus facilities, mountain backdrop, and high overall student life.",
         "Admissions": "Target (B Grade): Accessible admissions (~87% acceptance rate); high acceptance rate with broad admissions criteria where her GPA profile is well above average."
       }
