@@ -39,13 +39,12 @@ def show_editable_fields(data):
     for key in sample_prof.keys():
         print(f"   - profile.{key}")
 
-    print("\n3. Grade & Detail Metrics (replace <metric> with metric name, e.g., biology):")
+    print("\n3. Grade & Detail Metrics (replace <metric> with metric name):")
     metrics = get_metric_keys(data)
     for m in metrics:
         print(f"   - grades.{m}")
         print(f"   - details.{m}")
-    print("\nExample usage: python script.py --school UCLA --field location --value \"Los Angeles, CA\"")
-    print("Example usage for metrics: python script.py --school UCLA --field grades.biology --value A")
+    print("\nExample usage: python manage_colleges.py --school UCLA --field location --value \"Los Angeles, CA\"")
 
 def add_school_interactive(data):
     print("\n--- Add New School (Interactive) ---")
@@ -89,13 +88,6 @@ def add_school_interactive(data):
         "school_logo": input("  School Logo URL: ").strip(),
         "link_appily": input("  Appily Link: ").strip()
     }
-
-    missing = []
-    if not full_name: missing.append("full_name")
-    if not location: missing.append("location")
-    if not profile["school_logo"]: missing.append("school_logo")
-    if missing:
-        print(f"\n⚠️ WARNING: The following fields were left empty: {', '.join(missing)}")
 
     new_school = {
         "school": school_code,
@@ -156,22 +148,17 @@ def edit_school_interactive(data):
         new_d = input(f"  [{m}] Detail [{curr_d[:30]}...]: ").strip()
         if new_d: school["details"][m] = new_d
 
-    missing = []
-    if not school.get("location"): missing.append("location")
-    if not prof.get("school_logo"): missing.append("school_logo")
-    if missing:
-        print(f"\n⚠️ WARNING: The following key fields are still empty: {', '.join(missing)}")
-
     save_data(data)
 
 def main():
     parser = argparse.ArgumentParser(description="Manage college data JSON.")
     parser.add_argument("--add", metavar="CODE", help="Quickly add a new school code with empty/default template.")
-    parser.add_argument("--list", action="store_true", help="List all schools in the database.")
+    parser.add_argument("--list", action="store_true", help="List all schools in the database (or combine with --school or --field to query).")
+    parser.add_argument("--metrics", action="store_true", help="List all evaluation metrics currently configured.")
     parser.add_argument("--fields", action="store_true", help="Display all editable fields and paths.")
-    parser.add_argument("--school", metavar="CODE", help="Specify school code to edit via command line.")
-    parser.add_argument("--field", metavar="PATH", help="Specify field path to update (e.g., location, profile.topology, grades.biology).")
-    parser.add_argument("--value", metavar="VAL", help="New value to assign to the specified field.")
+    parser.add_argument("--school", metavar="CODE", help="Specify school code to view/edit.")
+    parser.add_argument("--field", metavar="PATH", help="Specify field path to view/update (e.g., location, profile.topology, grades.biology).")
+    parser.add_argument("--value", metavar="VAL", help="New value to assign when updating a field.")
     args = parser.parse_args()
 
     data = load_data()
@@ -180,12 +167,66 @@ def main():
         show_editable_fields(data)
         return
 
+    if args.metrics:
+        print("\n--- Current Evaluation Metrics ---")
+        metrics = get_metric_keys(data)
+        for m in metrics:
+            desc = data.get("metrics_descriptions", {}).get(m, "No description found.")
+            print(f"- {m}: {desc}")
+        return
+
+    # QUERY MODE: python manage_colleges.py --list --school <name>
+    if args.list and args.school and not args.field:
+        school_code = args.school.strip().upper()
+        target_school = None
+        for s in data["schools"]:
+            if s["school"].upper() == school_code or s.get("profile", {}).get("full_name", "").upper() == school_code:
+                target_school = s
+                break
+        
+        if not target_school:
+            print(f"Error: School '{args.school}' not found.")
+            return
+
+        print(f"\n--- Stats for {target_school['school']} ({target_school.get('profile', {}).get('full_name', '')}) ---")
+        print(json.dumps(target_school, indent=2, ensure_ascii=False))
+        return
+
+    # QUERY MODE: python manage_colleges.py --list --field <path>
+    if args.list and args.field and not args.school:
+        path = args.field.strip()
+        print(f"\n--- Querying Field: '{path}' across all schools ---")
+        
+        for s in data["schools"]:
+            school_name = s['school']
+            val = None
+            
+            if path.startswith("profile."):
+                prof_key = path.split(".")[1]
+                val = s.get("profile", {}).get(prof_key, "N/A")
+            elif path.startswith("grades."):
+                grade_key = path.split(".")[1]
+                val = s.get("grades", {}).get(grade_key, "N/A")
+            elif path.startswith("details."):
+                detail_key = path.split(".")[1]
+                val = s.get("details", {}).get(detail_key, "N/A")
+            elif path in ["location", "enrollment", "school"]:
+                val = s.get(path, "N/A")
+            else:
+                print(f"Error: Unknown field path '{path}'. Run with --fields to see available paths.")
+                return
+            
+            print(f"  {school_name}: {val}")
+        return
+
+    # GENERAL LIST MODE: python manage_colleges.py --list
     if args.list:
         print("\n--- Current Schools ---")
         for s in data.get("schools", []):
             print(f"- {s['school']}: {s.get('profile', {}).get('full_name', '')} ({s.get('location', 'No location')})")
         return
 
+    # UPDATE MODE: python manage_colleges.py --school <CODE> --field <PATH> --value <VAL>
     if args.school and args.field and args.value is not None:
         school_code = args.school.strip().upper()
         target_school = None
@@ -201,7 +242,6 @@ def main():
         path = args.field.strip()
         val = args.value.strip()
 
-        # Handle dot notations (e.g., profile.topology, grades.biology, details.biology)
         if path.startswith("profile."):
             prof_key = path.split(".")[1]
             if prof_key in target_school["profile"]:
@@ -209,7 +249,7 @@ def main():
                 save_data(data)
                 print(f"Updated profile.{prof_key} for {school_code} to: {val}")
             else:
-                print(f"Error: Profile key '{prof_key}' does not exist. Use --fields to check valid fields.")
+                print(f"Error: Profile key '{prof_key}' does not exist.")
         elif path.startswith("grades."):
             grade_key = path.split(".")[1]
             target_school.setdefault("grades", {})[grade_key] = val.upper()
@@ -256,7 +296,7 @@ def main():
         }
         data["schools"].append(new_school)
         save_data(data)
-        print(f"⚠️ WARNING: School '{school_code}' added with empty/default template fields. Remember to fill them in!")
+        print(f"⚠️ WARNING: School '{school_code}' added with empty template fields.")
         return
 
     # Interactive menu if no CLI args passed
@@ -265,9 +305,10 @@ def main():
         print("1. Add New School (Interactive)")
         print("2. Edit Existing School")
         print("3. List All Schools")
-        print("4. Exit")
+        print("4. List All Metrics")
+        print("5. Exit")
         
-        choice = input("Enter choice (1-4): ").strip()
+        choice = input("Enter choice (1-5): ").strip()
         data = load_data()
 
         if choice == "1":
@@ -279,10 +320,16 @@ def main():
             for s in data.get("schools", []):
                 print(f"- {s['school']}: {s.get('profile', {}).get('full_name', '')} ({s.get('location', 'No location')})")
         elif choice == "4":
+            print("\n--- Current Evaluation Metrics ---")
+            metrics = get_metric_keys(data)
+            for m in metrics:
+                desc = data.get("metrics_descriptions", {}).get(m, "No description found.")
+                print(f"- {m}: {desc}")
+        elif choice == "5":
             print("Exiting. Goodbye!")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, 3, or 4.")
+            print("Invalid choice. Please enter 1, 2, 3, 4, or 5.")
 
 if __name__ == "__main__":
     main()
