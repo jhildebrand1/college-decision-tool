@@ -1,18 +1,18 @@
 {
   "metrics_descriptions": {
     "Cost": "Breakdown of residency status (In-State, Out-of-State, WUE), tuition tier, and expected financial aid impact.",
-    "Difficulty": "Selectivity and admission criteria (acceptance rate, GPA profile, and institutional rigor).",
     "Support": "Availability and quality of academic advising, tutoring centers, freshman retention networks, and student success resources.",
-    "Adjustment": "Cultural transition and similarity to Southern California (lifestyle shift, regional dynamics, student body demographic balance).",
-    "Home": "Travel logistics back to San Diego (direct flight availability, drive times, airport proximity, and travel costs).",
     "Social": "Weekend party environment, Greek life prevalence, off-campus house/bar scenes, and overall nightlife density.",
-    "Environment": "Proximity to outdoor recreation (beaches, trails, ski resorts, rivers) and access to active student lifestyle amenities.",
     "Weather": "Count of pleasant/comfortable outdoor days during the core academic school year (Sept–May), excluding extreme heat, snow, or heavy rain.",
     "Biology": "Institutional research funding (NIH/NSF), lab access, pre-health tracks, and proximity to biotech corridors.",
     "CLS": "Alignment of biology curriculum with California Clinical Laboratory Scientist (CLS) prerequisites (e.g., Hematology, Quant Chem) and clinical rotation pipelines.",
     "Spirit": "Game day culture, D1 sports tradition, stadium energy, and collective student body pride.",
     "Happiness": "Student quality-of-life rating based on campus safety, housing, food, community feel, and day-to-day satisfaction (anchored to Princeton Review QoL surveys).",
-    "Admissions": "Admissions: Selectivity, acceptance rates, test score profiles, and overall competitiveness of the admissions process."
+    "Admissions": "Admissions: Selectivity, acceptance rates, test score profiles, and overall competitiveness of the admissions process.",
+    "CultureShock": "Cultural transition and similarity to Southern California (lifestyle shift, regional dynamics, student body demographic balance).",
+    "Outdoors": "Proximity to outdoor recreation (beaches, trails, ski resorts, rivers) and access to active student lifestyle amenities.",
+    "GoHome": "Travel logistics back to San Diego (direct flight availability, drive times, airport proximity, and travel costs).",
+    "Safety": "Campus security infrastructure, Clery Act crime statistics, surrounding city crime rates, and off-campus environmental safety."
   },
   "schools": [
     {
@@ -39,33 +39,33 @@
       },
       "grades": {
         "Cost": "A",
-        "Difficulty": "F",
-        "Support": "C",
-        "Adjustment": "A",
-        "Home": "A",
+        "Support": "A",
         "Social": "A",
-        "Environment": "A",
         "Weather": "A",
         "Biology": "A",
         "CLS": "D",
         "Spirit": "D",
         "Happiness": "B",
-        "Admissions": "F"
+        "Admissions": "F",
+        "CultureShock": "A",
+        "Outdoors": "A",
+        "GoHome": "A",
+        "Safety": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$43,937 (In-State CA). Final cost is largely fixed unless eligible for need-based aid.",
-        "Difficulty": "Strict Pre-Bio GPA gatekeeping, brutal weed-out curves in Gen/Org Chem, and fast 10-week quarter pace.",
-        "Support": "Fast quarter pace and overcrowded advising force high self-advocacy; help centers exist but are heavily TA-driven.",
-        "Adjustment": "Identical coastal SoCal beach culture (Isla Vista), outdoorsy lifestyle, and easy drive/flight home.",
-        "Home": "Easy: 4hr drive (~$40 gas) or 3hr flight (~$135).",
+        "Support": "High-performing infrastructure featuring a 93% freshman retention rate and an 83% graduation rate, reflecting exceptionally strong student success systems.",
         "Social": "Legendary Isla Vista street and house party culture right on the ocean.",
-        "Environment": "Unmatched daily access to coastal surfing, beach cruisers, and an active ocean lifestyle.",
         "Weather": "~220 nice days. Mild coastal sun, minimal bad days",
         "Biology": "Top-tier R1 research; world-class molecular, cellular, and marine biology labs with strong West Coast biotech placement.",
         "CLS": "Pure theoretical bio; lacks clinical electives like Hematology and Quant Chem.",
         "Spirit": "No football team, but partially salvaged by a surprisingly massive, rowdy D1 men soccer culture that pulls thousands of students to Harder Stadium.",
         "Happiness": "86 - High student satisfaction, beach setting, and strong campus community.",
-        "Admissions": "Hard: ~30% acceptance rate with heavy emphasis on unweighted GPA. Applicants should expect to have above 3.8 unweighted GPA to be competitive."
+        "Admissions": "Hard: ~30% acceptance rate with heavy emphasis on unweighted GPA. Applicants should expect to have above 3.8 unweighted GPA to be competitive.",
+        "CultureShock": "Identical coastal SoCal beach culture (Isla Vista), outdoorsy lifestyle, and easy drive/flight home.",
+        "Outdoors": "Unmatched daily access to coastal surfing, beach cruisers, and an active ocean lifestyle.",
+        "GoHome": "Easy: 4hr drive (~$40 gas) or 3hr flight (~$135).",
+        "Safety": "Isolated, heavily controlled coastal campus bubble with very low local crime rates."
       }
     },
     {
@@ -92,33 +92,33 @@
       },
       "grades": {
         "Cost": "D",
-        "Difficulty": "C",
-        "Support": "B",
-        "Adjustment": "B",
-        "Home": "B",
-        "Social": "B",
-        "Environment": "A",
+        "Support": "A",
+        "Social": "A",
         "Weather": "C",
         "Biology": "A",
         "CLS": "C",
         "Spirit": "B",
         "Happiness": "A",
-        "Admissions": "B"
+        "Admissions": "B",
+        "CultureShock": "B",
+        "Outdoors": "A",
+        "GoHome": "B",
+        "Safety": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$64,452 - $68,440 (Out-of-State). Does not participate in WUE, but offers automatic non-resident merit scholarships based on GPA. Cost could lower slightly.",
-        "Difficulty": "Rigorous Bio/Chem screening courses; strong R1 resources but requires heavy self-advocacy to get help.",
-        "Support": "Good Science Learning Center tutoring and peer support hubs, though large lectures require self-driven outreach.",
-        "Adjustment": "High sun and huge SoCal outdoor match (hiking/skiing); very smooth transition despite altitude.",
-        "Home": "Easy: 5hr trip via 2.5hr flight + direct bus ($70-$130).",
+        "Support": "Strong student retention engine with an 89% retention rate and a 74% graduation rate, ensuring reliable institutional support.",
         "Social": "Lively Pearl Street and The Hill, but less formal Greek dominance than the SEC.",
-        "Environment": "World-class access for mountain biking, climbing the Flatirons, and weekend ski trips.",
         "Weather": "~155 nice days. Cold snowy winters offset the crisp sunny days",
         "Biology": "BioFrontiers Institute powerhouse; deep federal funding and direct pipelines into the Boulder-Denver biotech/medical device hub.",
         "CLS": "Heavy research bio; missing clinical electives; requires external post-grad prereqs.",
         "Spirit": "Passionate Folsom Field crowd and prime Big 12 atmosphere, but sports dont totally rule campus life.",
         "Happiness": "93 - Outstanding outdoor lifestyle, high student happiness, and campus amenities.",
-        "Admissions": "Target: Moderate competitiveness (~80% acceptance rate); values AP rigor and personal essays heavily."
+        "Admissions": "Target: Moderate competitiveness (~80% acceptance rate); values AP rigor and personal essays heavily.",
+        "CultureShock": "High sun and huge SoCal outdoor match (hiking/skiing); very smooth transition despite altitude.",
+        "Outdoors": "World-class access for mountain biking, climbing the Flatirons, and weekend ski trips.",
+        "GoHome": "Easy: 5hr trip via 2.5hr flight + direct bus ($70-$130).",
+        "Safety": "Generally safe campus, though standard college-town property crime and party-area dynamics exist."
       }
     },
     {
@@ -145,33 +145,33 @@
       },
       "grades": {
         "Cost": "D",
-        "Difficulty": "C",
         "Support": "B",
-        "Adjustment": "A",
-        "Home": "B",
         "Social": "A",
-        "Environment": "C",
         "Weather": "B",
         "Biology": "B",
         "CLS": "B",
-        "Spirit": "A",
+        "Spirit": "B",
         "Happiness": "B",
-        "Admissions": "A"
+        "Admissions": "A",
+        "CultureShock": "A",
+        "Outdoors": "C",
+        "GoHome": "B",
+        "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$65,900 - $67,770 (Out-of-State). Offers the Arizona Excellence Award ($6k-$18k/yr) for non-residents based on GPA. Cost could lower.",
-        "Difficulty": "Massive intro lecture halls and self-driven environment; great research labs if you seek them out.",
-        "Support": "Strong \"Think Tank\" tutoring network and Pre-Health advising, though massive intro halls require student initiative.",
-        "Adjustment": "Desert sun, palm trees, and massive California student population; seamless cultural transition.",
-        "Home": "Moderate: 3.5hr trip via 1.25hr flight + Uber ($175-$275).",
+        "Support": "Solid standard public performance showing an 83% retention rate and a 66% graduation rate, supported by standard large-university frameworks.",
         "Social": "Massive Greek life, pool parties, and a wild bar scene on Fourth Ave.",
-        "Environment": "Great desert hiking and stargazing, but heavily landlocked and extremely hot.",
         "Weather": "~175 nice days. Lovely winters but brutal Jun-Sep heat (110F+) penalized",
         "Biology": "BIO5 Institute heavy-hitter; exceptional interdisciplinary labs, pre-health tracks, and growing AZ bioscience ties.",
         "CLS": "Strong Physiology/Med Bio tracks; covers core chem/micro, but no direct main-campus MLS BS.",
         "Spirit": "Rivalry-fueled Wildcat sports culture; massive basketball tradition and rowdy football tailgates.",
         "Happiness": "85 - Great weather, active campus social life, and high student satisfaction.",
-        "Admissions": "Easy (A Grade): Accessible admissions (~86% acceptance rate); grid/index-based admissions heavily driven by core GPA requirements, making entry practically assured."
+        "Admissions": "Easy (A Grade): Accessible admissions (~86% acceptance rate); grid/index-based admissions heavily driven by core GPA requirements, making entry practically assured.",
+        "CultureShock": "Desert sun, palm trees, and massive California student population; seamless cultural transition.",
+        "Outdoors": "Great desert hiking and stargazing, but heavily landlocked and extremely hot.",
+        "GoHome": "Moderate: 3.5hr trip via 1.25hr flight + Uber ($175-$275).",
+        "Safety": "Tucson's urban proximity and regional border-city property stats pull down off-campus safety indexes."
       }
     },
     {
@@ -198,33 +198,33 @@
       },
       "grades": {
         "Cost": "C",
-        "Difficulty": "B",
-        "Support": "A",
-        "Adjustment": "A",
-        "Home": "A",
+        "Support": "B",
         "Social": "A",
-        "Environment": "C",
         "Weather": "C",
         "Biology": "B",
         "CLS": "A",
-        "Spirit": "A",
+        "Spirit": "B",
         "Happiness": "B",
-        "Admissions": "A"
+        "Admissions": "A",
+        "CultureShock": "A",
+        "Outdoors": "C",
+        "GoHome": "A",
+        "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$55,091 - $57,000 (Out-of-State). Tempe main campus does NOT offer WUE, but provides generous New American University merit scholarships based on GPA.",
-        "Difficulty": "Early-warning tracking tech, 24/7 tutoring, and structured SI sessions keep large STEM classes manageable.",
-        "Support": "Industry-leading eAdvising tech with automated early-warning flags, 24/7 tutoring, and proactive SI study sessions.",
-        "Adjustment": "Sunny year-round, giant SoCal transplant crowd, and familiar desert/coastal lifestyle blend.",
-        "Home": "Easy: 5.5hr drive (~$55 gas) or 3.5hr trip via 1.25hr flight ($40-$80).",
+        "Support": "Modern large-scale support framework maintaining an 86% retention rate and a 58% graduation rate amidst high enrollment volume.",
         "Social": "The ultimate nightlife scale: Mill Ave, massive concerts, and huge Greek presence.",
-        "Environment": "Highly urbanized; great city amenities but requires driving out of the metro for real nature escapes.",
         "Weather": "~150 nice days. Phoenix heat island makes bad days worse than Tucson",
         "Biology": "Biodesign Institute engine; cutting-edge facilities and strong health-tech pipelines in the Phoenix metro.",
         "CLS": "Offers a direct Medical Laboratory Science (BAS) degree with NAACLS-aligned clinical coursework.",
         "Spirit": "Massive Sun Devil athletics presence; loud Big 12 game days and major campus-wide spirit.",
         "Happiness": "85 - High campus energy, modern facilities, and top-tier student recreation.",
-        "Admissions": "Easy: ~90% acceptance rate; strict assured-admissions criteria based on GPA/test scores."
+        "Admissions": "Easy: ~90% acceptance rate; strict assured-admissions criteria based on GPA/test scores.",
+        "CultureShock": "Sunny year-round, giant SoCal transplant crowd, and familiar desert/coastal lifestyle blend.",
+        "Outdoors": "Highly urbanized; great city amenities but requires driving out of the metro for real nature escapes.",
+        "GoHome": "Easy: 5.5hr drive (~$55 gas) or 3.5hr trip via 1.25hr flight ($40-$80).",
+        "Safety": "Sprawling urban Phoenix and Tempe metro footprint leads to higher volume of surrounding property crime."
       }
     },
     {
@@ -251,33 +251,33 @@
       },
       "grades": {
         "Cost": "B",
-        "Difficulty": "A",
-        "Support": "A",
-        "Adjustment": "B",
-        "Home": "C",
-        "Social": "C",
-        "Environment": "A",
+        "Support": "B",
+        "Social": "B",
         "Weather": "C",
         "Biology": "B",
         "CLS": "B",
         "Spirit": "C",
         "Happiness": "B",
-        "Admissions": "A"
+        "Admissions": "A",
+        "CultureShock": "B",
+        "Outdoors": "A",
+        "GoHome": "C",
+        "Safety": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$50,000 - $53,294 (Out-of-State). Participates in WUE (3.2+ GPA required). High likelihood of cost lowering.",
-        "Difficulty": "Premier vet/life-science teaching focus; peer mentoring and collaborative labs minimize weed-out stress.",
-        "Support": "Dedicated STEM peer-mentoring, highly accessible faculty, and learning communities built around undergrad retention.",
-        "Adjustment": "Great laid-back outdoor culture; feels slightly more local/traditional Colorado than Boulder.",
-        "Home": "Moderate: 6hr trip via 2.5hr flight + shuttle ($115-$175).",
+        "Support": "Reliable college-town support systems yielding an 85% freshman retention rate and a 69% graduation rate.",
         "Social": "Laid-back brewery and live music town; missing the massive blowout party reputation.",
-        "Environment": "Immediate access to Horsetooth Reservoir, Rocky Mountain trails, and outdoor recreation.",
         "Weather": "~155 nice days. Cold winters and high plains wind offset the sun",
         "Biology": "Legendary vet-med, microbiology, and animal science programs; exceptional hands-on labs across the Front Range.",
         "CLS": "Microbiology BS has strong clinical tracks and a direct feeder partnership with CCMLS.",
         "Spirit": "Loud Ram pride with a modern on-campus stadium, but regional and lacks the massive, all-consuming SEC game-day culture.",
         "Happiness": "89 - Excellent college town environment, high student well-being, and outdoor access.",
-        "Admissions": "Easy: Highly accessible ~90% acceptance rate; admissions criteria readily admit students clearing a 3.0+ GPA threshold."
+        "Admissions": "Easy: Highly accessible ~90% acceptance rate; admissions criteria readily admit students clearing a 3.0+ GPA threshold.",
+        "CultureShock": "Great laid-back outdoor culture; feels slightly more local/traditional Colorado than Boulder.",
+        "Outdoors": "Immediate access to Horsetooth Reservoir, Rocky Mountain trails, and outdoor recreation.",
+        "GoHome": "Moderate: 6hr trip via 2.5hr flight + shuttle ($115-$175).",
+        "Safety": "Fort Collins consistently ranks among the safest mid-sized cities and campuses in the country."
       }
     },
     {
@@ -304,33 +304,33 @@
       },
       "grades": {
         "Cost": "C",
-        "Difficulty": "A",
         "Support": "A",
-        "Adjustment": "D",
-        "Home": "D",
         "Social": "A",
-        "Environment": "D",
         "Weather": "D",
         "Biology": "C",
         "CLS": "B",
         "Spirit": "A",
         "Happiness": "B",
-        "Admissions": "D"
+        "Admissions": "D",
+        "CultureShock": "D",
+        "Outdoors": "C",
+        "GoHome": "D",
+        "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$55,800 (Out-of-State). Offers aggressive non-resident merit scholarships for high GPAs that can lower out-of-state tuition close to in-state rates.",
-        "Difficulty": "Nationally top-ranked advising network with structured Supplemental Instruction (SI) in tough sciences.",
-        "Support": "Nationally top-ranked Student Success Center with extensive Supplemental Instruction (SI) and hands-on academic coaching.",
-        "Adjustment": "Significant shift to SEC Greek life, traditional Southern pacing, and a completely different social ecosystem.",
-        "Home": "Hard: 8+hr trip via multi-leg flights; expensive ($275-$475+).",
+        "Support": "Elite flagship infrastructure backed by a 92% retention rate and a 79% graduation rate, indicating strong student engagement.",
         "Social": "Elite SEC Greek life and chaotic Five Points bar scene right off campus.",
-        "Environment": "Landlocked with heavy humidity; outdoor recreation is highly limited compared to the West Coast.",
         "Weather": "~130 nice days. Humid muggy summers drag the score down hard",
         "Biology": "Solid pre-med tracks and regional hospital networks, but lacks a dense local corporate biotech corridor.",
         "CLS": "Solid pre-med/bio curriculum; easily covers core prereqs with in-state clinical pipelines.",
         "Spirit": "Elite SEC football religion; iconic Five Points tailgating and intense, stadium-shaking spirit.",
         "Happiness": "88 - Deep SEC campus pride, active student body, and vibrant campus life.",
-        "Admissions": "Hard: Competitive review with ~57% acceptance rate; holistic review process that rewards AP coursework and strong essay writing."
+        "Admissions": "Hard: Competitive review with ~57% acceptance rate; holistic review process that rewards AP coursework and strong essay writing.",
+        "CultureShock": "Significant shift to SEC Greek life, traditional Southern pacing, and a completely different social ecosystem.",
+        "Outdoors": "River systems and parklands are about 30-45 minutes away in flat midlands terrain.",
+        "GoHome": "Hard: 8+hr trip via multi-leg flights; expensive ($275-$475+).",
+        "Safety": "Downtown Columbia setting requires street smarts, sitting right on the border of standard urban safety risks."
       }
     },
     {
@@ -357,33 +357,33 @@
       },
       "grades": {
         "Cost": "C",
-        "Difficulty": "A",
-        "Support": "A",
-        "Adjustment": "B",
-        "Home": "C",
-        "Social": "D",
-        "Environment": "B",
+        "Support": "B",
+        "Social": "B",
         "Weather": "D",
         "Biology": "B",
         "CLS": "A",
-        "Spirit": "C",
+        "Spirit": "B",
         "Happiness": "B",
-        "Admissions": "B"
+        "Admissions": "B",
+        "CultureShock": "B",
+        "Outdoors": "B",
+        "GoHome": "C",
+        "Safety": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$58,668 (Out-of-State). Participates in WUE based on high school GPA. High likelihood of cost lowering.",
-        "Difficulty": "Dedicated Science Success Center tutoring and early paid research access (URSA-Engage) drive high retention.",
-        "Support": "Science Success Center offers dedicated STEM tutoring and early paid research mentorship (URSA-Engage).",
-        "Adjustment": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
-        "Home": "Hard: 6.5hr trip via 2.5hr flight + long shuttle ($170-$210).",
+        "Support": "Functional, steady support infrastructure anchored by an 83% retention rate and a 67% graduation rate.",
         "Social": "Quiet, subdued campus nightlife; mostly smaller house parties and local pubs.",
-        "Environment": "Great access to the Cascades and coast, but persistent rain limits daily outdoor consistency.",
         "Weather": "~105 nice days. Relentless PNW grey and rain",
         "Biology": "Elite ag/forestry research with massive federal grants; top-tier environmental biology and biochemistry labs.",
         "CLS": "Features a dedicated BioHealth Sciences major with an official Pre-Clinical Lab Science option.",
         "Spirit": "Loyal Reser Stadium culture and proud Beaver backing, but quiet nationally and overshadowed by larger regional powerhouses.",
         "Happiness": "82 - High marks for campus safety, friendly community, and outdoor culture.",
-        "Admissions": "Target: Accessible admissions with ~78% acceptance rate; holistic but admissions where APs and essay is counted. Admitted students have weighted GPAs between 3.5–3.8"
+        "Admissions": "Target: Accessible admissions with ~78% acceptance rate; holistic but admissions where APs and essay is counted. Admitted students have weighted GPAs between 3.5–3.8",
+        "CultureShock": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
+        "Outdoors": "Great access to the Cascades and coast, but persistent rain limits daily outdoor consistency.",
+        "GoHome": "Hard: 6.5hr trip via 2.5hr flight + long shuttle ($170-$210).",
+        "Safety": "Corvallis is an exceptionally secure, low-crime Pacific Northwest college town."
       }
     },
     {
@@ -410,33 +410,33 @@
       },
       "grades": {
         "Cost": "A",
-        "Difficulty": "C",
-        "Support": "C",
-        "Adjustment": "A",
-        "Home": "A",
+        "Support": "A",
         "Social": "A",
-        "Environment": "A",
         "Weather": "A",
         "Biology": "A",
         "CLS": "A",
-        "Spirit": "C",
+        "Spirit": "B",
         "Happiness": "B",
-        "Admissions": "F"
+        "Admissions": "F",
+        "CultureShock": "A",
+        "Outdoors": "B",
+        "GoHome": "A",
+        "Safety": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$37,324 - $38,938 (In-State CA). Final cost is largely fixed unless eligible for local/need-based aid.",
-        "Difficulty": "Impacted biology major; large intro lectures and high demand require proactive office hour visits.",
-        "Support": "Impacted biology major causes advising slots to fill fast; resources exist but the system wont hunt you down.",
-        "Adjustment": "Zero adjustment; home turf in San Diego with familiar local network, weather, and coastal lifestyle.",
-        "Home": "Easy: 45min drive; zero flight friction.",
+        "Support": "Robust student success tracking featuring a 91% retention rate and a 76% graduation rate above regional averages.",
         "Social": "Massive Southern California party reputation and huge local nightlife access.",
-        "Environment": "Perfect year-round weather for coastal surfing, hiking, and active local sports leagues.",
         "Weather": "~250 nice days. Peak SoCal perfection, minimal bad days",
         "Biology": "Leverages San Diego’s top-3 global biotech hub (Torrey Pines Mesa) for unmatched local interning and lab access.",
         "CLS": "Microbiology BS offers an explicit Clinical Lab Science emphasis including Hematology.",
         "Spirit": "Good basketball energy and new Snapdragon Stadium tailgating, but heavily diluted by the broader San Diego lifestyle.",
         "Happiness": "84 - Strong local lifestyle, high campus satisfaction, and great climate.",
-        "Admissions": "Hard: Highly impacted, ~36% acceptance rate; Strict numerical algorithm weighted on raw GPA without essays."
+        "Admissions": "Hard: Highly impacted, ~36% acceptance rate; Strict numerical algorithm weighted on raw GPA without essays.",
+        "CultureShock": "Zero adjustment; home turf in San Diego with familiar local network, weather, and coastal lifestyle.",
+        "Outdoors": "Great year-round access to Pacific beaches, coastal paths, and nearby trails within a 15-25 minute drive.",
+        "GoHome": "Easy: 45min drive; zero flight friction.",
+        "Safety": "San Diego urban integration brings standard petty crime considerations, but overall municipal safety is solid."
       }
     },
     {
@@ -463,33 +463,33 @@
       },
       "grades": {
         "Cost": "B",
-        "Difficulty": "B",
         "Support": "B",
-        "Adjustment": "C",
-        "Home": "C",
         "Social": "F",
-        "Environment": "A",
         "Weather": "C",
         "Biology": "A",
         "CLS": "A",
         "Spirit": "B",
         "Happiness": "B",
-        "Admissions": "B"
+        "Admissions": "B",
+        "CultureShock": "C",
+        "Outdoors": "A",
+        "GoHome": "C",
+        "Safety": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$45,415 - $51,135 (Out-of-State). Eligible for WUE with a 3.30+ GPA, capping tuition at 150% of in-state. High likelihood of cost lowering.",
-        "Difficulty": "Direct med center access with funded undergrad research (UROP) and collaborative STEM support.",
-        "Support": "Well-funded STEM tutoring hubs and direct Health Sciences advising with accessible undergrad research mentors.",
-        "Adjustment": "Progressive college pockets, but embedded in a distinct regional and religious cultural backdrop.",
-        "Home": "Moderate: 4hr trip via 2hr flight; tickets pricey ($200-$300).",
+        "Support": "Solid baseline operational metrics with an 86% retention rate and a 69% graduation rate, providing standard public support pathways.",
         "Social": "Very muted nightlife due to local liquor laws and a heavy commuter population.",
-        "Environment": "Unbeatable access to world-class ski canyons within 30 minutes of campus.",
         "Weather": "~150 nice days. Cold winters plus inversions hurt air quality badly",
         "Biology": "World-renowned genetics and biochemistry labs with direct ties to U of U Health and Intermountain West biotech.",
         "CLS": "Features a direct, NAACLS-accredited BS in Medical Laboratory Science with clinical rotations.",
         "Spirit": "Passionate Utes fanbase and elite football atmosphere in Rice-Eccles, though slightly more regional compared to elite SEC flagships.",
         "Happiness": "87 - Excellent campus facilities, mountain backdrop, and high overall student life.",
-        "Admissions": "Target: ~87% acceptance rate; Broad admissions criteria where admitted students have weighted GPAs between 3.3–3.6."
+        "Admissions": "Target: ~87% acceptance rate; Broad admissions criteria where admitted students have weighted GPAs between 3.3–3.6.",
+        "CultureShock": "Progressive college pockets, but embedded in a distinct regional and religious cultural backdrop.",
+        "Outdoors": "Unbeatable access to world-class ski canyons within 30 minutes of campus.",
+        "GoHome": "Moderate: 4hr trip via 2hr flight; tickets pricey ($200-$300).",
+        "Safety": "Secure foothill campus setting in a safer major metropolitan area."
       }
     },
     {
@@ -516,33 +516,33 @@
       },
       "grades": {
         "Cost": "C",
-        "Difficulty": "B",
         "Support": "A",
-        "Adjustment": "D",
-        "Home": "D",
         "Social": "A",
-        "Environment": "D",
         "Weather": "D",
         "Biology": "C",
         "CLS": "B",
         "Spirit": "A",
         "Happiness": "A",
-        "Admissions": "D"
+        "Admissions": "D",
+        "CultureShock": "D",
+        "Outdoors": "C",
+        "GoHome": "D",
+        "Safety": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$56,706 - $58,000 (Out-of-State). Offers structured non-resident merit scholarships based on GPA and test scores. Cost could lower.",
-        "Difficulty": "Dedicated COSAm STEM tutoring centers, strong pre-health advising, and accessible faculty mentorship.",
-        "Support": "COSAM features structured drop-in STEM tutoring centers, dedicated pre-health advisors, and close faculty ties.",
-        "Adjustment": "Significant shift to SEC Greek life, traditional Southern pacing, and a completely different social ecosystem.",
-        "Home": "Hard: 7.5hr trip via flight + shuttle; expensive ($200-$400+).",
+        "Support": "Excellent personal-touch framework boasting a 95% retention rate and an 82% graduation rate, paired with a favorable 10:1 faculty ratio.",
         "Social": "Legendary SEC tailgating and massive traditional Greek life dominance.",
-        "Environment": "Lake Martin is great, but day-to-day dynamic outdoor terrain is very limited.",
         "Weather": "~125 nice days. Deep South heat and humidity punish the bad days",
         "Biology": "Strong pre-vet and agricultural tracks, but traditional corporate biotech/industrial bio networking lags behind.",
         "CLS": "Main campus covers core prereqs in Biomedical Sci; full NAACLS MLS is at Auburn Montgomery.",
         "Spirit": "Peak SEC tradition; Toomers Corner, legendary tailgating, and total town-wide football immersion.",
         "Happiness": "98 - Near-top national satisfaction rating; legendary campus spirit, food, and student community.",
-        "Admissions": "Hard (D Grade): Competitive out-of-state pool (~50% acceptance rate); admissions leans heavily on GPA metrics and academic alignment."
+        "Admissions": "Hard (D Grade): Competitive out-of-state pool (~50% acceptance rate); admissions leans heavily on GPA metrics and academic alignment.",
+        "CultureShock": "Significant shift to SEC Greek life, traditional Southern pacing, and a completely different social ecosystem.",
+        "Outdoors": "Local state parks, rolling hills, and lake access within 20-30 minutes.",
+        "GoHome": "Hard: 7.5hr trip via flight + shuttle; expensive ($200-$400+).",
+        "Safety": "Quiet, traditional, highly secure southern college town environment."
       }
     },
     {
@@ -569,33 +569,33 @@
       },
       "grades": {
         "Cost": "D",
-        "Difficulty": "C",
         "Support": "B",
-        "Adjustment": "B",
-        "Home": "B",
         "Social": "B",
-        "Environment": "B",
         "Weather": "D",
         "Biology": "B",
         "CLS": "B",
         "Spirit": "A",
         "Happiness": "C",
-        "Admissions": "B"
+        "Admissions": "B",
+        "CultureShock": "B",
+        "Outdoors": "B",
+        "GoHome": "B",
+        "Safety": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$68,931 - $74,325 (Out-of-State). Does not participate in WUE, but offers automatic Apex/Summit merit scholarships based on GPA. Cost could lower.",
-        "Difficulty": "Smaller STEM class sizes than massive land-grants and good tutoring, but moderate local clinical access.",
-        "Support": "Solid support via the Tutoring & Academic Engagement Center; smaller STEM scale allows better advisor access.",
-        "Adjustment": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
-        "Home": "Moderate: 4.5hr trip via 2.5hr flight + Uber ($175-$275).",
+        "Support": "Dependable regional public framework featuring an 85% retention rate and a 70% graduation rate.",
         "Social": "Strong house party and bar scene, but lacks the sheer massive scale of ASU or LSU.",
-        "Environment": "Deep PNW recreation in the Cascades, though winter rain dampens daily outdoor activities.",
         "Weather": "~105 nice days. Wet PNW marine climate, relentlessly grey",
         "Biology": "Respectable molecular biology and neuroscience (Institute of Molecular Biology), but smaller overall scope than peers.",
         "CLS": "Solid West Coast bio/micro curriculum; covers general prereqs, though lacks on-campus MLS.",
         "Spirit": "Iconic Autzen Stadium noise, Nike-backed hype, and massive statewide Duck pride.",
         "Happiness": "79 - Solid Pacific Northwest campus life, though dinged slightly on housing and weather.",
-        "Admissions": "Target: ~78% acceptance rate; holistic review that places solid value on AP course load and personal statement essays.  GPAs between 3.4-3.7"
+        "Admissions": "Target: ~78% acceptance rate; holistic review that places solid value on AP course load and personal statement essays.  GPAs between 3.4-3.7",
+        "CultureShock": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
+        "Outdoors": "Deep PNW recreation in the Cascades, though winter rain dampens daily outdoor activities.",
+        "GoHome": "Moderate: 4.5hr trip via 2.5hr flight + Uber ($175-$275).",
+        "Safety": "Eugene has typical Pacific Northwest property crime issues, but campus operations are tightly managed."
       }
     },
     {
@@ -622,33 +622,33 @@
       },
       "grades": {
         "Cost": "C",
-        "Difficulty": "D",
         "Support": "B",
-        "Adjustment": "F",
-        "Home": "F",
         "Social": "A",
-        "Environment": "F",
         "Weather": "F",
         "Biology": "C",
         "CLS": "A",
         "Spirit": "A",
         "Happiness": "C",
-        "Admissions": "C"
+        "Admissions": "C",
+        "CultureShock": "F",
+        "Outdoors": "F",
+        "GoHome": "F",
+        "Safety": "D"
       },
       "details": {
         "Cost": "Est. Total COA: ~$56,122 - $58,256 (Out-of-State). Offers automatic non-resident merit scholarships and fee waivers for high GPAs and test scores. Cost could lower.",
-        "Difficulty": "High DFW (Drop/Fail/Withdraw) rates in General & Organic Chem with traditional sink-or-swim dynamics.",
-        "Support": "Center for Academic Success provides solid SI study sessions, though main academic advising is more reactive.",
-        "Adjustment": "Largest cultural shift on the list: heavy Cajun/subtropical environment, unique local customs, and deep-rooted SEC identity.",
-        "Home": "Hard: 9hr trip via multi-leg flights; very expensive ($325-$525+).",
+        "Support": "Standard SEC foundational support systems with an 85% retention rate and a 69% graduation rate.",
         "Social": "Tigerland and SEC tailgating create one of the most intense party environments in the country.",
-        "Environment": "Flat, swampy, and intensely humid; virtually zero traditional dynamic outdoor recreation.",
         "Weather": "~95 nice days. Subtropical humidity makes bad days genuinely oppressive",
         "Biology": "Solid regional bio departments and local medical ties, but institutional biotech research funding is relatively limited.",
         "CLS": "Has an established Medical Laboratory Science pipeline linked directly to LSU Health Sciences.",
         "Spirit": "Unrivaled Death Valley night games, legendary Cajun tailgating, and pure football-as-religion culture.",
         "Happiness": "81 - Intense game day passion, though campus infrastructure and housing hold score down.",
-        "Admissions": "Target: Straightforward benchmarks with ~79% acceptance rate, Typical admitted students have weighted GPAs between 3.4–3.7"
+        "Admissions": "Target: Straightforward benchmarks with ~79% acceptance rate, Typical admitted students have weighted GPAs between 3.4–3.7",
+        "CultureShock": "Largest cultural shift on the list: heavy Cajun/subtropical environment, unique local customs, and deep-rooted SEC identity.",
+        "Outdoors": "Flat, swampy, and intensely humid; virtually zero traditional dynamic outdoor recreation.",
+        "GoHome": "Hard: 9hr trip via multi-leg flights; very expensive ($325-$525+).",
+        "Safety": "Baton Rouge consistently registers high violent and property crime rates per capita, requiring extreme off-campus vigilance."
       }
     },
     {
@@ -675,33 +675,33 @@
       },
       "grades": {
         "Cost": "B",
-        "Difficulty": "B",
-        "Support": "B",
-        "Adjustment": "C",
-        "Home": "C",
+        "Support": "C",
         "Social": "F",
-        "Environment": "C",
         "Weather": "B",
         "Biology": "C",
         "CLS": "B",
-        "Spirit": "D",
+        "Spirit": "C",
         "Happiness": "D",
-        "Admissions": "C"
+        "Admissions": "C",
+        "CultureShock": "C",
+        "Outdoors": "B",
+        "GoHome": "C",
+        "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$42,382 - $46,422 (Out-of-State). Offers non-resident merit scholarships based on GPA. Cost could lower after admission.",
-        "Difficulty": "Dedicated B.S. in Medical Bio track with Peer-Led Team Learning (PLTL) support in tough O-Chem sequences.",
-        "Support": "Strong Center for Learning and Student Success (CLASS) utilizing Peer-Led Team Learning (PLTL) in tough STEM series.",
-        "Adjustment": "Familiar sunny coastal/beach lifestyle, but a distinct East Coast/suburban adjustment away from the West Coast vibe.",
-        "Home": "Hard: 7.5hr trip via 5hr flight + train/Uber ($155-$290).",
+        "Support": "Developing completion infrastructure reflecting an 80% retention rate and a ~50-53% graduation rate, tracking slightly behind major flagships.",
         "Social": "Sleepy campus in a wealthy suburb; requires a drive to Miami/Fort Lauderdale for real nightlife.",
-        "Environment": "Close to South Florida beaches, but embedded in flat, humid urban sprawl.",
         "Weather": "~175 nice days. Beautiful winters but summer humidity and hurricane risk penalized",
         "Biology": "Decent regional Florida pre-health tracks, but lacks a heavy research corridor or major biotech pipeline.",
         "CLS": "Solid Medical Biology tracks; good access to regional Florida hospital MLS internship sites.",
         "Spirit": "Subdued athletic culture; smaller commuter crowds and minimal traditional game-day energy.",
         "Happiness": "66 - Lower student satisfaction; heavy commuter feel and limited residential campus life.",
-        "Admissions": "Target: ~60% acceptance rate and typical admitted students have weighted GPAs between 3.2–3.5"
+        "Admissions": "Target: ~60% acceptance rate and typical admitted students have weighted GPAs between 3.2–3.5",
+        "CultureShock": "Familiar sunny coastal/beach lifestyle, but a distinct East Coast/suburban adjustment away from the West Coast vibe.",
+        "Outdoors": "Top-tier coastal and water lifestyle with Atlantic beaches and intracoastal waterways 10-15 minutes away.",
+        "GoHome": "Hard: 7.5hr trip via 5hr flight + train/Uber ($155-$290).",
+        "Safety": "Boca Raton is generally safe, but open regional commuter access introduces consistent property crime profiles."
       }
     }
   ]

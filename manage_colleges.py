@@ -20,7 +20,7 @@ def get_metric_keys(data):
         return list(data["metrics_descriptions"].keys())
     elif data.get("schools"):
         return list(data["schools"][0].get("grades", {}).keys())
-    return ["Cost", "Difficulty", "Support", "Adjustment", "Home", "Social", "Environment", "Weather", "Biology", "CLS", "Spirit", "Happiness", "Admissions"]
+    return ["Cost", "Support", "Adjustment", "Home", "Social", "Environment", "Weather", "Biology", "CLS", "Spirit", "Happiness", "Admissions"]
 
 def show_editable_fields(data):
     print("\n--- Editable Fields Reference Guide ---")
@@ -45,6 +45,68 @@ def show_editable_fields(data):
         print(f"   - grades.{m}")
         print(f"   - details.{m}")
     print("\nExample usage: python manage_colleges.py --school UCLA --field location --value \"Los Angeles, CA\"")
+    print("To rename a metric globally: python manage_colleges.py --rename-metric <OldName> <NewName>")
+    print("To remove a section metric across all schools: python manage_colleges.py --remove-section <metric>")
+
+def remove_section_globally(data, section_name):
+    target = section_name.strip()
+    print(f"\n⚠️ WARNING: You are about to completely remove the metric/section '{target}' (both grades.{target} and details.{target}) from ALL schools.")
+    confirmation = input("Are you sure? Type 'yes' to proceed: ").strip()
+    
+    if confirmation != "yes":
+        print("Operation cancelled. No changes were made.")
+        return
+
+    removed_count = 0
+    for s in data.get("schools", []):
+        modified = False
+        if "grades" in s and target in s["grades"]:
+            del s["grades"][target]
+            modified = True
+        if "details" in s and target in s["details"]:
+            del s["details"][target]
+            modified = True
+        if modified:
+            removed_count += 1
+
+    if "metrics_descriptions" in data and target in data["metrics_descriptions"]:
+        del data["metrics_descriptions"][target]
+
+    save_data(data)
+    print(f"Successfully removed section '{target}' from {removed_count} school(s).")
+
+def rename_metric_globally(data, old_name, new_name):
+    old_target = old_name.strip()
+    new_target = new_name.strip()
+
+    if not old_target or not new_target:
+        print("Error: Both old and new metric names must be provided.")
+        return
+
+    print(f"\n⚠️ You are about to rename metric '{old_target}' to '{new_target}' across ALL schools and descriptions.")
+    confirmation = input("Are you sure? Type 'yes' to proceed: ").strip()
+
+    if confirmation != "yes":
+        print("Operation cancelled. No changes were made.")
+        return
+
+    updated_count = 0
+    for s in data.get("schools", []):
+        modified = False
+        if "grades" in s and old_target in s["grades"]:
+            s["grades"][new_target] = s["grades"].pop(old_target)
+            modified = True
+        if "details" in s and old_target in s["details"]:
+            s["details"][new_target] = s["details"].pop(old_target)
+            modified = True
+        if modified:
+            updated_count += 1
+
+    if "metrics_descriptions" in data and old_target in data["metrics_descriptions"]:
+        data["metrics_descriptions"][new_target] = data["metrics_descriptions"].pop(old_target)
+
+    save_data(data)
+    print(f"Successfully renamed metric '{old_target}' to '{new_target}' for {updated_count} school(s).")
 
 def add_school_interactive(data):
     print("\n--- Add New School (Interactive) ---")
@@ -159,9 +221,19 @@ def main():
     parser.add_argument("--school", metavar="CODE", help="Specify school code to view/edit.")
     parser.add_argument("--field", metavar="PATH", help="Specify field path to view/update (e.g., location, profile.topology, grades.biology).")
     parser.add_argument("--value", metavar="VAL", help="New value to assign when updating a field.")
+    parser.add_argument("--remove-section", metavar="SECTION", help="Completely remove a metric section (grades and details) across all schools.")
+    parser.add_argument("--rename-metric", nargs=2, metavar=("OLD", "NEW"), help="Rename a metric key globally across all schools.")
     args = parser.parse_args()
 
     data = load_data()
+
+    if args.remove_section:
+        remove_section_globally(data, args.remove_section)
+        return
+
+    if args.rename_metric:
+        rename_metric_globally(data, args.rename_metric[0], args.rename_metric[1])
+        return
 
     if args.fields:
         show_editable_fields(data)

@@ -910,6 +910,9 @@
                     };
                 });
 
+                // Automatically sort metrics alphabetically by their display name
+                metricsList.sort((a, b) => a.name.localeCompare(b.name));
+
                 // Automatically sort schools alphabetically by their display name
                 schools.sort((a, b) => a.displayName.localeCompare(b.displayName));
 
