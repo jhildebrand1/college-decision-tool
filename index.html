@@ -115,20 +115,7 @@
             background-color: #484e53;
         }
 
-        /* Natural Centering Wrapper without shrinking table content */
-        .comparison-wrapper {
-            width: fit-content;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        .sliders-section,
-        .sub-toolbar-helper,
-        .detail-drawer,
-        .overall-ranking {
-            width: 100%;
-        }
-
+        /* Fully Unbounded / Full-Width Scrolling Table Container */
         .table-responsive {
             width: 100%;
             overflow-x: auto;
@@ -382,9 +369,17 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+        }
+
+        .profile-logo {
+            max-width: 64px;
+            max-height: 64px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #f0f0f0;
+            padding: 4px;
         }
 
         .profile-section {
@@ -393,9 +388,6 @@
             border-radius: 8px;
             margin-bottom: 20px;
             overflow: hidden;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .profile-content {
@@ -482,9 +474,6 @@
 
         .major-selector {
             margin-bottom: 20px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .major-selector label {
@@ -517,9 +506,6 @@
         }
 
         .profile-cards-grid {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
@@ -565,9 +551,6 @@
             .gallery {
                 grid-template-columns: 1fr;
             }
-            .comparison-wrapper {
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -586,106 +569,104 @@
             <div class="content">
                 <!-- TAB 1: School Comparison -->
                 <div class="tab-content active" id="comparison">
-                    <div class="comparison-wrapper">
-                        <!-- Global Toolbar Container -->
-                        <div class="sliders-section">
-                            <div style="display: flex; align-items: center; gap: 6px; font-size: 13px;">
-                                <label for="setAllSelect" style="font-weight: 600; white-space: nowrap;">Set All Weights:</label>
-                                <select id="setAllSelect" onchange="setAllWeights(this.value)" style="padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border, #e0e0e0); font-size: 13px; cursor: pointer; background: #ffffff; font-weight: 500;">
-                                    <option value="" disabled selected>Select level...</option>
-                                    <option value="0">Not Factored (0x)</option>
-                                    <option value="1">Not Important (1x)</option>
-                                    <option value="2">Somewhat (2x)</option>
-                                    <option value="3">Very Important (3x)</option>
-                                    <option value="4">Dealbreaker (15x)</option>
-                                </select>
-                            </div>
-                            
-                            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-                                <div class="school-filter-container">
-                                    <button id="manageSchoolsBtn" class="action-btn secondary-btn" onclick="toggleSchoolFilterDropdown(event)">
-                                        <i class="fas fa-filter"></i> <span id="schoolFilterBtnText">Manage Schools</span>
-                                    </button>
-                                    <div class="school-filter-dropdown" id="schoolFilterDropdown" onclick="event.stopPropagation()">
-                                        <div style="font-weight: 700; font-size: 13px; margin-bottom: 8px; color: #0066cc; display: flex; justify-content: space-between; align-items: center;">
-                                            <span>Filter Schools</span>
-                                            <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolFilterDropdown()"></i>
-                                        </div>
-                                        <div class="school-filter-list" id="schoolFilterList">
-                                            <!-- Injected by JS -->
-                                        </div>
-                                        <div style="display: flex; justify-content: space-between; font-size: 12px;">
-                                            <span style="color: #0066cc; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(true)">Select All</span>
-                                            <span style="color: #c5221f; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(false)">Deselect All</span>
-                                        </div>
+                    <!-- Global Toolbar Container -->
+                    <div class="sliders-section">
+                        <div style="display: flex; align-items: center; gap: 6px; font-size: 13px;">
+                            <label for="setAllSelect" style="font-weight: 600; white-space: nowrap;">Set All Weights:</label>
+                            <select id="setAllSelect" onchange="setAllWeights(this.value)" style="padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border, #e0e0e0); font-size: 13px; cursor: pointer; background: #ffffff; font-weight: 500;">
+                                <option value="" disabled selected>Select level...</option>
+                                <option value="0">Not Factored (0x)</option>
+                                <option value="1">Not Important (1x)</option>
+                                <option value="2">Somewhat (2x)</option>
+                                <option value="3">Very Important (3x)</option>
+                                <option value="4">Dealbreaker (15x)</option>
+                            </select>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                            <div class="school-filter-container">
+                                <button id="manageSchoolsBtn" class="action-btn secondary-btn" onclick="toggleSchoolFilterDropdown(event)">
+                                    <i class="fas fa-filter"></i> <span id="schoolFilterBtnText">Manage Schools</span>
+                                </button>
+                                <div class="school-filter-dropdown" id="schoolFilterDropdown" onclick="event.stopPropagation()">
+                                    <div style="font-weight: 700; font-size: 13px; margin-bottom: 8px; color: #0066cc; display: flex; justify-content: space-between; align-items: center;">
+                                        <span>Filter Schools</span>
+                                        <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolFilterDropdown()"></i>
+                                    </div>
+                                    <div class="school-filter-list" id="schoolFilterList">
+                                        <!-- Injected by JS -->
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                        <span style="color: #0066cc; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(true)">Select All</span>
+                                        <span style="color: #c5221f; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(false)">Deselect All</span>
                                     </div>
                                 </div>
+                            </div>
 
-                                <button id="resetMetricsBtn" class="action-btn secondary-btn" onclick="resetMetricsToDefault()">
-                                    <i class="fas fa-undo"></i> Reset All Defaults
-                                </button>
+                            <button id="resetMetricsBtn" class="action-btn secondary-btn" onclick="resetMetricsToDefault()">
+                                <i class="fas fa-undo"></i> Reset All Defaults
+                            </button>
 
-                                <button id="flipAxisBtn" class="action-btn">
-                                    <i class="fas fa-sync-alt"></i> Flip Axes
-                                </button>
+                            <button id="flipAxisBtn" class="action-btn">
+                                <i class="fas fa-sync-alt"></i> Flip Axes
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="sub-toolbar-helper">
+                        Grading Scale (A = Highest, F = Lowest) • <span style="color: #0066cc;">Click headers to configure metrics or view school spotlight</span>
+                    </div>
+
+                    <!-- School Spotlight Drawer -->
+                    <div class="detail-drawer" id="schoolDrawer" style="border-left-color: #28a745;">
+                        <h4 id="schoolDrawerTitle">
+                            <span>School Spotlight</span> 
+                            <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>
+                        </h4>
+                        <div id="schoolDrawerBody" style="font-size: 14px; color: var(--text-primary, #333);"></div>
+                    </div>
+
+                    <!-- Metric Info & Controls Drawer -->
+                    <div class="detail-drawer" id="metricDrawer">
+                        <h4 id="metricDrawerTitle">
+                            <span>Metric Configuration</span> 
+                            <i class="fas fa-times" style="cursor: pointer;" onclick="closeMetricDrawer()"></i>
+                        </h4>
+                        <p id="metricDrawerDesc" style="font-size: 13px; color: #555; background: #f9f9f9; padding: 8px; border-radius: 4px; margin-bottom: 14px; line-height: 1.4;"></p>
+                        
+                        <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 220px;">
+                                <label style="display: flex; justify-content: space-between; font-weight: 600; font-size: 13px; margin-bottom: 6px;">
+                                    <span>Importance Weight:</span> 
+                                    <span id="drawerWeightText" style="color: #0066cc; font-weight: 700;"></span>
+                                </label>
+                                <input type="range" id="drawerWeightSlider" min="0" max="4" step="1" oninput="handleDrawerWeightChange(this.value)" style="width: 100%; cursor: pointer;">
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px; margin-top: 14px;">
+                                <input type="checkbox" id="drawerReverseCheck" onchange="handleDrawerReverseChange(this.checked)" style="width: 16px; height: 16px; cursor: pointer;">
+                                <label for="drawerReverseCheck" style="font-weight: 600; font-size: 13px; cursor: pointer;">Reverse Grade Scale (A ↔ F)</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="sub-toolbar-helper">
-                            Grading Scale (A = Highest, F = Lowest) • <span style="color: #0066cc;">Click headers to configure metrics or view school spotlight</span>
-                        </div>
+                    <!-- Detail Drawer -->
+                    <div class="detail-drawer" id="detailDrawer">
+                        <h4 id="drawerTitle"><span>Detail Evaluation</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i></h4>
+                        <p id="drawerText">Click any grade in the table above to view specific evaluation details here.</p>
+                    </div>
 
-                        <!-- School Spotlight Drawer -->
-                        <div class="detail-drawer" id="schoolDrawer" style="border-left-color: #28a745;">
-                            <h4 id="schoolDrawerTitle">
-                                <span>School Spotlight</span> 
-                                <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>
-                            </h4>
-                            <div id="schoolDrawerBody" style="font-size: 14px; color: var(--text-primary, #333);"></div>
-                        </div>
+                    <!-- Comparison Table Container -->
+                    <div class="table-responsive">
+                        <table class="comparison-table" id="comparisonTable">
+                            <!-- Rendered by JavaScript -->
+                        </table>
+                    </div>
 
-                        <!-- Metric Info & Controls Drawer -->
-                        <div class="detail-drawer" id="metricDrawer">
-                            <h4 id="metricDrawerTitle">
-                                <span>Metric Configuration</span> 
-                                <i class="fas fa-times" style="cursor: pointer;" onclick="closeMetricDrawer()"></i>
-                            </h4>
-                            <p id="metricDrawerDesc" style="font-size: 13px; color: #555; background: #f9f9f9; padding: 8px; border-radius: 4px; margin-bottom: 14px; line-height: 1.4;"></p>
-                            
-                            <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
-                                <div style="flex: 1; min-width: 220px;">
-                                    <label style="display: flex; justify-content: space-between; font-weight: 600; font-size: 13px; margin-bottom: 6px;">
-                                        <span>Importance Weight:</span> 
-                                        <span id="drawerWeightText" style="color: #0066cc; font-weight: 700;"></span>
-                                    </label>
-                                    <input type="range" id="drawerWeightSlider" min="0" max="4" step="1" oninput="handleDrawerWeightChange(this.value)" style="width: 100%; cursor: pointer;">
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 8px; margin-top: 14px;">
-                                    <input type="checkbox" id="drawerReverseCheck" onchange="handleDrawerReverseChange(this.checked)" style="width: 16px; height: 16px; cursor: pointer;">
-                                    <label for="drawerReverseCheck" style="font-weight: 600; font-size: 13px; cursor: pointer;">Reverse Grade Scale (A ↔ F)</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Detail Drawer -->
-                        <div class="detail-drawer" id="detailDrawer">
-                            <h4 id="drawerTitle"><span>Detail Evaluation</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i></h4>
-                            <p id="drawerText">Click any grade in the table above to view specific evaluation details here.</p>
-                        </div>
-
-                        <!-- Comparison Table Container -->
-                        <div class="table-responsive">
-                            <table class="comparison-table" id="comparisonTable">
-                                <!-- Rendered by JavaScript -->
-                            </table>
-                        </div>
-
-                        <!-- Overall Ranking -->
-                        <div class="overall-ranking">
-                            <h3 style="margin-bottom: 15px;">Overall ranking (based on weights)</h3>
-                            <div id="rankingList">
-                                <!-- Injected dynamically by JS -->
-                            </div>
+                    <!-- Overall Ranking -->
+                    <div class="overall-ranking">
+                        <h3 style="margin-bottom: 15px;">Overall ranking (based on weights)</h3>
+                        <div id="rankingList">
+                            <!-- Injected dynamically by JS -->
                         </div>
                     </div>
                 </div>
