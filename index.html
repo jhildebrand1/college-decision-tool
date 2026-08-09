@@ -115,7 +115,20 @@
             background-color: #484e53;
         }
 
-        /* Fully Un-stuck Scrolling Table Container */
+        /* Natural Centering Wrapper without shrinking table content */
+        .comparison-wrapper {
+            width: fit-content;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .sliders-section,
+        .sub-toolbar-helper,
+        .detail-drawer,
+        .overall-ranking {
+            width: 100%;
+        }
+
         .table-responsive {
             width: 100%;
             overflow-x: auto;
@@ -369,15 +382,9 @@
             display: flex;
             align-items: center;
             gap: 20px;
-        }
-
-        .profile-logo {
-            width: 64px;
-            height: 64px;
-            object-fit: contain;
-            border-radius: 6px;
-            background: #f0f0f0;
-            padding: 4px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .profile-section {
@@ -386,6 +393,9 @@
             border-radius: 8px;
             margin-bottom: 20px;
             overflow: hidden;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .profile-content {
@@ -472,6 +482,9 @@
 
         .major-selector {
             margin-bottom: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .major-selector label {
@@ -501,6 +514,16 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+        }
+
+        .profile-cards-grid {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .info-card h3 {
@@ -542,6 +565,9 @@
             .gallery {
                 grid-template-columns: 1fr;
             }
+            .comparison-wrapper {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -560,115 +586,115 @@
             <div class="content">
                 <!-- TAB 1: School Comparison -->
                 <div class="tab-content active" id="comparison">
-                    <!-- Global Toolbar Container -->
-                    <div class="sliders-section">
-                        <div style="display: flex; align-items: center; gap: 6px; font-size: 13px;">
-                            <label for="setAllSelect" style="font-weight: 600; white-space: nowrap;">Set All Weights:</label>
-                            <select id="setAllSelect" onchange="setAllWeights(this.value)" style="padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border, #e0e0e0); font-size: 13px; cursor: pointer; background: #ffffff; font-weight: 500;">
-                                <option value="" disabled selected>Select level...</option>
-                                <option value="0">Not Factored (0x)</option>
-                                <option value="1">Not Important (1x)</option>
-                                <option value="2">Somewhat (2x)</option>
-                                <option value="3">Very Important (3x)</option>
-                                <option value="4">Dealbreaker (15x)</option>
-                            </select>
-                        </div>
-                        
-                        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-                            <div class="school-filter-container">
-                                <button id="manageSchoolsBtn" class="action-btn secondary-btn" onclick="toggleSchoolFilterDropdown(event)">
-                                    <i class="fas fa-filter"></i> <span id="schoolFilterBtnText">Manage Schools</span>
-                                </button>
-                                <div class="school-filter-dropdown" id="schoolFilterDropdown" onclick="event.stopPropagation()">
-                                    <div style="font-weight: 700; font-size: 13px; margin-bottom: 8px; color: #0066cc; display: flex; justify-content: space-between; align-items: center;">
-                                        <span>Filter Schools</span>
-                                        <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolFilterDropdown()"></i>
-                                    </div>
-                                    <div class="school-filter-list" id="schoolFilterList">
-                                        <!-- Injected by JS -->
-                                    </div>
-                                    <div style="display: flex; justify-content: space-between; font-size: 12px;">
-                                        <span style="color: #0066cc; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(true)">Select All</span>
-                                        <span style="color: #c5221f; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(false)">Deselect All</span>
+                    <div class="comparison-wrapper">
+                        <!-- Global Toolbar Container -->
+                        <div class="sliders-section">
+                            <div style="display: flex; align-items: center; gap: 6px; font-size: 13px;">
+                                <label for="setAllSelect" style="font-weight: 600; white-space: nowrap;">Set All Weights:</label>
+                                <select id="setAllSelect" onchange="setAllWeights(this.value)" style="padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border, #e0e0e0); font-size: 13px; cursor: pointer; background: #ffffff; font-weight: 500;">
+                                    <option value="" disabled selected>Select level...</option>
+                                    <option value="0">Not Factored (0x)</option>
+                                    <option value="1">Not Important (1x)</option>
+                                    <option value="2">Somewhat (2x)</option>
+                                    <option value="3">Very Important (3x)</option>
+                                    <option value="4">Dealbreaker (15x)</option>
+                                </select>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                                <div class="school-filter-container">
+                                    <button id="manageSchoolsBtn" class="action-btn secondary-btn" onclick="toggleSchoolFilterDropdown(event)">
+                                        <i class="fas fa-filter"></i> <span id="schoolFilterBtnText">Manage Schools</span>
+                                    </button>
+                                    <div class="school-filter-dropdown" id="schoolFilterDropdown" onclick="event.stopPropagation()">
+                                        <div style="font-weight: 700; font-size: 13px; margin-bottom: 8px; color: #0066cc; display: flex; justify-content: space-between; align-items: center;">
+                                            <span>Filter Schools</span>
+                                            <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolFilterDropdown()"></i>
+                                        </div>
+                                        <div class="school-filter-list" id="schoolFilterList">
+                                            <!-- Injected by JS -->
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                            <span style="color: #0066cc; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(true)">Select All</span>
+                                            <span style="color: #c5221f; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(false)">Deselect All</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <button id="resetMetricsBtn" class="action-btn secondary-btn" onclick="resetMetricsToDefault()">
-                                <i class="fas fa-undo"></i> Reset All Defaults
-                            </button>
+                                <button id="resetMetricsBtn" class="action-btn secondary-btn" onclick="resetMetricsToDefault()">
+                                    <i class="fas fa-undo"></i> Reset All Defaults
+                                </button>
 
-                            <button id="flipAxisBtn" class="action-btn">
-                                <i class="fas fa-sync-alt"></i> Flip Axes
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="sub-toolbar-helper">
-                        Grading Scale (A = Highest, F = Lowest) • <span style="color: #0066cc;">Click headers to configure metrics or view school spotlight</span>
-                    </div>
-
-                    <!-- School Spotlight Drawer -->
-                    <div class="detail-drawer" id="schoolDrawer" style="border-left-color: #28a745;">
-                        <h4 id="schoolDrawerTitle">
-                            <span>School Spotlight</span> 
-                            <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>
-                        </h4>
-                        <div id="schoolDrawerBody" style="font-size: 14px; color: var(--text-primary, #333);"></div>
-                    </div>
-
-                    <!-- Metric Info & Controls Drawer -->
-                    <div class="detail-drawer" id="metricDrawer">
-                        <h4 id="metricDrawerTitle">
-                            <span>Metric Configuration</span> 
-                            <i class="fas fa-times" style="cursor: pointer;" onclick="closeMetricDrawer()"></i>
-                        </h4>
-                        <p id="metricDrawerDesc" style="font-size: 13px; color: #555; background: #f9f9f9; padding: 8px; border-radius: 4px; margin-bottom: 14px; line-height: 1.4;"></p>
-                        
-                        <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
-                            <div style="flex: 1; min-width: 220px;">
-                                <label style="display: flex; justify-content: space-between; font-weight: 600; font-size: 13px; margin-bottom: 6px;">
-                                    <span>Importance Weight:</span> 
-                                    <span id="drawerWeightText" style="color: #0066cc; font-weight: 700;"></span>
-                                </label>
-                                <input type="range" id="drawerWeightSlider" min="0" max="4" step="1" oninput="handleDrawerWeightChange(this.value)" style="width: 100%; cursor: pointer;">
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 8px; margin-top: 14px;">
-                                <input type="checkbox" id="drawerReverseCheck" onchange="handleDrawerReverseChange(this.checked)" style="width: 16px; height: 16px; cursor: pointer;">
-                                <label for="drawerReverseCheck" style="font-weight: 600; font-size: 13px; cursor: pointer;">Reverse Grade Scale (A ↔ F)</label>
+                                <button id="flipAxisBtn" class="action-btn">
+                                    <i class="fas fa-sync-alt"></i> Flip Axes
+                                </button>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Detail Drawer -->
-                    <div class="detail-drawer" id="detailDrawer">
-                        <h4 id="drawerTitle"><span>Detail Evaluation</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i></h4>
-                        <p id="drawerText">Click any grade in the table above to view specific evaluation details here.</p>
-                    </div>
+                        <div class="sub-toolbar-helper">
+                            Grading Scale (A = Highest, F = Lowest) • <span style="color: #0066cc;">Click headers to configure metrics or view school spotlight</span>
+                        </div>
 
-                    <!-- Un-stuck Comparison Table Container -->
-                    <div class="table-responsive">
-                        <table class="comparison-table" id="comparisonTable">
-                            <!-- Rendered by JavaScript -->
-                        </table>
-                    </div>
+                        <!-- School Spotlight Drawer -->
+                        <div class="detail-drawer" id="schoolDrawer" style="border-left-color: #28a745;">
+                            <h4 id="schoolDrawerTitle">
+                                <span>School Spotlight</span> 
+                                <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>
+                            </h4>
+                            <div id="schoolDrawerBody" style="font-size: 14px; color: var(--text-primary, #333);"></div>
+                        </div>
 
-                    <!-- Overall Ranking -->
-                    <div class="overall-ranking">
-                        <h3 style="margin-bottom: 15px;">Overall ranking (based on weights)</h3>
-                        <div id="rankingList">
-                            <!-- Injected dynamically by JS -->
+                        <!-- Metric Info & Controls Drawer -->
+                        <div class="detail-drawer" id="metricDrawer">
+                            <h4 id="metricDrawerTitle">
+                                <span>Metric Configuration</span> 
+                                <i class="fas fa-times" style="cursor: pointer;" onclick="closeMetricDrawer()"></i>
+                            </h4>
+                            <p id="metricDrawerDesc" style="font-size: 13px; color: #555; background: #f9f9f9; padding: 8px; border-radius: 4px; margin-bottom: 14px; line-height: 1.4;"></p>
+                            
+                            <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
+                                <div style="flex: 1; min-width: 220px;">
+                                    <label style="display: flex; justify-content: space-between; font-weight: 600; font-size: 13px; margin-bottom: 6px;">
+                                        <span>Importance Weight:</span> 
+                                        <span id="drawerWeightText" style="color: #0066cc; font-weight: 700;"></span>
+                                    </label>
+                                    <input type="range" id="drawerWeightSlider" min="0" max="4" step="1" oninput="handleDrawerWeightChange(this.value)" style="width: 100%; cursor: pointer;">
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px; margin-top: 14px;">
+                                    <input type="checkbox" id="drawerReverseCheck" onchange="handleDrawerReverseChange(this.checked)" style="width: 16px; height: 16px; cursor: pointer;">
+                                    <label for="drawerReverseCheck" style="font-weight: 600; font-size: 13px; cursor: pointer;">Reverse Grade Scale (A ↔ F)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detail Drawer -->
+                        <div class="detail-drawer" id="detailDrawer">
+                            <h4 id="drawerTitle"><span>Detail Evaluation</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i></h4>
+                            <p id="drawerText">Click any grade in the table above to view specific evaluation details here.</p>
+                        </div>
+
+                        <!-- Comparison Table Container -->
+                        <div class="table-responsive">
+                            <table class="comparison-table" id="comparisonTable">
+                                <!-- Rendered by JavaScript -->
+                            </table>
+                        </div>
+
+                        <!-- Overall Ranking -->
+                        <div class="overall-ranking">
+                            <h3 style="margin-bottom: 15px;">Overall ranking (based on weights)</h3>
+                            <div id="rankingList">
+                                <!-- Injected dynamically by JS -->
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- TAB 2: School Profile -->
                 <div class="tab-content" id="profile">
-                    <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 20px;">
-                        <div class="major-selector">
-                            <label for="selectProfileSchool">Select school to view profile:</label>
-                            <select id="selectProfileSchool" style="max-width: 400px; font-weight: 600;"></select>
-                        </div>
+                    <div class="major-selector">
+                        <label for="selectProfileSchool">Select school to view profile:</label>
+                        <select id="selectProfileSchool" style="max-width: 400px; font-weight: 600;"></select>
                     </div>
 
                     <!-- Dynamic Profile Dashboard -->
@@ -697,7 +723,7 @@
                         </div>
 
                         <!-- Cards Grid -->
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                        <div class="profile-cards-grid">
                             
                             <!-- Card 1: Logistics -->
                             <div class="info-card">
@@ -948,7 +974,8 @@
             schools.forEach(s => {
                 const opt = document.createElement('option');
                 opt.value = s.fullName;
-                opt.textContent = s.fullName;
+                const profileObj = profilesData[s.fullName.toLowerCase()];
+                opt.textContent = (profileObj && profileObj.fullName) ? profileObj.fullName : s.fullName;
                 select.appendChild(opt);
             });
             if (schools.length > 0) {
@@ -1074,28 +1101,28 @@
             table.innerHTML = html;
         }
 
-function openSchoolDrawer(schoolFullName) {
-    activeSchoolName = schoolFullName;
-    const s = schools.find(item => item.fullName === schoolFullName);
-    if (!s) return;
+        function openSchoolDrawer(schoolFullName) {
+            activeSchoolName = schoolFullName;
+            const s = schools.find(item => item.fullName === schoolFullName);
+            if (!s) return;
 
-    closeMetricDrawer();
-    closeDetailDrawer();
-    closeSchoolFilterDropdown();
+            closeMetricDrawer();
+            closeDetailDrawer();
+            closeSchoolFilterDropdown();
 
-    const drawer = document.getElementById('schoolDrawer');
-    const title = document.getElementById('schoolDrawerTitle');
-    const body = document.getElementById('schoolDrawerBody');
+            const drawer = document.getElementById('schoolDrawer');
+            const title = document.getElementById('schoolDrawerTitle');
+            const body = document.getElementById('schoolDrawerBody');
 
-    // Automatically fetch the official full name from profilesData using the short code
-    const profileObj = profilesData[schoolFullName.toLowerCase()];
-    const officialName = (profileObj && profileObj.fullName) ? profileObj.fullName : schoolFullName;
+            const profileObj = profilesData[schoolFullName.toLowerCase()];
+            const officialName = (profileObj && profileObj.fullName) ? profileObj.fullName : schoolFullName;
 
-    const rankData = currentCalculatedRankings.find(r => r.name === schoolFullName);
-    const rankDisplay = rankData ? `#${rankData.rank} of ${schools.length}` : 'Unranked';
-    const percentageDisplay = rankData ? `${rankData.score}%` : 'N/A';
+            const rankData = currentCalculatedRankings.find(r => r.name === schoolFullName);
+            const rankDisplay = rankData ? `#${rankData.rank} of ${schools.length}` : 'Unranked';
+            const percentageDisplay = rankData ? `${rankData.score}%` : 'N/A';
 
-    title.innerHTML = `<span><i class="fas fa-university" style="margin-right: 8px;"></i>${officialName} Spotlight</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>`;
+            title.innerHTML = `<span><i class="fas fa-university" style="margin-right: 8px;"></i>${officialName} Spotlight</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolDrawer()"></i>`;
+
             let strengths = [], concerns = [];
             metricsList.forEach(m => {
                 let grade = s.grades[m.id] || 'C';
@@ -1300,7 +1327,10 @@ function openSchoolDrawer(schoolFullName) {
             closeSchoolFilterDropdown();
 
             const drawer = document.getElementById('detailDrawer');
-            document.getElementById('drawerTitle').innerHTML = `<span>${schoolName} — ${metricName} (Grade: ${grade})</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i>`;
+            const profileObj = profilesData[schoolName.toLowerCase()];
+            const officialName = (profileObj && profileObj.fullName) ? profileObj.fullName : schoolName;
+
+            document.getElementById('drawerTitle').innerHTML = `<span>${officialName} — ${metricName} (Grade: ${grade})</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i>`;
             document.getElementById('drawerText').textContent = decodeURIComponent(encodedDetail);
             drawer.classList.add('open');
             drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1314,7 +1344,6 @@ function openSchoolDrawer(schoolFullName) {
         function calculateRankings() {
             const gradeValues = { 'A': 10, 'B': 8, 'C': 6, 'D': 4, 'F': 2 };
             let totalWeight = 0;
-            metricsList.locals ||= [];
             metricsList.forEach(m => totalWeight += importanceMap[metricWeights[m.id] !== undefined ? metricWeights[m.id] : 3].weight);
 
             const results = schools.map(school => {
@@ -1343,8 +1372,12 @@ function openSchoolDrawer(schoolFullName) {
                 const div = document.createElement('div');
                 div.className = 'ranking-item';
                 const warningBadge = res.dealbreakerFailed ? `<span style="font-size: 11px; background: #fce8e6; color: #c5221f; padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 8px;"><i class="fas fa-exclamation-triangle"></i> Dealbreaker Failed</span>` : '';
+                
+                const profileObj = profilesData[res.name.toLowerCase()];
+                const officialName = (profileObj && profileObj.fullName) ? profileObj.fullName : res.name;
+
                 div.innerHTML = `<span class="ranking-position">${res.rank}</span>
-                    <span class="ranking-school" style="cursor: pointer;" onclick="openSchoolDrawer('${res.name.replace(/'/g, "\\'")}')">${res.name} ${warningBadge} <i class="fas fa-info-circle" style="font-size: 12px; color: #0066cc; margin-left: 6px;"></i></span>
+                    <span class="ranking-school" style="cursor: pointer;" onclick="openSchoolDrawer('${res.name.replace(/'/g, "\\'")}')">${officialName} ${warningBadge} <i class="fas fa-info-circle" style="font-size: 12px; color: #0066cc; margin-left: 6px;"></i></span>
                     <span class="ranking-score">${res.score}%</span>`;
                 container.appendChild(div);
             });
