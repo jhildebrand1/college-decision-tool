@@ -28,7 +28,7 @@
         "airport_distance": "10 miles (~15 min drive) to Santa Barbara Municipal Airport (SBA).",
         "transit_options": "MTD local bus network serves campus heavily, though bikes and walking are the primary modes of transport for students.",
         "neighborhood_vibe": "Laid-back beach town culture anchored directly by Isla Vista (IV)—a densely packed, legendary student enclave right outside the campus gates where streets are swarming with bikes, local surf shops, and casual food spots.",
-        "housing_status": "Freshmen are housed in diverse coastal residence halls like Manzanita and San Nicolas with immediate ocean views. Off-campus housing is hyper-concentrated in Isla Vista's high-density student apartments and multi-unit houses, where properties rent out nearly a year in advance and students typically share rooms or pack tightly into close quarters.",
+        "housing_status": "Freshmen are housed in diverse coastal residence halls like Manzanita and San Nicolas with immediate ocean views. Off-campus housing is hyper-concentrated in Isla Vista high-density student apartments and multi-unit houses, where properties rent out nearly a year in advance and students typically share rooms or pack tightly into close quarters.",
         "medical_access": "No on-campus teaching hospital, but connected via regional transit and close proximity to Cottage Health medical networks and local biotech research centers.",
         "link_admissions": "https://admissions.ucsb.edu",
         "link_bio_dept": "https://undergrad.biology.ucsb.edu/majors",
@@ -164,7 +164,7 @@
         "CultureShock": "Desert sun, palm trees, and massive California student population; seamless cultural transition.",
         "Outdoors": "Great desert hiking and stargazing, but heavily landlocked and extremely hot.",
         "GoHome": "Moderate: 3.5hr trip via 1.25hr flight + Uber ($175-$275).",
-        "Safety": "Tucson's urban proximity and regional border-city property stats pull down off-campus safety indexes."
+        "Safety": "Tucson urban proximity and regional border-city property stats pull down off-campus safety indexes."
       }
     },
     {
@@ -435,7 +435,7 @@
         "topology": "Hillside campus nestled against the Wasatch Range, featuring sloping terrain, scenic elevated views of Salt Lake City, and modern architectural clusters. Outdoors: Immediate access to world-class mountain biking and hiking trails right up Red Butte and Emigration Canyons; elite skiing at Alta/Snowbird and Park City within 30-45 minutes; Great Salt Lake is nearby.",
         "airport_distance": "10 miles (~20 min drive) to Salt Lake City International Airport (SLC).",
         "transit_options": "UTA TRAX light rail red line and campus shuttle network offering free transit for students across the Salt Lake valley.",
-        "neighborhood_vibe": "An urban-mountain fusion setting right at the edge of downtown Salt Lake City. The campus sits elevated against the Wasatch foothills, giving it a peaceful, nature-forward academic enclave feel while remaining a short TRAX ride away from the city's urban grid.",
+        "neighborhood_vibe": "An urban-mountain fusion setting right at the edge of downtown Salt Lake City. The campus sits elevated against the Wasatch foothills, giving it a peaceful, nature-forward academic enclave feel while remaining a short TRAX ride away from the city urban grid.",
         "housing_status": "Freshman housing features extensive modern complexes built originally for the Olympic Village. Off-campus housing is widely spread throughout the surrounding Salt Lake neighborhoods (like the Avenues or Sugar House), though many students rely on the free TRAX system to commute if they live off-site.",
         "medical_access": "University of Utah Health provides a premier on-campus teaching hospital and clinical research system.",
         "link_admissions": "https://admissions.utah.edu",
@@ -486,7 +486,7 @@
         "topology": "Rolling, picturesque Southern campus featuring historic brick buildings, beautiful oak-lined quads, and gently sloping terrain. Outdoors: Access to local Chewacla State Park for mountain biking and lake swimming; Lake Martin is 30 minutes away for boating; no local mountains, skiing, or ocean access.",
         "airport_distance": "55 miles (~50 min drive) west to Montgomery Regional Airport (MGM) or 100 miles to Atlanta (ATL).",
         "transit_options": "Tiger Transit bus system providing extensive complimentary transportation across campus and the local Auburn area.",
-        "neighborhood_vibe": "A quintessential, tight-knit Southern SEC college town. Downtown Auburn merges right into the campus edge at the iconic Toomer's Corner, characterized by local Southern dining, historic storefronts, and an overwhelmingly warm, small-town community atmosphere.",
+        "neighborhood_vibe": "A quintessential, tight-knit Southern SEC college town. Downtown Auburn merges right into the campus edge at the iconic Toomer Corner, characterized by local Southern dining, historic storefronts, and an overwhelmingly warm, small-town community atmosphere.",
         "housing_status": "Freshman housing features high-end residence halls managed through the 'Auburn Family' residential program. Off-campus housing consists of sprawling student complexes and cottage communities built specifically for upperclassmen, many featuring massive pools and private shuttle loops.",
         "medical_access": "University-affiliated medical support services and proximal to regional care providers.",
         "link_admissions": "https://auburn.edu/admissions/index.php",
@@ -675,6 +675,57 @@
         "Outdoors": "Top-tier coastal and water lifestyle with Atlantic beaches and intracoastal waterways 10-15 minutes away.",
         "GoHome": "Hard: 7.5hr trip via 5hr flight + train/Uber ($155-$290).",
         "Safety": "Boca Raton is generally safe, but open regional commuter access introduces consistent property crime profiles."
+      }
+    },
+    {
+      "school": "FIU",
+      "location": "Miami, FL",
+      "enrollment": "56000",
+      "profile": {
+        "full_name": "Florida International University",
+        "photo_1": "https://www.fiu.edu/_assets/images/student-life/fountain.jpg",
+        "photo_2": "https://centralreservations.fiu.edu/venues/_assets/img/fiu-football-stadium1.jpg",
+        "photo_3": "https://localist-images.azureedge.net/photos/43701775596688/card/d46f4fef4092355bb66715ba99f78d64cc10bdc6.jpg",
+        "video_url": "https://www.youtube.com/embed/CIoBSbRVJ-M?si=LyNY7AOqHtQrN_AF",
+        "topology": "Sprawling, flat urban-suburban South Florida campus layout featuring modern architecture and lush tropical landscaping. Outdoors: Minutes from the Everglades and a short drive to Miami beaches for swimming and coastal recreation; flat local landscape with zero mountains or skiing anywhere in Florida.",
+        "airport_distance": "12 miles (~20-25 min drive) to Miami International Airport (MIA).",
+        "transit_options": "FIUs Panther Express shuttle system and local Miami-Dade transit buses connecting students across the metro region.",
+        "neighborhood_vibe": "A massive urban-suburban setting in West Miami. The campus acts as a dense, high-energy city hub surrounded by vibrant South Florida culture, dense commercial corridors, and immediate access to Miami.",
+        "housing_status": "Freshman housing features large modern residential complexes like Parkview and University Towers. Off-campus housing consists heavily of dense student apartment complexes and suburban rentals across the Miami metro, requiring cars or shuttles for transit.",
+        "medical_access": "Full clinical integration anchored directly by the Herbert Wertheim College of Medicine and extensive partnerships with Baptist Health and Jackson Health System.",
+        "link_admissions": "https://admissions.fiu.edu",
+        "link_bio_dept": "https://case.fiu.edu/biology/",
+        "link_official_site": "https://www.fiu.edu",
+        "school_logo": "https://logos-world.net/wp-content/uploads/2020/06/FIU-Panthers-Logo.png",
+        "link_appily": "https://www.appily.com/colleges/florida-international-university"
+      },
+      "grades": {
+        "Cost": "B",
+        "Support": "C",
+        "Social": "D",
+        "Weather": "B",
+        "Biology": "B",
+        "CLS": "B",
+        "Spirit": "C",
+        "Admissions": "D",
+        "CultureShock": "C",
+        "Outdoors": "B",
+        "GoHome": "C",
+        "Safety": "C"
+      },
+      "details": {
+        "Cost": "Est. Total COA: ~$41,500 - $45,000 (Out-of-State). Offers competitive non-resident merit scholarships based on GPA and test scores.",
+        "Support": "Massive institutional scale operating with an 89% freshman retention rate, though large student-to-adviser ratios impact upper-division navigation.",
+        "Social": "Massive student population and active campus cultural events, but on-campus social life is severely limited by a heavy commuter culture.",
+        "Weather": "~175 nice days. Sunny tropical winters, but heavy summer humidity and hurricane season risks.",
+        "Biology": "R1 research infrastructure with solid federal funding and clinical medical school networks, though trailing elite West Coast biological powerhouses.",
+        "CLS": "Solid biological tracks and Biomedical Engineering intersections, with clinical exposure via major Miami hospital networks.",
+        "Spirit": "Growing Conference USA athletic presence, but largely a commuter-heavy vibe lacking traditional all-consuming sports culture.",
+        "Admissions": "Target: ~60% acceptance rate; selective index-based review heavily weighting GPA and test scores, SAT required",
+        "CultureShock": "High-energy urban Miami demographic shift; intense cultural melting pot distinctly different from Southern California pacing.",
+        "Outdoors": "Great coastal and beach access in Miami, though completely flat with zero elevation or mountain recreation.",
+        "GoHome": "Hard: 7.5hr trip via 5hr flight + transit; expensive tickets ($180-$320).",
+        "Safety": "Suburban campus footprint with standard major metropolitan property and urban crime considerations in the surrounding Miami area."
       }
     }
   ]
