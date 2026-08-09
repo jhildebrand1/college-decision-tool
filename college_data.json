@@ -65,7 +65,7 @@
         "CLS": "Pure theoretical bio; lacks clinical electives like Hematology and Quant Chem.",
         "Spirit": "Solid Gaucho pride and soccer culture, but lacks big-time D1 football and stadium tailgating.",
         "Happiness": "86 - High student satisfaction, beach setting, and strong campus community.",
-        "Admissions": "Hard / High Reach (~30% acceptance rate); UC system heavily caps unweighted GPA and lacks test options, placing her UN GPA below the median admitted tier."
+        "Admissions": "Hard (F Grade): Selective UC system (~30% acceptance rate) heavily caps unweighted GPA and lacks test options, placing her UN GPA below the median admitted tier."
       }
     },
     {
@@ -118,7 +118,7 @@
         "CLS": "Heavy research bio; missing clinical electives; requires external post-grad prereqs.",
         "Spirit": "Passionate Folsom Field crowd and prime Big 12 atmosphere, but sports dont totally rule campus life.",
         "Happiness": "93 - Outstanding outdoor lifestyle, high student happiness, and campus amenities.",
-        "Admissions": "Target (~80% acceptance rate); values AP rigor and personal essays heavily; her 3.5-3.6 W GPA makes her a strong applicant for general/bio entry."
+        "Admissions": "Target (B Grade): Moderate competitiveness (~80% acceptance rate); values AP rigor and personal essays heavily; her 3.5-3.6 W GPA makes her a strong applicant for general/bio entry."
       }
     },
     {
@@ -171,7 +171,7 @@
         "CLS": "Strong Physiology/Med Bio tracks; covers core chem/micro, but no direct main-campus MLS BS.",
         "Spirit": "Rivalry-fueled Wildcat sports culture; massive basketball tradition and rowdy football tailgates.",
         "Happiness": "85 - Great weather, active campus social life, and high student satisfaction.",
-        "Admissions": "Easy / Safety (~86% acceptance rate); grid/index-based admissions heavily driven by core GPA requirements, making entry practically assured."
+        "Admissions": "Easy (A Grade): Accessible admissions (~86% acceptance rate); grid/index-based admissions heavily driven by core GPA requirements, making entry practically assured."
       }
     },
     {
@@ -224,7 +224,7 @@
         "CLS": "Offers a direct Medical Laboratory Science (BAS) degree with NAACLS-aligned clinical coursework.",
         "Spirit": "Massive Sun Devil athletics presence; loud Big 12 game days and major campus-wide spirit.",
         "Happiness": "85 - High campus energy, modern facilities, and top-tier student recreation.",
-        "Admissions": "Easy / Safety (~90% acceptance rate); strict assured-admissions criteria based on GPA/test scores where her 3.5+ W GPA guarantees entry."
+        "Admissions": "Easy (A Grade): Highly accessible (~90% acceptance rate); strict assured-admissions criteria based on GPA/test scores where her 3.5+ W GPA guarantees entry."
       }
     },
     {
@@ -277,7 +277,7 @@
         "CLS": "Microbiology BS has strong clinical tracks and a direct feeder partnership with CCMLS.",
         "Spirit": "Loud, loyal Ram pride with a great modern on-campus stadium, though not SEC-level madness.",
         "Happiness": "89 - Excellent college town environment, high student well-being, and outdoor access.",
-        "Admissions": "Easy / Safety (~90% acceptance rate); highly accessible admissions criteria that readily admit students clearing a 3.0+ GPA threshold."
+        "Admissions": "Easy (A Grade): Highly accessible (~90% acceptance rate); admissions criteria readily admit students clearing a 3.0+ GPA threshold."
       }
     },
     {
@@ -330,7 +330,7 @@
         "CLS": "Solid pre-med/bio curriculum; easily covers core prereqs with in-state clinical pipelines.",
         "Spirit": "Elite SEC football religion; iconic Five Points tailgating and intense, stadium-shaking spirit.",
         "Happiness": "88 - Deep SEC campus pride, active student body, and vibrant campus life.",
-        "Admissions": "Target (~57% acceptance rate); holistic review process that rewards her AP coursework and strong essay writing."
+        "Admissions": "Hard (D Grade): Competitive review (~57% acceptance rate); holistic review process that rewards her AP coursework and strong essay writing."
       }
     },
     {
@@ -383,7 +383,7 @@
         "CLS": "Features a dedicated BioHealth Sciences major with an official Pre-Clinical Lab Science option.",
         "Spirit": "Deep Beaver pride and loyal Reser Stadium culture, though slightly overshadowed regionally by UO.",
         "Happiness": "82 - High marks for campus safety, friendly community, and outdoor culture.",
-        "Admissions": "Easy / Safety (~78% acceptance rate); holistic but accessible admissions where her 3.5+ W GPA and AP background put her in a great spot."
+        "Admissions": "Target (B Grade): Accessible admissions (~78% acceptance rate); holistic but accessible admissions where her 3.5+ W GPA and AP background put her in a great spot."
       }
     },
     {
@@ -436,7 +436,7 @@
         "CLS": "Microbiology BS offers an explicit Clinical Lab Science emphasis including Hematology.",
         "Spirit": "Strong Aztec basketball energy and new Snapdragon Stadium tailgating, but competes with SD lifestyle.",
         "Happiness": "84 - Strong local lifestyle, high campus satisfaction, and great climate.",
-        "Admissions": "Target / Reach (~36% acceptance rate); CSUs use a strict numerical algorithm weighted on raw GPA without essays; impacted Bio major keeps entry tight."
+        "Admissions": "Hard (F Grade): Highly impacted (~36% acceptance rate); CSUs use a strict numerical algorithm weighted on raw GPA without essays; impacted Bio major keeps entry tight."
       }
     },
     {
@@ -489,7 +489,7 @@
         "CLS": "Features a direct, NAACLS-accredited BS in Medical Laboratory Science with clinical rotations.",
         "Spirit": "Loud, passionate Utes fanbase and elite football atmosphere in Rice-Eccles, backed by deep regional loyalty.",
         "Happiness": "87 - Excellent campus facilities, mountain backdrop, and high overall student life.",
-        "Admissions": "Easy / Safety (~87% acceptance rate); high acceptance rate with broad admissions criteria where her GPA profile is well above average."
+        "Admissions": "Target (B Grade): Accessible admissions (~87% acceptance rate); high acceptance rate with broad admissions criteria where her GPA profile is well above average."
       }
     },
     {
@@ -542,7 +542,7 @@
         "CLS": "Main campus covers core prereqs in Biomedical Sci; full NAACLS MLS is at Auburn Montgomery.",
         "Spirit": "Peak SEC tradition; Toomers Corner, legendary tailgating, and total town-wide football immersion.",
         "Happiness": "98 - Near-top national satisfaction rating; legendary campus spirit, food, and student community.",
-        "Admissions": "Target (~50% acceptance rate); competitive out-of-state pool where admissions leans heavily on GPA metrics and academic alignment."
+        "Admissions": "Hard (D Grade): Competitive out-of-state pool (~50% acceptance rate); admissions leans heavily on GPA metrics and academic alignment."
       }
     },
     {
@@ -595,7 +595,7 @@
         "CLS": "Solid West Coast bio/micro curriculum; covers general prereqs, though lacks on-campus MLS.",
         "Spirit": "Iconic Autzen Stadium noise, Nike-backed hype, and massive statewide Duck pride.",
         "Happiness": "79 - Solid Pacific Northwest campus life, though dinged slightly on housing and weather.",
-        "Admissions": "Target (~78% acceptance rate); holistic review that places solid value on AP course load and personal statement essays."
+        "Admissions": "Target (B Grade): Moderate selectiveness (~78% acceptance rate); holistic review that places solid value on AP course load and personal statement essays."
       }
     },
     {
@@ -648,7 +648,7 @@
         "CLS": "Has an established Medical Laboratory Science pipeline linked directly to LSU Health Sciences.",
         "Spirit": "Unrivaled Death Valley night games, legendary Cajun tailgating, and pure football-as-religion culture.",
         "Happiness": "81 - Intense game day passion, though campus infrastructure and housing hold score down.",
-        "Admissions": "Easy / Safety (~79% acceptance rate); straightforward admission benchmarks where her weighted GPA comfortably exceeds requirements."
+        "Admissions": "Target (C Grade): Straightforward benchmarks (~79% acceptance rate); weighted GPA comfortably exceeds requirements."
       }
     },
     {
@@ -701,7 +701,7 @@
         "CLS": "Solid Medical Biology tracks; good access to regional Florida hospital MLS internship sites.",
         "Spirit": "Subdued athletic culture; smaller commuter crowds and minimal traditional game-day energy.",
         "Happiness": "66 - Lower student satisfaction; heavy commuter feel and limited residential campus life.",
-        "Admissions": "Easy / Safety (~60% acceptance rate); accessible core GPA requirements where her academic profile sits well within standard entry bands."
+        "Admissions": "Target (C Grade): Accessible core GPA requirements (~60% acceptance rate) where her academic profile sits well within standard entry bands."
       }
     }
   ]
