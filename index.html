@@ -741,18 +741,38 @@
                                 </div>
                             </div>
 
-                            <!-- Card 3: Academics -->
+                            <!-- Card 3: Academics & Research Hub -->
                             <div class="info-card">
-                                <h3><i class="fas fa-microscope"></i> Academics & Links</h3>
+                                <h3><i class="fas fa-microscope"></i> Academics & Research Hub</h3>
+                                
                                 <div class="info-item">
                                     <div class="info-item-label">Clinical / Medical Access</div>
                                     <div class="info-item-value" id="profMedical">--</div>
                                 </div>
-                                <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
-                                    <a id="linkOfficial" href="#" target="_blank" class="action-btn" style="text-decoration: none;"><i class="fas fa-globe"></i> Official Site</a>
-                                    <a id="linkAppily" href="#" target="_blank" class="action-btn" style="text-decoration: none; background-color: #f39c12 !important;"><i class="fas fa-school"></i> Appily</a>
-                                    <a id="linkAdmissions" href="#" target="_blank" class="action-btn" style="text-decoration: none; background-color: #27ae60 !important;"><i class="fas fa-user-graduate"></i> Admissions</a>
-                                    <a id="linkBio" href="#" target="_blank" class="action-btn" style="text-decoration: none; background-color: #8e44ad !important;"><i class="fas fa-dna"></i> Bio Dept</a>
+
+                                <!-- Live API Injected Metrics -->
+                                <div id="academicApiData" style="background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid #e0e0e0; font-size: 13px; display: flex; flex-direction: column; gap: 6px; margin-top: 6px;">
+                                    <div><strong>🎓 Graduation Rate:</strong> <span id="apiGradRate">Loading...</span></div>
+                                    <div><strong>🎯 Acceptance Rate:</strong> <span id="apiAcceptance">Loading...</span></div>
+                                </div>
+
+                                <!-- Primary Links -->
+                                <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+                                    <a id="linkOfficial" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 5px 10px;"><i class="fas fa-globe"></i> Official Site</a>
+                                    <a id="linkAppily" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 5px 10px; background-color: #f39c12 !important;"><i class="fas fa-school"></i> Appily</a>
+                                    <a id="linkAdmissions" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 5px 10px; background-color: #27ae60 !important;"><i class="fas fa-user-graduate"></i> Admissions</a>
+                                    <a id="linkBio" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 5px 10px; background-color: #8e44ad !important;"><i class="fas fa-dna"></i> Bio Dept</a>
+                                </div>
+
+                                <!-- Dynamic Auto-Generated Smart Links -->
+                                <div style="border-top: 1px dashed #ccc; padding-top: 10px; margin-top: 6px;">
+                                    <div class="info-item-label" style="margin-bottom: 6px;">Smart Research Links</div>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                        <a id="linkRMP" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fas fa-chalkboard-teacher"></i> RateMyProfessors</a>
+                                        <a id="linkUSNews" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fas fa-award"></i> U.S. News Rank</a>
+                                        <a id="linkReddit" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fab fa-reddit"></i> School Subreddit</a>
+                                        <a id="linkTikTok" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fab fa-tiktok"></i> TikTok Vlogs</a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -1198,12 +1218,52 @@
             document.getElementById('linkAdmissions').href = data.linkAdmissions || '#';
             document.getElementById('linkBio').href = data.linkBio || '#';
 
+            // --- Programmatic Smart Links (Zero JSON work required) ---
+            const officialTitle = data.fullName || (sObj ? sObj.displayName : schoolKey);
+            const queryTitle = encodeURIComponent(officialTitle);
+
+            document.getElementById('linkRMP').href = `https://www.ratemyprofessors.com/search/professors?q=${queryTitle}`;
+            document.getElementById('linkUSNews').href = `https://www.google.com/search?q=${queryTitle}+US+News+college+ranking`;
+            
+            // Link directly to a Reddit search specifically filtering for Communities (Subreddits)
+            document.getElementById('linkReddit').href = `https://www.reddit.com/search/?q=${queryTitle}&type=sr`;
+
+            // Link directly to a TikTok search for student tours and day-in-the-life vlogs
+            document.getElementById('linkTikTok').href = `https://www.tiktok.com/search?q=${queryTitle}+college+tour`;
+
+            // --- Live College Scorecard API Fetch ---
+            document.getElementById('apiGradRate').textContent = 'Fetching...';
+            document.getElementById('apiAcceptance').textContent = 'Fetching...';
+
+            fetch(`https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${queryTitle}&api_key=DEMO_KEY&fields=latest.completion.rate_suppressed.overall,latest.admissions.admission_rate.overall`)
+                .then(res => res.json())
+                .then(scorecardData => {
+                    if (scorecardData.results && scorecardData.results.length > 0) {
+                        const schoolMatch = scorecardData.results[0];
+                        
+                        // Completion / Grad Rate
+                        const gradRate = schoolMatch['latest.completion.rate_suppressed.overall'];
+                        document.getElementById('apiGradRate').textContent = gradRate ? `${(gradRate * 100).toFixed(1)}%` : 'Data Not Reported';
+
+                        // Acceptance Rate
+                        const acceptRate = schoolMatch['latest.admissions.admission_rate.overall'];
+                        document.getElementById('apiAcceptance').textContent = acceptRate ? `${(acceptRate * 100).toFixed(1)}%` : 'Data Not Reported';
+                    } else {
+                        document.getElementById('apiGradRate').textContent = 'N/A';
+                        document.getElementById('apiAcceptance').textContent = 'N/A';
+                    }
+                })
+                .catch(err => {
+                    console.error('Scorecard API fetch error:', err);
+                    document.getElementById('apiGradRate').textContent = 'Unavailable';
+                    document.getElementById('apiAcceptance').textContent = 'Unavailable';
+                });
+
             document.getElementById('profileVideo').src = data.videoUrl || '';
 
             // Update Full-Screen Campus Map
             const mapFrame = document.getElementById('profMapFrame');
             if (mapFrame) {
-                const officialTitle = data.fullName || (sObj ? sObj.displayName : schoolKey);
                 const locationStr = sObj ? sObj.location : '';
                 const query = encodeURIComponent(`${officialTitle} ${locationStr} campus`);
                 mapFrame.src = `https://maps.google.com/maps?q=${query}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
