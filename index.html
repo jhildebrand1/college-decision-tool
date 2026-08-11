@@ -23,7 +23,7 @@
 
         .container {
             display: flex;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .main-content {
@@ -94,7 +94,7 @@
             font-size: 13px;
             transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s, box-shadow 0.1s;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             text-decoration: none;
@@ -117,7 +117,6 @@
             background-color: #484e53;
         }
 
-        /* Fully Unbounded / Full-Width Scrolling Table Container */
         .table-responsive {
             width: 100%;
             overflow-x: auto;
@@ -215,7 +214,6 @@
         .score.very-low { background-color: #fce8e6; color: #a50e0e; border: 1px solid #fad2cf; font-weight: 700; }
         .score.good { background-color: #e8f0fe; color: #1967d2; border: 1px solid #d2e3fc; }
 
-        /* Drawers */
         .detail-drawer {
             background-color: #ffffff;
             border: 1px solid var(--border, #e0e0e0);
@@ -266,7 +264,6 @@
             padding: 0 4px;
         }
 
-        /* Filter Dropdown */
         .school-filter-container, .metric-filter-container {
             position: relative;
             display: inline-block;
@@ -363,59 +360,75 @@
             animation: highlightUpdate 0.3s ease-out;
         }
 
-        /* Profile Styles */
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
         .profile-header-card {
-            background-color: var(--surface-2, #ffffff);
+            background-color: #ffffff;
             border: 1px solid var(--border, #e0e0e0);
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 24px;
             display: flex;
             align-items: center;
             gap: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .profile-logo {
-            max-width: 64px;
-            max-height: 64px;
+            max-width: 72px;
+            max-height: 72px;
             width: auto;
             height: auto;
             object-fit: contain;
-            border-radius: 6px;
-            background: #f0f0f0;
-            padding: 4px;
+            border-radius: 8px;
+            background: #fafafa;
+            padding: 6px;
+            border: 1px solid #eee;
         }
 
         .profile-section {
-            background-color: var(--surface-2, #ffffff);
+            background-color: #ffffff;
             border: 1px solid var(--border, #e0e0e0);
             border-radius: 8px;
-            margin-bottom: 20px;
-            overflow: hidden;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
-        .profile-content {
-            padding: 20px;
+        .profile-section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-accent, #0066cc);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #f0f4f8;
+            padding-bottom: 10px;
         }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 12px;
-            margin-bottom: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
         }
 
         .gallery-item {
             aspect-ratio: 16 / 9;
-            border-radius: 6px;
+            border-radius: 8px;
             overflow: hidden;
             background-color: var(--surface-1, #f5f5f5);
             cursor: pointer;
-            transition: transform 0.2s;
+            border: 1px solid #e5e5e5;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .gallery-item:hover {
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .gallery-item img {
@@ -424,7 +437,6 @@
             object-fit: cover;
         }
 
-        /* Lightbox Modal */
         .lightbox-modal {
             display: none;
             position: fixed;
@@ -464,10 +476,10 @@
         }
 
         .video-player {
-            margin-bottom: 15px;
-            border-radius: 6px;
+            border-radius: 8px;
             overflow: hidden;
             aspect-ratio: 16 / 9;
+            background-color: #000;
         }
 
         .video-player iframe {
@@ -490,77 +502,173 @@
 
         .major-selector select {
             width: 100%;
+            max-width: 400px;
             padding: 10px;
             border: 1px solid var(--border, #e0e0e0);
             border-radius: 6px;
             font-size: 14px;
+            font-weight: 600;
             background-color: var(--surface-2, #ffffff);
             color: var(--text-primary, #1a1a1a);
         }
 
-        /* Profile Info Cards */
+        .profile-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
         .info-card {
-            background-color: var(--surface-2, #ffffff);
+            background-color: #ffffff;
             border: 1px solid var(--border, #e0e0e0);
             border-radius: 8px;
             padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 12px;
-        }
-
-        .profile-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
         }
 
         .info-card h3 {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--text-accent, #0066cc);
-            margin-bottom: 8px;
-            border-bottom: 2px solid var(--border, #e0e0e0);
+            margin-bottom: 4px;
+            border-bottom: 1px solid var(--border, #e0e0e0);
             padding-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        .info-card .info-item {
-            background-color: transparent;
-            padding: 0;
-        }
-
         .info-card .info-item-label {
-            color: #555;
+            color: #666;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-size: 11px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .info-card .info-item-value {
             font-size: 14px;
-            font-weight: 400;
-            line-height: 1.5;
+            font-weight: 500;
+            line-height: 1.4;
             color: var(--text-primary, #1a1a1a);
         }
 
-        @media (max-width: 768px) {
+        .gpa-card-content {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .gpa-chart-container-horizontal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: #fafafa;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+        }
+
+        .gpa-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .gpa-label-horiz {
+            font-size: 11px;
+            font-weight: 600;
+            color: #444;
+            width: 62px;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .gpa-bar-wrapper-horiz {
+            flex: 1;
+            background: #e9ecef;
+            border-radius: 4px;
+            height: 16px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .gpa-bar-horiz {
+            height: 100%;
+            background: linear-gradient(90deg, #0066cc, #004080);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 6px;
+            min-width: 18px;
+            transition: width 0.4s ease;
+        }
+
+        .gpa-bar-val-horiz {
+            font-size: 10px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .gpa-stats-box {
+            width: 140px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #e6f0ff;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #b3d1ff;
+        }
+
+        .gpa-stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gpa-stat-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .gpa-stat-val {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0066cc;
+        }
+
+        @media (max-width: 900px) {
             .container {
                 flex-direction: column;
             }
             .gallery {
                 grid-template-columns: 1fr;
             }
+            .profile-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .gpa-card-content {
+                flex-direction: column;
+            }
+            .gpa-stats-box {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-
         <div class="main-content">
             <div class="header">
                 <h1>College Decision Tool</h1>
@@ -573,7 +681,6 @@
             <div class="content">
                 <!-- TAB 1: School Comparison -->
                 <div class="tab-content active" id="comparison">
-                    <!-- Global Toolbar Container -->
                     <div class="sliders-section">
                         <div style="display: flex; align-items: center; gap: 6px; font-size: 13px;">
                             <label for="setAllSelect" style="font-weight: 600; white-space: nowrap;">Set All Weights:</label>
@@ -587,7 +694,6 @@
                         </div>
                         
                         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-                            <!-- Manage Schools Dropdown -->
                             <div class="school-filter-container">
                                 <button id="manageSchoolsBtn" class="action-btn secondary-btn" onclick="toggleSchoolFilterDropdown(event)">
                                     <i class="fas fa-filter"></i> <span id="schoolFilterBtnText">Manage Schools</span>
@@ -597,9 +703,7 @@
                                         <span>Filter Schools</span>
                                         <i class="fas fa-times" style="cursor: pointer;" onclick="closeSchoolFilterDropdown()"></i>
                                     </div>
-                                    <div class="school-filter-list" id="schoolFilterList">
-                                        <!-- Injected by JS -->
-                                    </div>
+                                    <div class="school-filter-list" id="schoolFilterList"></div>
                                     <div style="display: flex; justify-content: space-between; font-size: 12px;">
                                         <span style="color: #0066cc; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(true)">Select All</span>
                                         <span style="color: #c5221f; cursor: pointer; font-weight: 600;" onclick="setAllSchoolsVisibility(false)">Deselect All</span>
@@ -607,7 +711,6 @@
                                 </div>
                             </div>
 
-                            <!-- Manage Metrics Dropdown -->
                             <div class="metric-filter-container">
                                 <button id="manageMetricsBtn" class="action-btn secondary-btn" onclick="toggleMetricFilterDropdown(event)">
                                     <i class="fas fa-columns"></i> <span id="metricFilterBtnText">Manage Metrics</span>
@@ -617,9 +720,7 @@
                                         <span>Filter Metrics</span>
                                         <i class="fas fa-times" style="cursor: pointer;" onclick="closeMetricFilterDropdown()"></i>
                                     </div>
-                                    <div class="metric-filter-list" id="metricFilterList">
-                                        <!-- Injected by JS -->
-                                    </div>
+                                    <div class="metric-filter-list" id="metricFilterList"></div>
                                     <div style="display: flex; justify-content: space-between; font-size: 12px;">
                                         <span style="color: #0066cc; cursor: pointer; font-weight: 600;" onclick="setAllMetricsVisibility(true)">Select All</span>
                                         <span style="color: #c5221f; cursor: pointer; font-weight: 600;" onclick="setAllMetricsVisibility(false)">Deselect All</span>
@@ -641,7 +742,6 @@
                         Grading Scale (A = Highest, F = Lowest) • <span style="color: #0066cc;">Click headers to configure metrics or view school spotlight</span>
                     </div>
 
-                    <!-- School Spotlight Drawer -->
                     <div class="detail-drawer" id="schoolDrawer" style="border-left-color: #28a745;">
                         <h4 id="schoolDrawerTitle">
                             <span>School Spotlight</span> 
@@ -650,7 +750,6 @@
                         <div id="schoolDrawerBody" style="font-size: 14px; color: var(--text-primary, #333);"></div>
                     </div>
 
-                    <!-- Metric Info & Controls Drawer -->
                     <div class="detail-drawer" id="metricDrawer">
                         <h4 id="metricDrawerTitle">
                             <span>Metric Configuration</span> 
@@ -673,25 +772,18 @@
                         </div>
                     </div>
 
-                    <!-- Detail Drawer -->
                     <div class="detail-drawer" id="detailDrawer">
                         <h4 id="drawerTitle"><span>Detail Evaluation</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i></h4>
                         <p id="drawerText">Click any grade in the table above to view specific evaluation details here.</p>
                     </div>
 
-                    <!-- Comparison Table Container -->
                     <div class="table-responsive">
-                        <table class="comparison-table" id="comparisonTable">
-                            <!-- Rendered by JavaScript -->
-                        </table>
+                        <table class="comparison-table" id="comparisonTable"></table>
                     </div>
 
-                    <!-- Overall Ranking -->
                     <div class="overall-ranking">
                         <h3 style="margin-bottom: 15px;">Overall ranking (based on weights)</h3>
-                        <div id="rankingList">
-                            <!-- Injected dynamically by JS -->
-                        </div>
+                        <div id="rankingList"></div>
                     </div>
                 </div>
 
@@ -699,36 +791,31 @@
                 <div class="tab-content" id="profile">
                     <div class="major-selector">
                         <label for="selectProfileSchool">Select school to view profile:</label>
-                        <select id="selectProfileSchool" style="max-width: 400px; font-weight: 600;"></select>
+                        <select id="selectProfileSchool"></select>
                     </div>
 
-                    <!-- Dynamic Profile Dashboard -->
-                    <div id="profileDashboard" style="display: none;">
+                    <div id="profileDashboard" style="display: none;" class="profile-container">
                         
-                        <!-- Profile Header Card with Logo and Full Name -->
-                        <div class="profile-header-card" style="flex-wrap: wrap;">
+                        <!-- Header -->
+                        <div class="profile-header-card">
                             <img id="profLogoImg" src="" alt="School Logo" class="profile-logo" style="display: none;">
-                            <div style="flex: 1; min-width: 220px;">
-                                <h2 id="profSchoolTitle" style="font-size: 20px; color: var(--text-primary, #1a1a1a);">--</h2>
-                                <p style="font-size: 13px; color: var(--text-secondary, #666); margin-bottom: 8px;">Campus Overview & Logistics Dashboard</p>
+                            <div style="flex: 1;">
+                                <h2 id="profSchoolTitle" style="font-size: 22px; color: var(--text-primary, #1a1a1a); margin-bottom: 4px;">--</h2>
+                                <p style="font-size: 13px; color: var(--text-secondary, #666); margin-bottom: 10px;">Campus Overview & Operations Dashboard</p>
                                 <div id="profQuickStats" style="display: flex; gap: 8px; flex-wrap: wrap; font-size: 12px;"></div>
                             </div>
                         </div>
 
-                        <!-- Hero Section -->
+                        <!-- Gallery & Video Tour -->
                         <div class="profile-section">
-                            <div class="profile-content open" style="display: block;">
-                                <div class="gallery" id="profileGallery">
-                                    <!-- Images injected here -->
-                                </div>
-                                <h4 style="font-size: 14px; margin-bottom: 10px; color: var(--text-primary, #1a1a1a);">Campus Tour</h4>
-                                <div class="video-player">
-                                    <iframe id="profileVideo" src="" allowfullscreen></iframe>
-                                </div>
+                            <div class="profile-section-title"><i class="fas fa-camera"></i> Campus Gallery & Video Tour</div>
+                            <div class="gallery" id="profileGallery"></div>
+                            <div class="video-player" id="videoContainer">
+                                <iframe id="profileVideo" src="" allowfullscreen></iframe>
                             </div>
                         </div>
 
-                        <!-- Cards Grid -->
+                        <!-- Profile Grid Section -->
                         <div class="profile-cards-grid">
                             
                             <!-- Card 1: Logistics -->
@@ -761,52 +848,123 @@
                                 </div>
                             </div>
 
-                            <!-- Card 3: Academics & Research Hub -->
-                            <div class="info-card">
-                                <h3><i class="fas fa-microscope"></i> Academics & Research Hub</h3>
-                                
-                                <div class="info-item">
-                                    <div class="info-item-label">Clinical / Medical Access</div>
-                                    <div class="info-item-value" id="profMedical">--</div>
-                                </div>
+                            <!-- Card 3: Academics & Research (100% Dynamic Container) -->
+                            <div class="info-card" style="grid-column: span 2;">
+                                <h3><i class="fas fa-microscope"></i> Academics & Research Tracks</h3>
+                                <div id="profAcademicsContainer" style="display: flex; flex-direction: column; gap: 12px;"></div>
 
-                                <!-- Live API Injected Metrics -->
-                                <div id="academicApiData" style="background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid #e0e0e0; font-size: 13px; display: flex; flex-direction: column; gap: 6px; margin-top: 6px;">
-                                    <div><strong>🎓 Graduation Rate:</strong> <span id="apiGradRate">Loading...</span></div>
-                                    <div><strong>🎯 Acceptance Rate:</strong> <span id="apiAcceptance">Loading...</span></div>
-                                </div>
-
-                                <!-- Primary Links -->
-                                <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
-                                    <a id="linkOfficial" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 5px 10px;"><i class="fas fa-globe"></i> Official Site</a>
-                                    <a id="linkAppily" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 5px 10px; background-color: #f39c12 !important;"><i class="fas fa-school"></i> Appily</a>
-                                    <a id="linkAdmissions" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 5px 10px; background-color: #27ae60 !important;"><i class="fas fa-user-graduate"></i> Admissions</a>
-                                    <a id="linkBio" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 5px 10px; background-color: #8e44ad !important;"><i class="fas fa-dna"></i> Bio Dept</a>
-                                </div>
-
-                                <!-- Dynamic Auto-Generated Smart Links -->
-                                <div style="border-top: 1px dashed #ccc; padding-top: 10px; margin-top: 6px;">
-                                    <div class="info-item-label" style="margin-bottom: 6px;">Smart Research Links</div>
+                                <div style="border-top: 1px dashed #ddd; padding-top: 10px; margin-top: 6px; display: flex; flex-direction: column; gap: 8px;">
+                                    <div class="info-item-label">Institutional Links</div>
                                     <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                                        <a id="linkRMP" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fas fa-chalkboard-teacher"></i> RateMyProfessors</a>
-                                        <a id="linkUSNews" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fas fa-award"></i> U.S. News Rank</a>
-                                        <a id="linkReddit" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fab fa-reddit"></i> School Subreddit</a>
-                                        <a id="linkTikTok" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fab fa-tiktok"></i> TikTok Vlogs</a>
+                                        <a id="linkOfficial" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fas fa-globe"></i> Official</a>
+                                        <a id="linkAppily" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 4px 8px; background-color: #f39c12;"><i class="fas fa-school"></i> Appily</a>
+                                        <a id="linkAdmissions" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 4px 8px; background-color: #27ae60;"><i class="fas fa-user-graduate"></i> Admissions</a>
+                                        <a id="linkBio" href="#" target="_blank" class="action-btn" style="font-size: 11px; padding: 4px 8px; background-color: #8e44ad;"><i class="fas fa-dna"></i> Bio Dept</a>
+                                    </div>
+                                    
+                                    <div class="info-item-label" style="margin-top: 4px;">Research Portals</div>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                        <a id="linkRMP" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fas fa-chalkboard-teacher"></i> RateMyProf</a>
+                                        <a id="linkUSNews" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fas fa-award"></i> US News</a>
+                                        <a id="linkReddit" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fab fa-reddit"></i> Reddit</a>
+                                        <a id="linkTikTok" href="#" target="_blank" class="action-btn secondary-btn" style="font-size: 11px; padding: 4px 8px;"><i class="fab fa-tiktok"></i> TikTok</a>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
 
-                        <!-- Full-Width Campus Map Section -->
-                        <div class="profile-section" style="margin-top: 20px;">
-                            <div class="profile-content" style="padding: 20px;">
-                                <h3 style="font-size: 16px; color: var(--text-accent, #0066cc); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                                    <i class="fas fa-map-marked-alt"></i> Campus Location & Map
-                                </h3>
-                                <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid var(--border, #e0e0e0); height: 450px;">
-                                    <iframe id="profMapFrame" width="100%" height="100%" style="border:0;" loading="lazy" src=""></iframe>
+                        <!-- Common Data Set (CDS) Section -->
+                        <div class="profile-section">
+                            <div class="profile-section-title"><i class="fas fa-chart-bar"></i> Common Data Set (CDS Data 2024-25)</div>
+
+                            <div class="profile-cards-grid" style="margin-bottom: 20px;">
+                                <div class="info-card">
+                                    <h3>Admissions Snapshot</h3>
+                                    <div class="info-item">
+                                        <div class="info-item-label">Cohort</div>
+                                        <div class="info-item-value" id="profCohort">--</div>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-item-label">Applicants / Admits</div>
+                                        <div class="info-item-value"><span id="profApplicants">--</span> / <span id="profAdmitted">--</span></div>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-item-label">Acceptance Rate</div>
+                                        <div class="info-item-value" id="profAccRate">--</div>
+                                    </div>
                                 </div>
+
+                                <div class="info-card">
+                                    <h3>Test Score Ranges (25-75th %ile)</h3>
+                                    <div class="info-item">
+                                        <div class="info-item-label">SAT Range & Policy</div>
+                                        <div class="info-item-value"><span id="profSATRange">--</span> <br><small id="profSATPolicy" style="color:#666;"></small></div>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-item-label">ACT Range & Policy</div>
+                                        <div class="info-item-value"><span id="profACTRange">--</span> <br><small id="profACTPolicy" style="color:#666;"></small></div>
+                                    </div>
+                                </div>
+
+                                <div class="info-card">
+                                    <h3>Student Outcomes</h3>
+                                    <div class="info-item">
+                                        <div class="info-item-label">1st Year Retention</div>
+                                        <div class="info-item-value" id="profRetention">--</div>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-item-label">4-Yr / 6-Yr Grad Rate</div>
+                                        <div class="info-item-value"><span id="prof4YrGrad">--</span> / <span id="prof6YrGrad">--</span></div>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="info-item-label">Student:Faculty Ratio</div>
+                                        <div class="info-item-value" id="profStudentFacultyRatio">--</div>
+                                    </div>
+                                </div>
+
+                                <div class="info-card">
+                                    <h3>High School GPA Distribution</h3>
+                                    <div class="gpa-card-content">
+                                        <div class="gpa-chart-container-horizontal" id="profGPAChartBars"></div>
+                                        <div class="gpa-stats-box">
+                                            <div class="gpa-stat-item">
+                                                <span class="gpa-stat-label">Avg HS GPA</span>
+                                                <span class="gpa-stat-val" id="profAvgGPA">--</span>
+                                            </div>
+                                            <div class="gpa-stat-item">
+                                                <span class="gpa-stat-label">Top 10% Rank</span>
+                                                <span class="gpa-stat-val" id="profTopTenPercent">--</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- COA Cards -->
+                            <div class="profile-cards-grid">
+                                <div class="info-card" style="border-left: 4px solid #0066cc;">
+                                    <h3>In-State Cost of Attendance</h3>
+                                    <div class="info-item"><div class="info-item-label">Tuition & Fees</div><div class="info-item-value" id="profInTuition">--</div></div>
+                                    <div class="info-item"><div class="info-item-label">Room & Board</div><div class="info-item-value" id="profInRoom">--</div></div>
+                                    <div class="info-item"><div class="info-item-label">Books & Supplies</div><div class="info-item-value" id="profInBooks">--</div></div>
+                                    <div class="info-item" style="margin-top: 4px;"><div class="info-item-label">Total COA</div><div class="info-item-value" id="profInCOA" style="font-weight: 700; color: #0066cc;">--</div></div>
+                                </div>
+                                <div class="info-card" style="border-left: 4px solid #d9534f;">
+                                    <h3>Out-of-State Cost of Attendance</h3>
+                                    <div class="info-item"><div class="info-item-label">Tuition & Fees</div><div class="info-item-value" id="profOutTuition">--</div></div>
+                                    <div class="info-item"><div class="info-item-label">Room & Board</div><div class="info-item-value" id="profOutRoom">--</div></div>
+                                    <div class="info-item"><div class="info-item-label">Books & Supplies</div><div class="info-item-value" id="profOutBooks">--</div></div>
+                                    <div class="info-item" style="margin-top: 4px;"><div class="info-item-label">Total COA</div><div class="info-item-value" id="profOutCOA" style="font-weight: 700; color: #d9534f;">--</div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Section -->
+                        <div class="profile-section">
+                            <div class="profile-section-title"><i class="fas fa-map-marker-alt"></i> Location & Campus Map</div>
+                            <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid var(--border, #e0e0e0); height: 350px;">
+                                <iframe id="profMapFrame" width="100%" height="100%" style="border:0;" loading="lazy" src=""></iframe>
                             </div>
                         </div>
 
@@ -820,7 +978,6 @@
         </div>
     </div>
 
-    <!-- Lightbox Modal for Full-Size Images -->
     <div id="imageLightbox" class="lightbox-modal" onclick="closeLightbox()">
         <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
         <img id="lightboxImg" class="lightbox-content" src="" alt="Full Size Preview">
@@ -855,9 +1012,20 @@
 
         async function loadJSONData() {
             try {
-                const response = await fetch(jsonUrl);
-                if (!response.ok) throw new Error(`HTTP error loading college_data.json`);
-                const jsonData = await response.json();
+                let jsonData;
+                try {
+                    const response = await fetch(jsonUrl);
+                    if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+                    jsonData = await response.json();
+                } catch (fetchErr) {
+                    console.warn("Fetch failed. Loading local embedded fallback.");
+                    const embeddedScript = document.getElementById("college-data-json");
+                    if (embeddedScript) {
+                        jsonData = JSON.parse(embeddedScript.textContent);
+                    } else {
+                        throw fetchErr;
+                    }
+                }
 
                 metricsHelpMap = jsonData.metrics_descriptions || {};
                 
@@ -871,19 +1039,19 @@
                 schools = [];
                 profilesData = {};
 
-                (jsonData.schools || []).forEach(item => {
+                (jsonData.schools || jsonData || []).forEach(item => {
                     const schoolCode = item.school;
                     const location = item.location;
-                    const enrollment = item.enrollment;
+                    const cds = item.cds_2024_2025 || {};
+                    const enrollment = cds.enrollment?.undergraduate_total || 0;
+                    const officialName = cds.general?.official_name || schoolCode;
                     const grades = item.grades || {};
                     const details = item.details || {};
                     const prof = item.profile || {};
 
-                    const fullName = prof.full_name || schoolCode;
-
                     schools.push({
                         fullName: schoolCode,
-                        displayName: fullName,
+                        displayName: officialName,
                         location,
                         enrollment,
                         grades,
@@ -891,7 +1059,8 @@
                     });
 
                     profilesData[schoolCode.toLowerCase()] = {
-                        fullName: fullName,
+                        fullName: schoolCode,
+                        displayName: officialName,
                         photo1: prof.photo_1,
                         photo2: prof.photo_2,
                         photo3: prof.photo_3,
@@ -906,14 +1075,13 @@
                         linkBio: prof.link_bio_dept,
                         linkOfficial: prof.link_official_site,
                         schoolLogo: prof.school_logo,
-                        linkAppily: prof.link_appily
+                        linkAppily: prof.link_appily,
+                        cds_2024_2025: cds,
+                        profile: prof
                     };
                 });
 
-                // Automatically sort metrics alphabetically by their display name
                 metricsList.sort((a, b) => a.name.localeCompare(b.name));
-
-                // Automatically sort schools alphabetically by their display name
                 schools.sort((a, b) => a.displayName.localeCompare(b.displayName));
 
                 calculateRankings(); 
@@ -1140,7 +1308,7 @@
             const body = document.getElementById('schoolDrawerBody');
 
             const profileObj = profilesData[schoolFullName.toLowerCase()];
-            const officialName = profileObj ? profileObj.fullName : s.displayName;
+            const officialName = profileObj ? profileObj.displayName : s.displayName;
 
             const rankData = currentCalculatedRankings.find(r => r.name === schoolFullName);
             const rankDisplay = rankData ? `#${rankData.rank} of ${schools.length}` : 'Unranked';
@@ -1255,56 +1423,86 @@
             if (!data) {
                 dashboard.style.display = 'none';
                 noMsg.style.display = 'block';
-                noMsg.textContent = `No detailed profile data available yet for ${schoolKey}.`;
+                noMsg.textContent = `No detailed profile data available for ${schoolKey}.`;
                 return;
             }
 
-            dashboard.style.display = 'block';
+            dashboard.style.display = 'flex';
             noMsg.style.display = 'none';
 
-            document.getElementById('profSchoolTitle').textContent = data.fullName || schoolKey;
+            // Reset dynamic containers
+            document.getElementById('profGPAChartBars').innerHTML = '';
+            document.getElementById('profileGallery').innerHTML = '';
+            document.getElementById('profQuickStats').innerHTML = '';
+
+            // POPULATE ACADEMICS & RESEARCH DYNAMICALLY
+            const acadContainer = document.getElementById('profAcademicsContainer');
+            if (acadContainer) {
+                acadContainer.innerHTML = '';
+
+                const acadData = data.profile?.academics || {};
+                const acadKeys = Object.keys(acadData);
+
+                if (acadKeys.length === 0) {
+                    acadContainer.innerHTML = `
+                        <div class="info-item">
+                            <div class="info-item-label">Clinical / Medical Access</div>
+                            <div class="info-item-value">${data.medical || '--'}</div>
+                        </div>
+                    `;
+                } else {
+                    acadKeys.forEach(key => {
+                        const label = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                        const value = acadData[key];
+                        
+                        const itemDiv = document.createElement('div');
+                        itemDiv.className = 'info-item';
+                        itemDiv.innerHTML = `
+                            <div class="info-item-label">${label}</div>
+                            <div class="info-item-value">${value || '--'}</div>
+                        `;
+                        acadContainer.appendChild(itemDiv);
+                    });
+                }
+            }
+
+            // Set Header & Quick Info
+            document.getElementById('profSchoolTitle').textContent = data.displayName || data.fullName || '--';
             
-            const sObj = schools.find(item => 
-                item.fullName.toLowerCase() === schoolKey.toLowerCase() || 
-                (item.displayName && item.displayName.toLowerCase() === schoolKey.toLowerCase())
-            );
+            const sObj = schools.find(item => item.fullName.toLowerCase() === schoolKey.toLowerCase());
+            const rankData = currentCalculatedRankings.find(r => r.name.toLowerCase() === schoolKey.toLowerCase());
             
-            const rankData = currentCalculatedRankings.find(r => 
-                r.name.toLowerCase() === schoolKey.toLowerCase() || 
-                (r.displayName && r.displayName.toLowerCase() === schoolKey.toLowerCase()) ||
-                (profilesData[r.name.toLowerCase()] && profilesData[r.name.toLowerCase()].fullName.toLowerCase() === schoolKey.toLowerCase())
-            );
-            
-            const quickStatsEl = document.getElementById('profQuickStats');
-            if (quickStatsEl && sObj) {
-                quickStatsEl.innerHTML = `
-                    <span style="background: #e6f0ff; color: #0066cc; padding: 3px 8px; border-radius: 12px; font-weight: 600;">🏆 Rank: #${rankData ? rankData.rank : 'N/A'}</span>
-                    <span style="background: #f1f3f4; color: #3c4043; padding: 3px 8px; border-radius: 12px; font-weight: 500;">👥 Enrollment: ${Number(sObj.enrollment).toLocaleString()}</span>
-                    <span style="background: #f1f3f4; color: #3c4043; padding: 3px 8px; border-radius: 12px; font-weight: 500;">📍 ${sObj.location}</span>
+            if (sObj) {
+                document.getElementById('profQuickStats').innerHTML = `
+                    <span style="background: #e6f0ff; color: #0066cc; padding: 4px 10px; border-radius: 12px; font-weight: 600;">🏆 Rank: #${rankData ? rankData.rank : 'N/A'}</span>
+                    <span style="background: #f1f3f4; color: #3c4043; padding: 4px 10px; border-radius: 12px; font-weight: 500;">👥 Enrollment: ${Number(sObj.enrollment || 0).toLocaleString()}</span>
+                    <span style="background: #f1f3f4; color: #3c4043; padding: 4px 10px; border-radius: 12px; font-weight: 500;">📍 ${sObj.location || '--'}</span>
                 `;
             }
-            
+
             const logoImg = document.getElementById('profLogoImg');
             if (data.schoolLogo && data.schoolLogo.trim() !== '') {
                 logoImg.src = data.schoolLogo;
                 logoImg.style.display = 'block';
             } else {
+                logoImg.src = '';
                 logoImg.style.display = 'none';
             }
 
+            // Direct Mapping
             document.getElementById('profAirport').textContent = data.airport || '--';
             document.getElementById('profTransit').textContent = data.transit || '--';
             document.getElementById('profTopology').textContent = data.topology || '--';
             document.getElementById('profVibe').textContent = data.vibe || '--';
             document.getElementById('profHousing').textContent = data.housing || '--';
-            document.getElementById('profMedical').textContent = data.medical || '--';
 
+            // Institutional Links
             document.getElementById('linkOfficial').href = data.linkOfficial || '#';
             document.getElementById('linkAppily').href = data.linkAppily || '#';
             document.getElementById('linkAdmissions').href = data.linkAdmissions || '#';
             document.getElementById('linkBio').href = data.linkBio || '#';
 
-            const officialTitle = data.fullName || (sObj ? sObj.displayName : schoolKey);
+            const officialTitle = data.displayName || (sObj ? sObj.displayName : schoolKey);
             const queryTitle = encodeURIComponent(officialTitle);
 
             document.getElementById('linkRMP').href = `https://www.ratemyprofessors.com/search/professors?q=${queryTitle}`;
@@ -1312,31 +1510,72 @@
             document.getElementById('linkReddit').href = `https://www.reddit.com/search/?q=${queryTitle}&type=sr`;
             document.getElementById('linkTikTok').href = `https://www.tiktok.com/search?q=${queryTitle}+college+tour`;
 
-            document.getElementById('apiGradRate').textContent = 'Fetching...';
-            document.getElementById('apiAcceptance').textContent = 'Fetching...';
+            // Common Data Set
+            const cds = data.cds_2024_2025 || {};
+            const adm = cds.admissions || {};
+            document.getElementById('profCohort').textContent = adm.cohort || '--';
+            document.getElementById('profApplicants').textContent = adm.applicants ? Number(adm.applicants).toLocaleString() : '--';
+            document.getElementById('profAdmitted').textContent = adm.admits ? Number(adm.admits).toLocaleString() : '--';
+            document.getElementById('profAccRate').textContent = adm.acceptance_rate_pct ? `${adm.acceptance_rate_pct.toFixed(1)}%` : '--';
 
-            fetch(`https://api.data.gov/ed/collegescorecard/v1/schools.json?school.name=${queryTitle}&api_key=DEMO_KEY&fields=latest.completion.rate_suppressed.overall,latest.admissions.admission_rate.overall`)
-                .then(res => res.json())
-                .then(scorecardData => {
-                    if (scorecardData.results && scorecardData.results.length > 0) {
-                        const schoolMatch = scorecardData.results[0];
-                        const gradRate = schoolMatch['latest.completion.rate_suppressed.overall'];
-                        document.getElementById('apiGradRate').textContent = gradRate ? `${(gradRate * 100).toFixed(1)}%` : 'Data Not Reported';
+            const gpaData = cds.gpa || {};
+            document.getElementById('profAvgGPA').textContent = gpaData.average_hs_gpa ? gpaData.average_hs_gpa.toFixed(2) : '--';
+            document.getElementById('profTopTenPercent').textContent = gpaData.class_rank_top_10_pct ? `${gpaData.class_rank_top_10_pct}%` : '--';
 
-                        const acceptRate = schoolMatch['latest.admissions.admission_rate.overall'];
-                        document.getElementById('apiAcceptance').textContent = acceptRate ? `${(acceptRate * 100).toFixed(1)}%` : 'Data Not Reported';
-                    } else {
-                        document.getElementById('apiGradRate').textContent = 'N/A';
-                        document.getElementById('apiAcceptance').textContent = 'N/A';
-                    }
-                })
-                .catch(err => {
-                    console.error('Scorecard API fetch error:', err);
-                    document.getElementById('apiGradRate').textContent = 'Unavailable';
-                    document.getElementById('apiAcceptance').textContent = 'Unavailable';
+            if (gpaData.distribution_pct) {
+                const gpaBands = [
+                    { label: '4.0', key: '4.0' }, { label: '3.75-3.99', key: '3.75-3.99' },
+                    { label: '3.50-3.74', key: '3.50-3.74' }, { label: '3.25-3.49', key: '3.25-3.49' },
+                    { label: '3.00-3.24', key: '3.00-3.24' }, { label: '< 3.0', key: 'below_3.0' }
+                ];
+                gpaBands.forEach(band => {
+                    const percent = gpaData.distribution_pct[band.key] || 0;
+                    const row = document.createElement('div');
+                    row.className = 'gpa-row';
+                    row.innerHTML = `
+                        <div class="gpa-label-horiz">${band.label}</div>
+                        <div class="gpa-bar-wrapper-horiz">
+                            <div class="gpa-bar-horiz" style="width: ${Math.max(percent, 2)}%;">
+                                ${percent > 4 ? `<span class="gpa-bar-val-horiz">${percent.toFixed(0)}%</span>` : ''}
+                            </div>
+                        </div>
+                    `;
+                    document.getElementById('profGPAChartBars').appendChild(row);
                 });
+            }
 
-            document.getElementById('profileVideo').src = data.videoUrl || '';
+            const tests = cds.test_scores || {};
+            document.getElementById('profSATRange').textContent = tests.sat_composite_25_75 || '--';
+            document.getElementById('profSATPolicy').textContent = tests.policy || '';
+            document.getElementById('profACTRange').textContent = tests.act_composite_25_75 || '--';
+            document.getElementById('profACTPolicy').textContent = tests.policy || '';
+
+            const coa = cds.cost_annual || {};
+            document.getElementById('profInTuition').textContent = formatCurrency(coa.tuition_in_state);
+            document.getElementById('profInRoom').textContent = formatCurrency(coa.room_and_board_on_campus);
+            document.getElementById('profInBooks').textContent = formatCurrency(coa.books_supplies);
+            document.getElementById('profInCOA').textContent = formatCurrency(coa.est_full_coa_in_state);
+            document.getElementById('profOutTuition').textContent = formatCurrency(coa.tuition_out_of_state);
+            document.getElementById('profOutRoom').textContent = formatCurrency(coa.room_and_board_on_campus);
+            document.getElementById('profOutBooks').textContent = formatCurrency(coa.books_supplies);
+            document.getElementById('profOutCOA').textContent = formatCurrency(coa.est_full_coa_out_of_state);
+
+            const outcomes = cds.outcomes || {};
+            document.getElementById('profRetention').textContent = outcomes.first_year_retention_pct ? `${outcomes.first_year_retention_pct.toFixed(1)}%` : '--';
+            document.getElementById('prof4YrGrad').textContent = outcomes.grad_rate_4yr_pct ? `${outcomes.grad_rate_4yr_pct.toFixed(1)}%` : '--';
+            document.getElementById('prof6YrGrad').textContent = outcomes.grad_rate_6yr_pct ? `${outcomes.grad_rate_6yr_pct.toFixed(1)}%` : '--';
+            document.getElementById('profStudentFacultyRatio').textContent = outcomes.student_to_faculty_ratio || '--';
+
+            // Video & Map
+            const videoContainer = document.getElementById('videoContainer');
+            const videoIframe = document.getElementById('profileVideo');
+            if (data.videoUrl && data.videoUrl.trim() !== '') {
+                videoIframe.src = data.videoUrl;
+                videoContainer.style.display = 'block';
+            } else {
+                videoIframe.src = '';
+                videoContainer.style.display = 'none';
+            }
 
             const mapFrame = document.getElementById('profMapFrame');
             if (mapFrame) {
@@ -1345,8 +1584,8 @@
                 mapFrame.src = `https://maps.google.com/maps?q=${query}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
             }
 
+            // Photo Gallery
             const gallery = document.getElementById('profileGallery');
-            gallery.innerHTML = '';
             [data.photo1, data.photo2, data.photo3].forEach(imgSrc => {
                 if (imgSrc && imgSrc.trim() !== '') {
                     const div = document.createElement('div');
@@ -1355,6 +1594,11 @@
                     gallery.appendChild(div);
                 }
             });
+        }
+
+        function formatCurrency(val) {
+            if (!val || isNaN(val)) return '--';
+            return `$${Number(val).toLocaleString()}`;
         }
 
         function openLightbox(imgSrc) {
@@ -1455,7 +1699,7 @@
 
             const drawer = document.getElementById('detailDrawer');
             const profileObj = profilesData[schoolName.toLowerCase()];
-            const officialName = profileObj ? profileObj.fullName : schoolName;
+            const officialName = profileObj ? profileObj.displayName : schoolName;
 
             document.getElementById('drawerTitle').innerHTML = `<span>${officialName} — ${metricName} (Grade: ${grade})</span> <i class="fas fa-times" style="cursor: pointer;" onclick="closeDetailDrawer()"></i>`;
             document.getElementById('drawerText').textContent = decodeURIComponent(encodedDetail);
@@ -1504,7 +1748,7 @@
                 const warningBadge = res.dealbreakerFailed ? `<span style="font-size: 11px; background: #fce8e6; color: #c5221f; padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 8px;"><i class="fas fa-exclamation-triangle"></i> Dealbreaker Failed</span>` : '';
                 
                 const profileObj = profilesData[res.name.toLowerCase()];
-                const officialName = profileObj ? profileObj.fullName : res.displayName;
+                const officialName = profileObj ? profileObj.displayName : res.displayName;
 
                 div.innerHTML = `<span class="ranking-position">${res.rank}</span>
                     <span class="ranking-school" style="cursor: pointer;" onclick="openSchoolDrawer('${res.name.replace(/'/g, "\\'")}')">${officialName} ${warningBadge} <i class="fas fa-info-circle" style="font-size: 12px; color: #0066cc; margin-left: 6px;"></i></span>

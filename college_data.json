@@ -17,9 +17,7 @@
     {
       "school": "UCSB",
       "location": "Santa Barbara, CA",
-      "enrollment": "23113",
       "profile": {
-        "full_name": "University of California Santa Barbara",
         "photo_1": "https://dailynexus.s3-us-west-1.amazonaws.com/dailynexus/wp-content/uploads/2020/03/DSC_0347.jpg",
         "photo_2": "https://summerspringboard.com/wp-content/uploads/2025/07/UC-Santa-Barbara-Campus-Photo.jpg",
         "photo_3": "https://upload.wikimedia.org/wikipedia/commons/3/33/UC_Santa_Barbara_Library_%2835399729253%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
@@ -30,6 +28,12 @@
         "neighborhood_vibe": "Laid-back beach town culture anchored directly by Isla Vista (IV)—a densely packed, legendary student enclave right outside the campus gates where streets are swarming with bikes, local surf shops, and casual food spots.",
         "housing_status": "Freshmen are housed in diverse coastal residence halls like Manzanita and San Nicolas with immediate ocean views. Off-campus housing is hyper-concentrated in Isla Vista high-density student apartments and multi-unit houses, where properties rent out nearly a year in advance and students typically share rooms or pack tightly into close quarters.",
         "medical_access": "No on-campus teaching hospital, but connected via regional transit and close proximity to Cottage Health medical networks and local biotech research centers.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity - AAU Member)",
+          "biology_and_pre_med": "World-class Molecular, Cellular, and Developmental Biology (MCDB) & Ecology/Ecology/Marine Biology (EEMB) labs; exceptional research funding via NIH/NSF.",
+          "clinical_and_medical_access": "No on-campus teaching hospital, but connected via regional transit and close proximity to Cottage Health medical networks and local biotech research centers.",
+          "flagship_programs": "Biomolecular Science & Engineering, Marine Biology, Physics, Chemical Engineering."
+        },
         "link_admissions": "https://admissions.ucsb.edu",
         "link_bio_dept": "https://undergrad.biology.ucsb.edu/majors",
         "link_official_site": "https://www.ucsb.edu",
@@ -37,18 +41,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-california-santa-barbara"
       },
       "grades": {
-        "Cost": "A",
-        "Support": "A",
-        "Social": "A",
-        "Weather": "A",
-        "Biology": "A",
-        "CLS": "D",
-        "Spirit": "D",
-        "Admissions": "F",
-        "CultureShock": "A",
-        "Outdoors": "A",
-        "GoHome": "A",
-        "Safety": "A"
+        "Cost": "A", "Support": "A", "Social": "A", "Weather": "A", "Biology": "A", "CLS": "D", "Spirit": "D", "Admissions": "F", "CultureShock": "A", "Outdoors": "A", "GoHome": "A", "Safety": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$43,937 (In-State CA). Final cost is largely fixed unless eligible for need-based aid.",
@@ -63,14 +56,21 @@
         "Outdoors": "Unmatched daily access to coastal surfing, beach cruisers, and an active ocean lifestyle.",
         "GoHome": "Easy: 4hr drive (~$40 gas) or 3hr flight (~$135).",
         "Safety": "Isolated, heavily controlled coastal campus bubble with very low local crime rates."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "University of California, Santa Barbara", "academic_calendar": "Quarter" },
+        "enrollment": { "undergraduate_total": 23181 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 110266, "admits": 36347, "enrolled": 5008, "acceptance_rate_pct": 33.0, "yield_rate_pct": 13.8 },
+        "test_scores": { "policy": "Not considered for admission, even if submitted", "sat_composite_25_75": "N/A", "act_composite_25_75": "N/A" },
+        "gpa": { "average_hs_gpa": 4.3, "pct_submitting_gpa": 97.6, "distribution_pct": { "4.0": 90.36, "3.75-3.99": 6.14, "3.50-3.74": 2.86, "3.25-3.49": 0.43, "3.00-3.24": 0.16, "below_3.0": 0.05 }, "class_rank_top_10_pct": "N/A" },
+        "cost_annual": { "tuition_in_state": "Data Not Available", "tuition_out_of_state": "Data Not Available", "required_fees": "Data Not Available", "room_and_board_on_campus": "Data Not Available", "books_supplies": "Data Not Available", "transportation": "Data Not Available", "est_full_coa_in_state": "Data Not Available", "est_full_coa_out_of_state": "Data Not Available" },
+        "outcomes": { "first_year_retention_pct": 93.26, "grad_rate_4yr_pct": 70.02, "grad_rate_6yr_pct": 83.0, "student_to_faculty_ratio": "17 to 1" }
       }
     },
     {
       "school": "CU",
       "location": "Boulder, CO",
-      "enrollment": "32520",
       "profile": {
-        "full_name": "University of Colorado Boulder",
         "photo_1": "https://www.colorado.edu/strategicrelations/sites/default/files/styles/original_image_size/public/article-image/2018_cu_boulder_aerial.jpg?itok=wW6T3JWl",
         "photo_2": "https://bora.co/wp-content/uploads/2016/02/Bora_CU-Boulder-CASE_03.jpg",
         "photo_3": "https://www.denverpost.com/wp-content/uploads/2024/05/TDP-Z-FOLSOMMOCKUP-2.jpg?fit=620%2C9999px&ssl=1",
@@ -81,6 +81,12 @@
         "neighborhood_vibe": "A classic picturesque mountain-town city feel. The campus flows right into 'The Hill' (a dense student commercial strip with pizza joints and cafes) and is a short walk from the upscale, brick-paved Pearl Street Mall. It feels distinctly upscale, active, and outdoors-obsessed.",
         "housing_status": "Freshman housing features unique residential academic programs (RAPs) clustered around main campus. Off-campus housing in Boulder is notoriously expensive and fiercely competitive, requiring students to look months ahead for rentals in local complexes or shared suburban-style houses further from the central quad.",
         "medical_access": "Campus medical services available via Wardenburg Health Center; proximal to Boulder Community Health facilities.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity - AAU Member)",
+          "biology_and_pre_med": "BioFrontiers Institute powerhouse; deep federal funding and direct pipelines into the Boulder-Denver biotech and medical technology hub.",
+          "clinical_and_medical_access": "Campus medical services available via Wardenburg Health Center; proximal to Boulder Community Health facilities.",
+          "flagship_programs": "Molecular, Cellular & Developmental Biology, Aerospace Engineering, Biochemistry, Environmental Studies."
+        },
         "link_admissions": "https://admissions.colorado.edu",
         "link_bio_dept": "https://www.colorado.edu/biologyadvising/explore-our-programs",
         "link_official_site": "https://www.colorado.edu",
@@ -88,18 +94,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-colorado-boulder"
       },
       "grades": {
-        "Cost": "D",
-        "Support": "A",
-        "Social": "A",
-        "Weather": "C",
-        "Biology": "A",
-        "CLS": "C",
-        "Spirit": "B",
-        "Admissions": "B",
-        "CultureShock": "B",
-        "Outdoors": "A",
-        "GoHome": "B",
-        "Safety": "B"
+        "Cost": "D", "Support": "A", "Social": "A", "Weather": "C", "Biology": "A", "CLS": "C", "Spirit": "B", "Admissions": "B", "CultureShock": "B", "Outdoors": "A", "GoHome": "B", "Safety": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$64,452 - $68,440 (Out-of-State). Does not participate in WUE, but offers automatic non-resident merit scholarships based on GPA. Cost could lower slightly.",
@@ -114,14 +109,21 @@
         "Outdoors": "World-class access for mountain biking, climbing the Flatirons, and weekend ski trips.",
         "GoHome": "Easy: 5hr trip via 2.5hr flight + direct bus ($70-$130).",
         "Safety": "Generally safe campus, though standard college-town property crime and party-area dynamics exist."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "University of Colorado Boulder", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 33384 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 68931, "admits": 52534, "enrolled": 7432, "acceptance_rate_pct": 76.2, "yield_rate_pct": 14.1 },
+        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1180-1390", "act_composite_25_75": "27-33" },
+        "gpa": { "average_hs_gpa": 3.79, "pct_submitting_gpa": 99.6, "distribution_pct": { "4.0": 44.0, "3.75-3.99": 23.0, "3.50-3.74": 18.0, "3.25-3.49": 10.0, "3.00-3.24": 4.0, "below_3.0": 2.0 }, "class_rank_top_10_pct": 30.0 },
+        "cost_annual": { "tuition_in_state": 11976, "tuition_out_of_state": 40320, "required_fees": 1646, "room_and_board_on_campus": 17794, "books_supplies": 1200, "transportation": 1376, "est_full_coa_in_state": 35738, "est_full_coa_out_of_state": 64082 },
+        "outcomes": { "first_year_retention_pct": 90.0, "grad_rate_4yr_pct": 57.0, "grad_rate_6yr_pct": 74.0, "student_to_faculty_ratio": "19.1 to 1" }
       }
     },
     {
       "school": "UA",
       "location": "Tucson, AZ",
-      "enrollment": "43294",
       "profile": {
-        "full_name": "University of Arizona",
         "photo_1": "https://www.arizona.edu/sites/default/files/images/DJI_20240826184423_0052_EDIT.jpeg.webp",
         "photo_2": "https://static.studyusa.com/school/aws_Z9vHSrMbw6Z0kF3X2Ugubh7DFBtwM6lA_lg_1x.jpg",
         "photo_3": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/tucson/UA-Library-1-974863ee5056a36_974866af-5056-a36a-0aceb13fdab98e42.jpg",
@@ -132,6 +134,12 @@
         "neighborhood_vibe": "Urban-suburban desert setting. The campus blends directly into the vibrant Main Gate Square commercial district and is right next to the historic Fourth Avenue strip, offering local indie venues, casual taco shops, and a dense student-heavy off-campus grid.",
         "housing_status": "Freshmen live in large-scale resort-style residence halls with heavy social integration. Off-campus housing is dominated by towering, high-rise luxury student apartment complexes clustered tightly around the edges of campus along Park Avenue and Speedway Boulevard, most within a 5-to-10 minute walk or scooter ride to class.",
         "medical_access": "Full clinical access through Banner University Medical Center located adjacent to campus.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity - AAU Member)",
+          "biology_and_pre_med": "BIO5 Institute heavy-hitter; exceptional interdisciplinary labs, over $1B in research spending, and growing AZ bioscience ties.",
+          "clinical_and_medical_access": "Full clinical access through Banner University Medical Center located adjacent to campus.",
+          "flagship_programs": "Physiology, Medical Biology, Astronomy, Optical Sciences, Pharmacy."
+        },
         "link_admissions": "https://admissions.arizona.edu",
         "link_bio_dept": "https://degrees.asu.edu/bachelors/major/ASU00/ASLSCBS/biology",
         "link_official_site": "https://www.arizona.edu",
@@ -139,18 +147,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-arizona"
       },
       "grades": {
-        "Cost": "D",
-        "Support": "B",
-        "Social": "A",
-        "Weather": "B",
-        "Biology": "B",
-        "CLS": "B",
-        "Spirit": "B",
-        "Admissions": "A",
-        "CultureShock": "A",
-        "Outdoors": "C",
-        "GoHome": "B",
-        "Safety": "C"
+        "Cost": "D", "Support": "B", "Social": "A", "Weather": "B", "Biology": "B", "CLS": "B", "Spirit": "B", "Admissions": "A", "CultureShock": "A", "Outdoors": "C", "GoHome": "B", "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$65,900 - $67,770 (Out-of-State). Offers the Arizona Excellence Award ($6k-$18k/yr) for non-residents based on GPA. Cost could lower.",
@@ -165,14 +162,21 @@
         "Outdoors": "Great desert hiking and stargazing, but heavily landlocked and extremely hot.",
         "GoHome": "Moderate: 3.5hr trip via 1.25hr flight + Uber ($175-$275).",
         "Safety": "Tucson urban proximity and regional border-city property stats pull down off-campus safety indexes."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "The University of Arizona", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 45025 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 58339, "admits": 50252, "enrolled": 9240, "acceptance_rate_pct": 86.1, "yield_rate_pct": 18.4 },
+        "test_scores": { "policy": "Not required for admission, but consider if submitted", "sat_composite_25_75": "1130-1340", "act_composite_25_75": "21-28" },
+        "gpa": { "average_hs_gpa": 3.47, "pct_submitting_gpa": 97.5, "distribution_pct": { "4.0": 14.0, "3.75-3.99": 24.0, "3.50-3.74": 17.0, "3.25-3.49": 14.0, "3.00-3.24": 12.0, "below_3.0": 19.0 }, "class_rank_top_10_pct": 33.0 },
+        "cost_annual": { "tuition_in_state": 11835, "tuition_out_of_state": 38165, "required_fees": 1738, "room_and_board_on_campus": 16746, "books_supplies": 600, "transportation": 2350, "est_full_coa_in_state": 35369, "est_full_coa_out_of_state": 61699 },
+        "outcomes": { "first_year_retention_pct": 82.8, "grad_rate_4yr_pct": 49.9, "grad_rate_6yr_pct": 68.0, "student_to_faculty_ratio": "20 to 1" }
       }
     },
     {
       "school": "ASU",
       "location": "Tempe, AZ",
-      "enrollment": "65450",
       "profile": {
-        "full_name": "Arizona State University",
         "photo_1": "https://tours.asu.edu/sites/g/files/litvpz4656/files/tours/tempe-hayden-hero.jpg",
         "photo_2": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Sun_Devil_Stadium_-_Pac12_Championship.jpg",
         "photo_3": "https://news.asu.edu/sites/default/files/styles/block_image_16_9_lge/public/tempe_01.jpg?itok=GpQ13gEc",
@@ -183,6 +187,12 @@
         "neighborhood_vibe": "A bustling urban city environment centered right next to downtown Tempe. Mill Avenue runs parallel to campus with high-rise bars, shopping, and restaurants, creating an energetic city vibe that seamlessly merges with the massive student population.",
         "housing_status": "Modern residential 'villages' cluster freshmen tightly by major. Off-campus housing consists of sprawling high-rise apartment towers lining University Drive and Apache Boulevard, many featuring resort-style pools and private shuttle options to combat the desert heat.",
         "medical_access": "Integrated health services on-campus and close proximity to Valley-wide clinical networks.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "Biodesign Institute engine; cutting-edge research facilities and direct health-tech pipelines in the Phoenix metro.",
+          "clinical_and_medical_access": "Integrated health services on-campus and close proximity to Valley-wide clinical networks.",
+          "flagship_programs": "Medical Laboratory Science (BAS with NAACLS accreditation), Biomedical Engineering, Sustainability, Nursing."
+        },
         "link_admissions": "https://admissions.asu.edu",
         "link_bio_dept": "https://asuonline.asu.edu/online-degree-programs/undergraduate/biological-sciences-bs/",
         "link_official_site": "https://www.asu.edu",
@@ -190,18 +200,7 @@
         "link_appily": "https://www.appily.com/colleges/arizona-state-university-campus-immersion"
       },
       "grades": {
-        "Cost": "C",
-        "Support": "B",
-        "Social": "A",
-        "Weather": "C",
-        "Biology": "B",
-        "CLS": "A",
-        "Spirit": "B",
-        "Admissions": "A",
-        "CultureShock": "A",
-        "Outdoors": "C",
-        "GoHome": "A",
-        "Safety": "C"
+        "Cost": "C", "Support": "B", "Social": "A", "Weather": "C", "Biology": "B", "CLS": "A", "Spirit": "B", "Admissions": "A", "CultureShock": "A", "Outdoors": "C", "GoHome": "A", "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$55,091 - $57,000 (Out-of-State). Tempe main campus does NOT offer WUE, but provides generous New American University merit scholarships based on GPA.",
@@ -216,14 +215,21 @@
         "Outdoors": "Highly urbanized; great city amenities but requires driving out of the metro for real nature escapes.",
         "GoHome": "Easy: 5.5hr drive (~$55 gas) or 3.5hr trip via 1.25hr flight ($40-$80).",
         "Safety": "Sprawling urban Phoenix and Tempe metro footprint leads to higher volume of surrounding property crime."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "Arizona State University Campus Immersion", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 65450 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 70928, "admits": 63756, "enrolled": 14099, "acceptance_rate_pct": 89.9, "yield_rate_pct": 22.1 },
+        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": null, "act_composite_25_75": null },
+        "gpa": { "average_hs_gpa": 3.53, "pct_submitting_gpa": 97.1, "distribution_pct": { "4.0": 9.3, "3.75-3.99": 27.8, "3.50-3.74": 22.7, "3.25-3.49": 16.5, "3.00-3.24": 13.4, "below_3.0": 10.4 }, "class_rank_top_10_pct": 29.2 },
+        "cost_annual": { "tuition_in_state": 11478, "tuition_out_of_state": 32394, "required_fees": 745, "room_and_board_on_campus": 16712, "books_supplies": 1320, "transportation": 1582, "est_full_coa_in_state": 31837, "est_full_coa_out_of_state": 52753 },
+        "outcomes": { "first_year_retention_pct": 86.6, "grad_rate_4yr_pct": 55.8, "grad_rate_6yr_pct": 70.1, "student_to_faculty_ratio": "18.0 to 1" }
       }
     },
     {
       "school": "CSU",
       "location": "Fort Collins, CO",
-      "enrollment": "26839",
       "profile": {
-        "full_name": "Colorado State University",
         "photo_1": "https://www.colostate.edu/wp-content/uploads/2024/08/DSC02952-768x512.jpg",
         "photo_2": "https://blogs-images.forbes.com/kristidosh/files/2017/08/IMAG8745.jpg",
         "photo_3": "https://admissions.colostate.edu/wp-content/uploads/2023/07/lagoon-rec-center-hero.jpg",
@@ -234,6 +240,12 @@
         "neighborhood_vibe": "A classic, thriving Colorado mountain town. The campus sits a short, scenic bike ride away from historic 'Old Town' Fort Collins, which features Victorian-style brick storefronts, local craft breweries, and an extremely friendly, outdoors-oriented community feel.",
         "housing_status": "Freshman housing features robust residential learning communities on campus. Off-campus options consist largely of multi-family rental houses and mid-rise complexes stretching toward Old Town, where biking or taking the MAX bus makes commuting seamless.",
         "medical_access": "Clinical partnerships with UCHealth Medical Center of the Rockies and local regional clinics.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "World-renowned Veterinary Medicine, Microbiology, and Animal Science powerhouse; exceptional hands-on laboratory access.",
+          "clinical_and_medical_access": "Clinical partnerships with UCHealth Medical Center of the Rockies and local regional clinics.",
+          "flagship_programs": "Microbiology (CCMLS Clinical Feeder Track), Veterinary Medicine, Biomedical Sciences, Environmental Health."
+        },
         "link_admissions": "https://admissions.colostate.edu",
         "link_bio_dept": "https://admissions.colostate.edu/programs/biology/",
         "link_official_site": "https://www.colostate.edu",
@@ -241,18 +253,7 @@
         "link_appily": "https://www.appily.com/colleges/colorado-state-university-fort-collins"
       },
       "grades": {
-        "Cost": "B",
-        "Support": "B",
-        "Social": "B",
-        "Weather": "C",
-        "Biology": "B",
-        "CLS": "B",
-        "Spirit": "C",
-        "Admissions": "A",
-        "CultureShock": "B",
-        "Outdoors": "A",
-        "GoHome": "C",
-        "Safety": "A"
+        "Cost": "B", "Support": "B", "Social": "B", "Weather": "C", "Biology": "B", "CLS": "B", "Spirit": "C", "Admissions": "A", "CultureShock": "B", "Outdoors": "A", "GoHome": "C", "Safety": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$50,000 - $53,294 (Out-of-State). Participates in WUE (3.2+ GPA required). High likelihood of cost lowering.",
@@ -267,14 +268,21 @@
         "Outdoors": "Immediate access to Horsetooth Reservoir, Rocky Mountain trails, and outdoor recreation.",
         "GoHome": "Moderate: 6hr trip via 2.5hr flight + shuttle ($115-$175).",
         "Safety": "Fort Collins consistently ranks among the safest mid-sized cities and campuses in the country."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "Colorado State University", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 26500 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 38520, "admits": 34118, "enrolled": 5429, "acceptance_rate_pct": 88.6, "yield_rate_pct": 15.9 },
+        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1060-1280", "act_composite_25_75": "22-29" },
+        "gpa": { "average_hs_gpa": 3.69, "pct_submitting_gpa": 99.9, "distribution_pct": { "4.0": 30.1, "3.75-3.99": 17.8, "3.50-3.74": 16.9, "3.25-3.49": 14.3, "3.00-3.24": 12.6, "below_3.0": 8.4 }, "class_rank_top_10_pct": 20.0 },
+        "cost_annual": { "tuition_in_state": 10609, "tuition_out_of_state": 32297, "required_fees": 2773, "room_and_board_on_campus": 14740, "books_supplies": 1460, "transportation": 1548, "est_full_coa_in_state": 31130, "est_full_coa_out_of_state": 52818 },
+        "outcomes": { "first_year_retention_pct": 85.9, "grad_rate_4yr_pct": 46.7, "grad_rate_6yr_pct": 66.5, "student_to_faculty_ratio": "17 to 1" }
       }
     },
     {
       "school": "UofSC",
       "location": "Columbia, SC",
-      "enrollment": "30187",
       "profile": {
-        "full_name": "University of South Carolina",
         "photo_1": "https://www.usnews.com/dims4/USNEWS/aa1ed7b/17177859217/resize/800x540%3E/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2Ffb%2Fce%2F8e7fde4944adb8527bd0fd7065b8%2Fuscb-aerial.jpg",
         "photo_2": "https://gamecocksonline.com/imgproxy/fHr9rKla3n6cDfyHi_JPPFIzMF8muKKWnyU7tIjwgKk/fit/5000/5000/ce/0/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dhbWVjb2Nrc29ubGluZS1jb20vMjAyMS8wNS9jNDdhMjEwNi13aWxsaWFtc19icmljZV9wYXJhbGxheF8yMi5qcGc.png",
         "photo_3": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/2a/63/1c/usc.jpg?w=1200&h=-1&s=1",
@@ -285,6 +293,12 @@
         "neighborhood_vibe": "A classic Southern state-capital city setting. The campus weaves directly into downtown Columbia and is right next to the historic 'Five Points' district—a lively neighborhood strip filled with local bars, eateries, and Southern storefronts.",
         "housing_status": "Freshman housing features historic halls around The Horseshoe as well as massive modern residential complexes like Green Quad. Off-campus housing is heavily influenced by Greek village houses and managed student apartments spread across downtown and the Vista district.",
         "medical_access": "Integrated student health and access to Prisma Health hospital systems.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "Solid pre-med tracks, Magellan Scholar undergraduate research grants, and active biological science departments.",
+          "clinical_and_medical_access": "Integrated student health and direct access to Prisma Health Richland hospital systems.",
+          "flagship_programs": "International Business (#1 Nationally), Biological Sciences, Pre-Med / Nursing, Marine Science."
+        },
         "link_admissions": "https://sc.edu/admissions/",
         "link_bio_dept": "https://sc.edu/study/majors_and_degrees/biochemistry-and-molecular-biology-bs.php",
         "link_official_site": "https://sc.edu",
@@ -292,18 +306,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-south-carolina-columbia"
       },
       "grades": {
-        "Cost": "C",
-        "Support": "A",
-        "Social": "A",
-        "Weather": "D",
-        "Biology": "C",
-        "CLS": "B",
-        "Spirit": "A",
-        "Admissions": "D",
-        "CultureShock": "D",
-        "Outdoors": "C",
-        "GoHome": "D",
-        "Safety": "C"
+        "Cost": "C", "Support": "A", "Social": "A", "Weather": "D", "Biology": "C", "CLS": "B", "Spirit": "A", "Admissions": "D", "CultureShock": "D", "Outdoors": "C", "GoHome": "D", "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$55,800 (Out-of-State). Offers aggressive non-resident merit scholarships for high GPAs that can lower out-of-state tuition close to in-state rates.",
@@ -318,14 +321,21 @@
         "Outdoors": "River systems and parklands are about 30-45 minutes away in flat midlands terrain.",
         "GoHome": "Hard: 8+hr trip via multi-leg flights; expensive ($275-$475+).",
         "Safety": "Downtown Columbia setting requires street smarts, sitting right on the border of standard urban safety risks."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "University of South Carolina", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 30187 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 52703, "admits": 31701, "enrolled": 7272, "acceptance_rate_pct": 60.2, "yield_rate_pct": 22.9 },
+        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1190-1350", "act_composite_25_75": "26-32" },
+        "gpa": { "average_hs_gpa": 3.69, "pct_submitting_gpa": 97.87, "distribution_pct": { "4.0": 16.0, "3.75-3.99": 34.0, "3.50-3.74": 28.0, "3.25-3.49": 15.0, "3.00-3.24": 6.0, "below_3.0": 1.0 }, "class_rank_top_10_pct": 29.0 },
+        "cost_annual": { "tuition_in_state": null, "tuition_out_of_state": null, "required_fees": null, "room_and_board_on_campus": null, "books_supplies": null, "transportation": null, "est_full_coa_in_state": null, "est_full_coa_out_of_state": null },
+        "outcomes": { "first_year_retention_pct": 92.0, "grad_rate_4yr_pct": 69.8, "grad_rate_6yr_pct": 79.0, "student_to_faculty_ratio": "19 to 1" }
       }
     },
     {
       "school": "OSU",
       "location": "Corvallis, OR",
-      "enrollment": "31253",
       "profile": {
-        "full_name": "Oregon State University",
         "photo_1": "https://oregonstate.edu/sites/default/files/2023-09/corvallis-aerial-900x600.jpg",
         "photo_2": "https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Foregonstate.sidearmsports.com%2Fimages%2F2023%2F9%2F9%2FReser.jpg&height=1100&type=webp",
         "photo_3": "https://library.oregonstate.edu/sites/default/files/styles/standard_500_x_333/public/2025-06/6contactvalleylibrary.jpeg?itok=QSb0uXTp",
@@ -336,6 +346,12 @@
         "neighborhood_vibe": "A quintessential, peaceful Pacific Northwest college town. Downtown Corvallis sits right next to the Willamette River with indie coffee shops and local bookstores, creating an unhurried, bike-centric, and intensely green community feel.",
         "housing_status": "Freshman housing features diverse residence halls across campus. Off-campus housing consists primarily of affordable local apartment complexes and cozy rental houses scattered through quiet neighborhoods where biking is the default transit method.",
         "medical_access": "Access via Good Samaritan Regional Medical Center and university-affiliated health clinics.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "Elite agricultural, forestry, and environmental research with massive federal grants; top-tier biochemistry labs.",
+          "clinical_and_medical_access": "Access via Good Samaritan Regional Medical Center and university-affiliated health clinics.",
+          "flagship_programs": "BioHealth Sciences (Pre-Clinical Lab Science Track), Biochemistry, Forestry, Oceanography."
+        },
         "link_admissions": "https://admissions.oregonstate.edu",
         "link_bio_dept": "https://catalog.oregonstate.edu/college-departments/science/school-life-sciences/integrative-biology/biology-bs-hbs/",
         "link_official_site": "https://oregonstate.edu",
@@ -343,18 +359,7 @@
         "link_appily": "https://www.appily.com/colleges/oregon-state-university"
       },
       "grades": {
-        "Cost": "C",
-        "Support": "B",
-        "Social": "B",
-        "Weather": "D",
-        "Biology": "B",
-        "CLS": "A",
-        "Spirit": "B",
-        "Admissions": "B",
-        "CultureShock": "B",
-        "Outdoors": "B",
-        "GoHome": "C",
-        "Safety": "A"
+        "Cost": "C", "Support": "B", "Social": "B", "Weather": "D", "Biology": "B", "CLS": "A", "Spirit": "B", "Admissions": "B", "CultureShock": "B", "Outdoors": "B", "GoHome": "C", "Safety": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$58,668 (Out-of-State). Participates in WUE based on high school GPA. High likelihood of cost lowering.",
@@ -369,14 +374,21 @@
         "Outdoors": "Great access to the Cascades and coast, but persistent rain limits daily outdoor consistency.",
         "GoHome": "Hard: 6.5hr trip via 2.5hr flight + long shuttle ($170-$210).",
         "Safety": "Corvallis is an exceptionally secure, low-crime Pacific Northwest college town."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "Oregon State University", "academic_calendar": "Quarter" },
+        "enrollment": { "undergraduate_total": 31253 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 30293, "admits": 23418, "enrolled": 4778, "acceptance_rate_pct": 77.3, "yield_rate_pct": 20.4 },
+        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1160-1390", "act_composite_25_75": "24-31" },
+        "gpa": { "average_hs_gpa": 3.7, "pct_submitting_gpa": 98.0, "distribution_pct": { "4.0": 13.0, "3.75-3.99": 38.0, "3.50-3.74": 25.0, "3.25-3.49": 15.0, "3.00-3.24": 7.0, "below_3.0": 2.0 }, "class_rank_top_10_pct": 29.0 },
+        "cost_annual": { "tuition_in_state": null, "tuition_out_of_state": null, "required_fees": null, "room_and_board_on_campus": null, "books_supplies": null, "transportation": null, "est_full_coa_in_state": null, "est_full_coa_out_of_state": null },
+        "outcomes": { "first_year_retention_pct": 87.8, "grad_rate_4yr_pct": 47.2, "grad_rate_6yr_pct": 70.1, "student_to_faculty_ratio": "17 to 1" }
       }
     },
     {
       "school": "SDSU",
       "location": "San Diego, CA",
-      "enrollment": "34600",
       "profile": {
-        "full_name": "San Diego State University",
         "photo_1": "https://slhs.sdsu.edu/_resources/images/phd/hepner-aerial2jpg.jpg",
         "photo_2": "https://www.sandiegouniontribune.com/wp-content/uploads/migration/2023/11/01/0000018a-ae82-d220-a7de-eec6ae8f0000.jpg",
         "photo_3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQpEzFtbN8z7djFdpxFgsMNCsHUQyrOjY9fWk4iEheiA&s",
@@ -387,6 +399,12 @@
         "neighborhood_vibe": "A dense, student-centric urban-suburban neighborhood setting (College Area). The immediate blocks surrounding campus are packed with student-frequented burger joints, boba shops, and apartment complexes, with fast trolley access into North Park and downtown.",
         "housing_status": "Freshmen are clustered in modern residence halls near Cuicacallia Suites and the central quad. Off-campus housing is intensely competitive, with students renting houses or apartments in the immediate surrounding neighborhoods (often referred to as 'The College Area') or commuting from nearby coastal suburbs.",
         "medical_access": "No primary on-campus teaching hospital, but positioned within 30 minutes of major research and medical powerhouses like UCSD Health and the Torrey Pines Mesa biotech cluster.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "Leverages San Diego’s top-3 global biotech hub (Torrey Pines Mesa) for unmatched local interning and lab access.",
+          "clinical_and_medical_access": "No primary on-campus teaching hospital, but positioned within 30 minutes of major research and medical powerhouses like UCSD Health and the Torrey Pines Mesa biotech cluster.",
+          "flagship_programs": "Microbiology (CLS Emphasis with Hematology), Public Health, Kinesiology, Nursing."
+        },
         "link_admissions": "https://admissions.sdsu.edu",
         "link_bio_dept": "https://biology.sdsu.edu/bachelors-programs/",
         "link_official_site": "https://www.sdsu.edu",
@@ -394,18 +412,7 @@
         "link_appily": "https://www.appily.com/colleges/san-diego-state-university"
       },
       "grades": {
-        "Cost": "A",
-        "Support": "A",
-        "Social": "A",
-        "Weather": "A",
-        "Biology": "A",
-        "CLS": "A",
-        "Spirit": "B",
-        "Admissions": "F",
-        "CultureShock": "A",
-        "Outdoors": "B",
-        "GoHome": "A",
-        "Safety": "B"
+        "Cost": "A", "Support": "A", "Social": "A", "Weather": "A", "Biology": "A", "CLS": "A", "Spirit": "B", "Admissions": "F", "CultureShock": "A", "Outdoors": "B", "GoHome": "A", "Safety": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$37,324 - $38,938 (In-State CA). Final cost is largely fixed unless eligible for local/need-based aid.",
@@ -420,14 +427,21 @@
         "Outdoors": "Great year-round access to Pacific beaches, coastal paths, and nearby trails within a 15-25 minute drive.",
         "GoHome": "Easy: 45min drive; zero flight friction.",
         "Safety": "San Diego urban integration brings standard petty crime considerations, but overall municipal safety is solid."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "San Diego State University", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 34637 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 90509, "admits": 32561, "enrolled": 6629, "acceptance_rate_pct": 36.0, "yield_rate_pct": 20.4 },
+        "test_scores": { "policy": "Not considered for admission, even if submitted", "sat_composite_25_75": "N/A", "act_composite_25_75": "N/A" },
+        "gpa": { "average_hs_gpa": 3.84, "pct_submitting_gpa": 100.0, "distribution_pct": { "4.0": 37.0, "3.75-3.99": 30.0, "3.50-3.74": 20.0, "3.25-3.49": 9.0, "3.00-3.24": 3.0, "below_3.0": 1.0 }, "class_rank_top_10_pct": 30.0 },
+        "cost_annual": { "tuition_in_state": 6450, "tuition_out_of_state": 19770, "required_fees": 3000, "room_and_board_on_campus": 23736, "books_supplies": 970, "transportation": 1170, "est_full_coa_in_state": 37594, "est_full_coa_out_of_state": 50914 },
+        "outcomes": { "first_year_retention_pct": 91.0, "grad_rate_4yr_pct": 56.3, "grad_rate_6yr_pct": 76.0, "student_to_faculty_ratio": "24 to 1" }
       }
     },
     {
       "school": "UofU",
       "location": "Salt Lake City, UT",
-      "enrollment": "29335",
       "profile": {
-        "full_name": "University of Utah",
         "photo_1": "https://www.utah.edu/_resources/images/visitors/banner-visitor.jpg",
         "photo_2": "https://olympics.utah.edu/wp-content/uploads/2024/07/2011utahfootball08.jpg",
         "photo_3": "https://www.campus.utah.edu/wp-content/uploads/2025/02/ceremonial-way-after-1.jpg",
@@ -438,6 +452,12 @@
         "neighborhood_vibe": "An urban-mountain fusion setting right at the edge of downtown Salt Lake City. The campus sits elevated against the Wasatch foothills, giving it a peaceful, nature-forward academic enclave feel while remaining a short TRAX ride away from the city urban grid.",
         "housing_status": "Freshman housing features extensive modern complexes built originally for the Olympic Village. Off-campus housing is widely spread throughout the surrounding Salt Lake neighborhoods (like the Avenues or Sugar House), though many students rely on the free TRAX system to commute if they live off-site.",
         "medical_access": "University of Utah Health provides a premier on-campus teaching hospital and clinical research system.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity - AAU Member)",
+          "biology_and_pre_med": "World-renowned human genetics and biochemistry labs with direct research ties to U of U Health and Intermountain West biotech.",
+          "clinical_and_medical_access": "University of Utah Health provides a premier on-campus teaching hospital and clinical research system.",
+          "flagship_programs": "Medical Laboratory Science (NAACLS Accredited BS), Human Genetics, Biomedical Engineering."
+        },
         "link_admissions": "https://admissions.utah.edu",
         "link_bio_dept": "https://www.biology.utah.edu/undergraduate-biology-degree-options/",
         "link_official_site": "https://www.utah.edu",
@@ -445,18 +465,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-utah"
       },
       "grades": {
-        "Cost": "B",
-        "Support": "B",
-        "Social": "F",
-        "Weather": "C",
-        "Biology": "A",
-        "CLS": "A",
-        "Spirit": "B",
-        "Admissions": "B",
-        "CultureShock": "C",
-        "Outdoors": "A",
-        "GoHome": "C",
-        "Safety": "B"
+        "Cost": "B", "Support": "B", "Social": "F", "Weather": "C", "Biology": "A", "CLS": "A", "Spirit": "B", "Admissions": "B", "CultureShock": "C", "Outdoors": "A", "GoHome": "C", "Safety": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$45,415 - $51,135 (Out-of-State). Eligible for WUE with a 3.30+ GPA, capping tuition at 150% of in-state. High likelihood of cost lowering.",
@@ -471,14 +480,21 @@
         "Outdoors": "Unbeatable access to world-class ski canyons within 30 minutes of campus.",
         "GoHome": "Moderate: 4hr trip via 2hr flight; tickets pricey ($200-$300).",
         "Safety": "Secure foothill campus setting in a safer major metropolitan area."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "University of Utah", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 28064 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 26822, "admits": 23062, "enrolled": 6001, "acceptance_rate_pct": 86.0, "yield_rate_pct": 26.0 },
+        "test_scores": { "policy": "Not required for admission, but consider if submitted", "sat_composite_25_75": "1200-1370", "act_composite_25_75": "22-29" },
+        "gpa": { "average_hs_gpa": 3.67, "pct_submitting_gpa": 97.0, "distribution_pct": { "4.0": 10.0, "3.75-3.99": 38.0, "3.50-3.74": 25.0, "3.25-3.49": 18.0, "3.00-3.24": 7.0, "below_3.0": 2.0 }, "class_rank_top_10_pct": null },
+        "cost_annual": { "tuition_in_state": null, "tuition_out_of_state": null, "required_fees": null, "room_and_board_on_campus": null, "books_supplies": null, "transportation": null, "est_full_coa_in_state": null, "est_full_coa_out_of_state": null },
+        "outcomes": { "first_year_retention_pct": 86.0, "grad_rate_4yr_pct": 35.1, "grad_rate_6yr_pct": 65.0, "student_to_faculty_ratio": "19 to 1" }
       }
     },
     {
       "school": "AU",
       "location": "Auburn, AL",
-      "enrollment": "28953",
       "profile": {
-        "full_name": "Auburn University",
         "photo_1": "https://auburn.edu/about/_assets/images/facts-figures.jpg",
         "photo_2": "https://www.theodysseyonline.com/media-library/image.jpg?id=18565227&width=980&quality=50",
         "photo_3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ77-KKM6xf_lfAwlWgkpLdf5W6y_pH-yFrkj7qfoLzLhs0xQ_LlvieZ8E&s=10",
@@ -489,6 +505,12 @@
         "neighborhood_vibe": "A quintessential, tight-knit Southern SEC college town. Downtown Auburn merges right into the campus edge at the iconic Toomer Corner, characterized by local Southern dining, historic storefronts, and an overwhelmingly warm, small-town community atmosphere.",
         "housing_status": "Freshman housing features high-end residence halls managed through the 'Auburn Family' residential program. Off-campus housing consists of sprawling student complexes and cottage communities built specifically for upperclassmen, many featuring massive pools and private shuttle loops.",
         "medical_access": "University-affiliated medical support services and proximal to regional care providers.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "Strong pre-vet, land-grant agricultural, and biomedical science tracks; expanding kinesiology and life sciences research.",
+          "clinical_and_medical_access": "University-affiliated medical support services and proximal to regional care providers.",
+          "flagship_programs": "Biomedical Sciences, Veterinary Medicine, Agricultural Sciences, Kinesiology, Engineering."
+        },
         "link_admissions": "https://auburn.edu/admissions/index.php",
         "link_bio_dept": "https://bulletin.auburn.edu/undergraduate/collegeofsciencesandmathematics/biologicalsciences/",
         "link_official_site": "https://www.auburn.edu",
@@ -496,18 +518,7 @@
         "link_appily": "https://www.appily.com/colleges/auburn-university"
       },
       "grades": {
-        "Cost": "C",
-        "Support": "A",
-        "Social": "A",
-        "Weather": "D",
-        "Biology": "C",
-        "CLS": "B",
-        "Spirit": "A",
-        "Admissions": "D",
-        "CultureShock": "D",
-        "Outdoors": "C",
-        "GoHome": "D",
-        "Safety": "A"
+        "Cost": "C", "Support": "A", "Social": "A", "Weather": "D", "Biology": "C", "CLS": "B", "Spirit": "A", "Admissions": "D", "CultureShock": "D", "Outdoors": "C", "GoHome": "D", "Safety": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$56,706 - $58,000 (Out-of-State). Offers structured non-resident merit scholarships based on GPA and test scores. Cost could lower.",
@@ -522,14 +533,21 @@
         "Outdoors": "Local state parks, rolling hills, and lake access within 20-30 minutes.",
         "GoHome": "Hard: 7.5hr trip via flight + shuttle; expensive ($200-$400+).",
         "Safety": "Quiet, traditional, highly secure southern college town environment."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "Auburn University", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 27907 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 55056, "admits": 25284, "enrolled": 6103, "acceptance_rate_pct": 45.9, "yield_rate_pct": 24.1 },
+        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1260-1380", "act_composite_25_75": "26-31" },
+        "gpa": { "average_hs_gpa": 4.09, "pct_submitting_gpa": 99.98, "distribution_pct": { "4.0": 63.98, "3.75-3.99": 19.88, "3.50-3.74": 10.52, "3.25-3.49": 3.83, "3.00-3.24": 1.41, "below_3.0": 0.37 }, "class_rank_top_10_pct": 35.0 },
+        "cost_annual": { "tuition_in_state": 11016, "tuition_out_of_state": 33048, "required_fees": 1874, "room_and_board_on_campus": 16626, "books_supplies": 1200, "transportation": 3154, "est_full_coa_in_state": 36882, "est_full_coa_out_of_state": 58914 },
+        "outcomes": { "first_year_retention_pct": 94.7, "grad_rate_4yr_pct": 60.4, "grad_rate_6yr_pct": 82.0, "student_to_faculty_ratio": "21 to 1" }
       }
     },
     {
       "school": "UO",
       "location": "Eugene, OR",
-      "enrollment": "20711",
       "profile": {
-        "full_name": "University of Oregon",
         "photo_1": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/6e/78/5f/university-of-oregon.jpg?w=2000&h=-1&s=1",
         "photo_2": "https://traveloregon.com/wp-content/uploads/2024/08/24Sept_GameDay_Autzen.jpg",
         "photo_3": "https://visit.uoregon.edu/sites/default/files/2025-09/campus-6-1x1.jpg",
@@ -540,6 +558,12 @@
         "neighborhood_vibe": "A progressive Pacific Northwest city-town hybrid. The campus borders the lively West University neighborhood, which is packed with local food trucks, coffee houses, and indie vintage stores, carrying a distinctively artsy, green, and bike-heavy culture.",
         "housing_status": "Freshmen live in modern residence halls close to the Erb Memorial Union. Off-campus housing consists heavily of shared student rentals and mid-rise apartment buildings throughout the West University district within easy walking or biking distance.",
         "medical_access": "Integrated student health and proximity to Eugene-area medical and trauma centers.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity - AAU Member)",
+          "biology_and_pre_med": "Respectable molecular biology and neuroscience via the Institute of Molecular Biology; active undergraduate lab involvement.",
+          "clinical_and_medical_access": "Integrated student health and proximity to Eugene-area medical and trauma centers.",
+          "flagship_programs": "Human Physiology, Molecular Biology, Neuroscience, Sports Business."
+        },
         "link_admissions": "https://admissions.uoregon.edu",
         "link_bio_dept": "https://admissions.uoregon.edu/majors/biology",
         "link_official_site": "https://uoregon.edu",
@@ -547,18 +571,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-oregon"
       },
       "grades": {
-        "Cost": "D",
-        "Support": "B",
-        "Social": "B",
-        "Weather": "D",
-        "Biology": "B",
-        "CLS": "B",
-        "Spirit": "A",
-        "Admissions": "B",
-        "CultureShock": "B",
-        "Outdoors": "B",
-        "GoHome": "B",
-        "Safety": "B"
+        "Cost": "D", "Support": "B", "Social": "B", "Weather": "D", "Biology": "B", "CLS": "B", "Spirit": "A", "Admissions": "B", "CultureShock": "B", "Outdoors": "B", "GoHome": "B", "Safety": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$68,931 - $74,325 (Out-of-State). Does not participate in WUE, but offers automatic Apex/Summit merit scholarships based on GPA. Cost could lower.",
@@ -568,19 +581,26 @@
         "Biology": "Respectable molecular biology and neuroscience (Institute of Molecular Biology), but smaller overall scope than peers.",
         "CLS": "Solid West Coast bio/micro curriculum; covers general prereqs, though lacks on-campus MLS.",
         "Spirit": "Iconic Autzen Stadium noise, Nike-backed hype, and massive statewide Duck pride.",
-        "Admissions": "Target: ~78% acceptance rate; holistic review that places solid value on AP course load and personal statement essays.  GPAs between 3.4-3.7",
+        "Admissions": "Target: ~78% acceptance rate; holistic review that places solid value on AP course load and personal statement essays. GPAs between 3.4-3.7",
         "CultureShock": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
         "Outdoors": "Deep PNW recreation in the Cascades, though winter rain dampens daily outdoor activities.",
         "GoHome": "Moderate: 4.5hr trip via 2.5hr flight + Uber ($175-$275).",
         "Safety": "Eugene has typical Pacific Northwest property crime issues, but campus operations are tightly managed."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "University of Oregon", "academic_calendar": "Quarter" },
+        "enrollment": { "undergraduate_total": 24404 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 40021, "admits": 35337, "enrolled": 5087, "acceptance_rate_pct": 88.3, "yield_rate_pct": 14.4 },
+        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1130-1360", "act_composite_25_75": "23-30" },
+        "gpa": { "average_hs_gpa": 3.73, "pct_submitting_gpa": 99.94, "distribution_pct": { "4.0": 33.26, "3.75-3.99": 20.85, "3.50-3.74": 16.86, "3.25-3.49": 12.75, "3.00-3.24": 9.38, "below_3.0": 6.91 }, "class_rank_top_10_pct": null },
+        "cost_annual": { "tuition_in_state": 12726, "tuition_out_of_state": 39922, "required_fees": 2594, "room_and_board_on_campus": 16611, "books_supplies": 1362, "transportation": 444, "est_full_coa_in_state": 36275, "est_full_coa_out_of_state": 63471 },
+        "outcomes": { "first_year_retention_pct": 86.4, "grad_rate_4yr_pct": 58.2, "grad_rate_6yr_pct": 72.0, "student_to_faculty_ratio": "18 to 1" }
       }
     },
     {
       "school": "LSU",
       "location": "Baton Rouge, LA",
-      "enrollment": "34242",
       "profile": {
-        "full_name": "Louisiana State University",
         "photo_1": "https://marvel-b1-cdn.bc0a.com/f00000000290274/www.lsu.edu/_resources/ldp/images/.private_ldp/a53995/production/master/eb925f07-0c01-47ee-b493-3de1ead54048.jpg",
         "photo_2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/f6/58/23/loudest-place-on-earth.jpg",
         "photo_3": "https://marvel-b1-cdn.bc0a.com/f00000000290274/www.lsu.edu/blog/images/2026/03/first-day-of-summer.jpg",
@@ -591,6 +611,12 @@
         "neighborhood_vibe": "A sprawling Southern capital city setting. The campus is self-contained along the Mississippi River, bordered by suburban residential extensions and bustling commercial corridors characterized by heavy local Southern culture and legendary game-day energy.",
         "housing_status": "Freshman housing features historic and modern residential colleges across campus. Off-campus housing is dominated by sprawling luxury apartment complexes and rental properties off Highland Road and Burbank Drive, which require driving or shuttle utilization to reach central classes.",
         "medical_access": "Access to comprehensive university medical clinics and proximity to Baton Rouge General health systems.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "Established Biological Sciences department with direct pipelines into LSU Health Sciences Centers in New Orleans and Shreveport.",
+          "clinical_and_medical_access": "Access to comprehensive university medical clinics and proximity to Baton Rouge General health systems.",
+          "flagship_programs": "Medical Laboratory Science (MLS Pipeline via LSU Health), Biological Sciences, Coastal Geology, Veterinary Medicine."
+        },
         "link_admissions": "https://www.lsu.edu/admissions/index.php",
         "link_bio_dept": "https://www.lsu.edu/science/biosci/index.php",
         "link_official_site": "https://www.lsu.edu",
@@ -598,18 +624,7 @@
         "link_appily": "https://www.appily.com/colleges/louisiana-state-university-shreveport"
       },
       "grades": {
-        "Cost": "C",
-        "Support": "B",
-        "Social": "A",
-        "Weather": "F",
-        "Biology": "C",
-        "CLS": "A",
-        "Spirit": "A",
-        "Admissions": "C",
-        "CultureShock": "F",
-        "Outdoors": "F",
-        "GoHome": "F",
-        "Safety": "D"
+        "Cost": "C", "Support": "B", "Social": "A", "Weather": "F", "Biology": "C", "CLS": "A", "Spirit": "A", "Admissions": "C", "CultureShock": "F", "Outdoors": "F", "GoHome": "F", "Safety": "D"
       },
       "details": {
         "Cost": "Est. Total COA: ~$56,122 - $58,256 (Out-of-State). Offers automatic non-resident merit scholarships and fee waivers for high GPAs and test scores. Cost could lower.",
@@ -624,14 +639,21 @@
         "Outdoors": "Flat, swampy, and intensely humid; virtually zero traditional dynamic outdoor recreation.",
         "GoHome": "Hard: 9hr trip via multi-leg flights; very expensive ($325-$525+).",
         "Safety": "Baton Rouge consistently registers high violent and property crime rates per capita, requiring extreme off-campus vigilance."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "Louisiana State University", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 34242 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 47065, "admits": 34513, "enrolled": 7925, "acceptance_rate_pct": 73.3, "yield_rate_pct": 23.0 },
+        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1180-1320", "act_composite_25_75": "24-30" },
+        "gpa": { "average_hs_gpa": 3.83, "pct_submitting_gpa": 99.32, "distribution_pct": { "4.0": 36.56, "3.75-3.99": 21.8, "3.50-3.74": 17.79, "3.25-3.49": 13.9, "3.00-3.24": 9.07, "below_3.0": 0.88 }, "class_rank_top_10_pct": 26.0 },
+        "cost_annual": { "tuition_in_state": 8038, "tuition_out_of_state": 24715, "required_fees": 3916, "room_and_board_on_campus": 15142, "books_supplies": 1084, "transportation": 3840, "est_full_coa_in_state": 36064, "est_full_coa_out_of_state": 52741 },
+        "outcomes": { "first_year_retention_pct": 84.7, "grad_rate_4yr_pct": 50.3, "grad_rate_6yr_pct": 68.8, "student_to_faculty_ratio": "21 to 1" }
       }
     },
     {
       "school": "FAU",
       "location": "Boca Raton, FL",
-      "enrollment": "25626",
       "profile": {
-        "full_name": "Florida Atlantic University",
         "photo_1": "https://www.usnews.com/dims4/USNEWS/6cc5ebf/17177859217/resize/800x540%3E/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F71%2F45fb1725a4eaa6ffa254f08a4ae595%2Ffau_82826876.jpg",
         "photo_2": "https://bocamag.com/wp-content/uploads/2024/12/FAU-Stadium-photo-courtesy-of-FAU-Athletics.jpg",
         "photo_3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-DdcG5MSTQOChe9GrTTuzlVONL0zRaqhlea1L-mRD2Da_WvbIxYT_rT3f&s=10",
@@ -642,6 +664,12 @@
         "neighborhood_vibe": "An upscale, quiet suburban South Florida setting. The campus sits in wealthy Boca Raton just minutes from pristine Atlantic beaches and high-end outdoor malls, carrying a relaxed, palm-lined coastal vibe rather than a dense, walkable college town feel.",
         "housing_status": "Freshmen live in modern resort-style residence halls like Innovation Village Apartments. Off-campus housing is expensive and upscale, dominated by suburban rental units and luxury apartment complexes across Boca Raton where most students require a car to get around.",
         "medical_access": "Access to local university health services and proximal to regional Baptist Health networks.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "Solid regional Florida pre-health tracks, Charles E. Schmidt College of Medicine on campus, and strong marine science research.",
+          "clinical_and_medical_access": "Access to local university health services and proximal to regional Baptist Health networks.",
+          "flagship_programs": "Biological Sciences, Pre-Med / Neuroscience, Marine Biology, Nursing."
+        },
         "link_admissions": "https://www.fau.edu/admissions/",
         "link_bio_dept": "https://www.fau.edu/career/majors/biological-sciences/",
         "link_official_site": "https://www.fau.edu",
@@ -649,18 +677,7 @@
         "link_appily": "https://www.appily.com/colleges/florida-atlantic-university"
       },
       "grades": {
-        "Cost": "B",
-        "Support": "C",
-        "Social": "F",
-        "Weather": "B",
-        "Biology": "C",
-        "CLS": "B",
-        "Spirit": "C",
-        "Admissions": "C",
-        "CultureShock": "C",
-        "Outdoors": "B",
-        "GoHome": "C",
-        "Safety": "C"
+        "Cost": "B", "Support": "C", "Social": "F", "Weather": "B", "Biology": "C", "CLS": "B", "Spirit": "C", "Admissions": "C", "CultureShock": "D", "Outdoors": "B", "GoHome": "C", "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$42,382 - $46,422 (Out-of-State). Offers non-resident merit scholarships based on GPA. Cost could lower after admission.",
@@ -675,14 +692,21 @@
         "Outdoors": "Top-tier coastal and water lifestyle with Atlantic beaches and intracoastal waterways 10-15 minutes away.",
         "GoHome": "Hard: 7.5hr trip via 5hr flight + train/Uber ($155-$290).",
         "Safety": "Boca Raton is generally safe, but open regional commuter access introduces consistent property crime profiles."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "Florida Atlantic University", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 24942 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 31511, "admits": 20838, "enrolled": 4232, "acceptance_rate_pct": 66.1, "yield_rate_pct": 20.3 },
+        "test_scores": { "policy": "Required to be considered for admission", "sat_composite_25_75": "1110-1210", "act_composite_25_75": "21-26" },
+        "gpa": { "average_hs_gpa": 3.83, "pct_submitting_gpa": 99.79, "distribution_pct": { "4.0": 37.3, "3.75-3.99": 19.77, "3.50-3.74": 19.56, "3.25-3.49": 13.83, "3.00-3.24": 8.26, "below_3.0": 1.28 }, "class_rank_top_10_pct": 16.64 },
+        "cost_annual": { "tuition_in_state": 6099, "tuition_out_of_state": 21655, "required_fees": 0, "room_and_board_on_campus": 15860, "books_supplies": 1320, "transportation": 2424, "est_full_coa_in_state": 31157, "est_full_coa_out_of_state": 46713 },
+        "outcomes": { "first_year_retention_pct": 84.0, "grad_rate_4yr_pct": 49.6, "grad_rate_6yr_pct": 63.0, "student_to_faculty_ratio": "24 to 1" }
       }
     },
     {
       "school": "FIU",
       "location": "Miami, FL",
-      "enrollment": "56000",
       "profile": {
-        "full_name": "Florida International University",
         "photo_1": "https://www.fiu.edu/_assets/images/student-life/fountain.jpg",
         "photo_2": "https://centralreservations.fiu.edu/venues/_assets/img/fiu-football-stadium1.jpg",
         "photo_3": "https://localist-images.azureedge.net/photos/43701775596688/card/d46f4fef4092355bb66715ba99f78d64cc10bdc6.jpg",
@@ -693,6 +717,12 @@
         "neighborhood_vibe": "A massive urban-suburban setting in West Miami. The campus acts as a dense, high-energy city hub surrounded by vibrant South Florida culture, dense commercial corridors, and immediate access to Miami.",
         "housing_status": "Freshman housing features large modern residential complexes like Parkview and University Towers. Off-campus housing consists heavily of dense student apartment complexes and suburban rentals across the Miami metro, requiring cars or shuttles for transit.",
         "medical_access": "Full clinical integration anchored directly by the Herbert Wertheim College of Medicine and extensive partnerships with Baptist Health and Jackson Health System.",
+        "academics": {
+          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
+          "biology_and_pre_med": "R1 research infrastructure with solid federal funding and clinical medical school networks on campus.",
+          "clinical_and_medical_access": "Full clinical integration anchored directly by the Herbert Wertheim College of Medicine and extensive partnerships with Baptist Health and Jackson Health System.",
+          "flagship_programs": "Biological Sciences, Biomedical Engineering, Public Health, Nursing."
+        },
         "link_admissions": "https://admissions.fiu.edu",
         "link_bio_dept": "https://case.fiu.edu/biology/",
         "link_official_site": "https://www.fiu.edu",
@@ -700,23 +730,12 @@
         "link_appily": "https://www.appily.com/colleges/florida-international-university"
       },
       "grades": {
-        "Cost": "B",
-        "Support": "C",
-        "Social": "D",
-        "Weather": "B",
-        "Biology": "B",
-        "CLS": "B",
-        "Spirit": "C",
-        "Admissions": "D",
-        "CultureShock": "C",
-        "Outdoors": "B",
-        "GoHome": "C",
-        "Safety": "C"
+        "Cost": "B", "Support": "C", "Social": "F", "Weather": "B", "Biology": "B", "CLS": "B", "Spirit": "C", "Admissions": "D", "CultureShock": "D", "Outdoors": "B", "GoHome": "C", "Safety": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$41,500 - $45,000 (Out-of-State). Offers competitive non-resident merit scholarships based on GPA and test scores.",
         "Support": "Massive institutional scale operating with an 89% freshman retention rate, though large student-to-adviser ratios impact upper-division navigation.",
-        "Social": "Massive student population and active campus cultural events, but on-campus social life is severely limited by a heavy commuter culture.",
+        "Social": "On-campus social life is severely limited by a massive commuter culture.",
         "Weather": "~175 nice days. Sunny tropical winters, but heavy summer humidity and hurricane season risks.",
         "Biology": "R1 research infrastructure with solid federal funding and clinical medical school networks, though trailing elite West Coast biological powerhouses.",
         "CLS": "Solid biological tracks and Biomedical Engineering intersections, with clinical exposure via major Miami hospital networks.",
@@ -726,6 +745,15 @@
         "Outdoors": "Great coastal and beach access in Miami, though completely flat with zero elevation or mountain recreation.",
         "GoHome": "Hard: 7.5hr trip via 5hr flight + transit; expensive tickets ($180-$320).",
         "Safety": "Suburban campus footprint with standard major metropolitan property and urban crime considerations in the surrounding Miami area."
+      },
+      "cds_2024_2025": {
+        "general": { "official_name": "Florida International University", "academic_calendar": "Semester" },
+        "enrollment": { "undergraduate_total": 44904 },
+        "admissions": { "cohort": "Fall 2024", "applicants": 32855, "admits": 17957, "enrolled": 5238, "acceptance_rate_pct": 54.7, "yield_rate_pct": 29.2 },
+        "test_scores": { "policy": "Required to be considered for admission", "sat_composite_25_75": "1070-1250", "act_composite_25_75": "21-27" },
+        "gpa": { "average_hs_gpa": 4.1, "pct_submitting_gpa": 99.0, "distribution_pct": { "4.0": 68.0, "3.75-3.99": 16.0, "3.50-3.74": 13.0, "3.25-3.49": 3.0, "3.00-3.24": 0.0, "below_3.0": 0.0 }, "class_rank_top_10_pct": 25.0 },
+        "cost_annual": { "tuition_in_state": 6168, "tuition_out_of_state": 18566, "required_fees": 398, "room_and_board_on_campus": 13080, "books_supplies": 1350, "transportation": 2460, "est_full_coa_in_state": 26362, "est_full_coa_out_of_state": 38760 },
+        "outcomes": { "first_year_retention_pct": 93.0, "grad_rate_4yr_pct": 59.0, "grad_rate_6yr_pct": 74.0, "student_to_faculty_ratio": "22 to 1" }
       }
     }
   ]
