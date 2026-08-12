@@ -1,7 +1,7 @@
 {
   "metrics_descriptions": {
     "Cost": "Breakdown of residency status (In-State, Out-of-State, WUE), tuition tier, and expected financial aid impact.",
-    "Support": "Availability and quality of academic advising, tutoring centers, freshman retention networks, and student success resources.",
+    "Support": "Comprehensive freshman structure, first-year seminar quality (e.g., U101), cohort-building programs, degree guidance, and dedicated retention infrastructure vs. independent/sink-or-swim setups.",
     "Social": "Weekend party environment, Greek life prevalence, off-campus house/bar scenes, and overall nightlife density.",
     "Weather": "Count of pleasant/comfortable outdoor days during the core academic school year (Sept–May), excluding extreme heat, snow, or heavy rain.",
     "Biology": "Institutional research funding (NIH/NSF), lab access, pre-health tracks, and proximity to biotech corridors.",
@@ -11,7 +11,8 @@
     "CultureShock": "Cultural transition and similarity to Southern California (lifestyle shift, regional dynamics, student body demographic balance).",
     "Outdoors": "Proximity to outdoor recreation (beaches, trails, ski resorts, rivers) and access to active student lifestyle amenities.",
     "GoHome": "Travel logistics back to San Diego (direct flight availability, drive times, airport proximity, and travel costs).",
-    "Safety": "Campus security infrastructure, Clery Act crime statistics, surrounding city crime rates, and off-campus environmental safety."
+    "Safety": "Campus security infrastructure, Clery Act crime statistics, surrounding city crime rates, and off-campus environmental safety.",
+    "Food": "Dining hall quality, variety, culinary reputation, special dietary accommodation, on-campus brand/retail options, and meal plan flexibility."
   },
   "schools": [
     {
@@ -41,11 +42,23 @@
         "link_appily": "https://www.appily.com/colleges/university-of-california-santa-barbara"
       },
       "grades": {
-        "Cost": "A", "Support": "A", "Social": "A", "Weather": "A", "Biology": "A", "CLS": "D", "Spirit": "D", "Admissions": "F", "CultureShock": "A", "Outdoors": "A", "GoHome": "A", "Safety": "A"
+        "Cost": "A",
+        "Support": "C",
+        "Social": "A",
+        "Weather": "A",
+        "Biology": "A",
+        "CLS": "D",
+        "Spirit": "D",
+        "Admissions": "F",
+        "CultureShock": "A",
+        "Outdoors": "A",
+        "GoHome": "A",
+        "Safety": "A",
+        "Food": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$43,937 (In-State CA). Final cost is largely fixed unless eligible for need-based aid.",
-        "Support": "High-performing infrastructure featuring a 93% freshman retention rate and an 83% graduation rate, reflecting exceptionally strong student success systems.",
+        "Support": "UC research-focused model that favors student independence; advising is available but expects self-advocacy without hand-holding.",
         "Social": "Legendary Isla Vista street and house party culture right on the ocean.",
         "Weather": "~220 nice days. Mild coastal sun, minimal bad days",
         "Biology": "Top-tier R1 research; world-class molecular, cellular, and marine biology labs with strong West Coast biotech placement.",
@@ -55,16 +68,59 @@
         "CultureShock": "Identical coastal SoCal beach culture (Isla Vista), outdoorsy lifestyle, and easy drive/flight home.",
         "Outdoors": "Unmatched daily access to coastal surfing, beach cruisers, and an active ocean lifestyle.",
         "GoHome": "Easy: 4hr drive (~$40 gas) or 3hr flight (~$135).",
-        "Safety": "Isolated, heavily controlled coastal campus bubble with very low local crime rates."
+        "Safety": "Isolated, heavily controlled coastal campus bubble with very low local crime rates.",
+        "Food": "Solid residential dining commons like Carrillo and Portola with ocean views and organic options, though standard UC rotation."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "University of California, Santa Barbara", "academic_calendar": "Quarter" },
-        "enrollment": { "undergraduate_total": 23181 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 110266, "admits": 36347, "enrolled": 5008, "acceptance_rate_pct": 33.0, "yield_rate_pct": 13.8 },
-        "test_scores": { "policy": "Not considered for admission, even if submitted", "sat_composite_25_75": "N/A", "act_composite_25_75": "N/A" },
-        "gpa": { "average_hs_gpa": 4.3, "pct_submitting_gpa": 97.6, "distribution_pct": { "4.0": 90.36, "3.75-3.99": 6.14, "3.50-3.74": 2.86, "3.25-3.49": 0.43, "3.00-3.24": 0.16, "below_3.0": 0.05 }, "class_rank_top_10_pct": "N/A" },
-        "cost_annual": { "tuition_in_state": "Data Not Available", "tuition_out_of_state": "Data Not Available", "required_fees": "Data Not Available", "room_and_board_on_campus": "Data Not Available", "books_supplies": "Data Not Available", "transportation": "Data Not Available", "est_full_coa_in_state": "Data Not Available", "est_full_coa_out_of_state": "Data Not Available" },
-        "outcomes": { "first_year_retention_pct": 93.26, "grad_rate_4yr_pct": 70.02, "grad_rate_6yr_pct": 83.0, "student_to_faculty_ratio": "17 to 1" }
+        "general": {
+          "official_name": "University of California, Santa Barbara",
+          "academic_calendar": "Quarter"
+        },
+        "enrollment": {
+          "undergraduate_total": 23181
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 110266,
+          "admits": 36347,
+          "enrolled": 5008,
+          "acceptance_rate_pct": 33.0,
+          "yield_rate_pct": 13.8
+        },
+        "test_scores": {
+          "policy": "Not considered for admission, even if submitted",
+          "sat_composite_25_75": "N/A",
+          "act_composite_25_75": "N/A"
+        },
+        "gpa": {
+          "average_hs_gpa": 4.3,
+          "pct_submitting_gpa": 97.6,
+          "distribution_pct": {
+            "4.0": 90.36,
+            "3.75-3.99": 6.14,
+            "3.50-3.74": 2.86,
+            "3.25-3.49": 0.43,
+            "3.00-3.24": 0.16,
+            "below_3.0": 0.05
+          },
+          "class_rank_top_10_pct": "N/A"
+        },
+        "cost_annual": {
+          "tuition_in_state": "Data Not Available",
+          "tuition_out_of_state": "Data Not Available",
+          "required_fees": "Data Not Available",
+          "room_and_board_on_campus": "Data Not Available",
+          "books_supplies": "Data Not Available",
+          "transportation": "Data Not Available",
+          "est_full_coa_in_state": "Data Not Available",
+          "est_full_coa_out_of_state": "Data Not Available"
+        },
+        "outcomes": {
+          "first_year_retention_pct": 93.26,
+          "grad_rate_4yr_pct": 70.02,
+          "grad_rate_6yr_pct": 83.0,
+          "student_to_faculty_ratio": "17 to 1"
+        }
       }
     },
     {
@@ -94,11 +150,23 @@
         "link_appily": "https://www.appily.com/colleges/university-of-colorado-boulder"
       },
       "grades": {
-        "Cost": "D", "Support": "A", "Social": "A", "Weather": "C", "Biology": "A", "CLS": "C", "Spirit": "B", "Admissions": "B", "CultureShock": "B", "Outdoors": "A", "GoHome": "B", "Safety": "B"
+        "Cost": "D",
+        "Support": "B",
+        "Social": "A",
+        "Weather": "C",
+        "Biology": "A",
+        "CLS": "C",
+        "Spirit": "B",
+        "Admissions": "B",
+        "CultureShock": "B",
+        "Outdoors": "A",
+        "GoHome": "B",
+        "Safety": "B",
+        "Food": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$64,452 - $68,440 (Out-of-State). Does not participate in WUE, but offers automatic non-resident merit scholarships based on GPA. Cost could lower slightly.",
-        "Support": "Strong student retention engine with an 89% retention rate and a 74% graduation rate, ensuring reliable institutional support.",
+        "Support": "Structured via Residential Academic Programs (RAPs) and solid advising, though students are encouraged to build independent initiative early.",
         "Social": "Lively Pearl Street and The Hill, but less formal Greek dominance than the SEC.",
         "Weather": "~155 nice days. Cold snowy winters offset the crisp sunny days",
         "Biology": "BioFrontiers Institute powerhouse; deep federal funding and direct pipelines into the Boulder-Denver biotech/medical device hub.",
@@ -108,16 +176,59 @@
         "CultureShock": "High sun and huge SoCal outdoor match (hiking/skiing); very smooth transition despite altitude.",
         "Outdoors": "World-class access for mountain biking, climbing the Flatirons, and weekend ski trips.",
         "GoHome": "Easy: 5hr trip via 2.5hr flight + direct bus ($70-$130).",
-        "Safety": "Generally safe campus, though standard college-town property crime and party-area dynamics exist."
+        "Safety": "Generally safe campus, though standard college-town property crime and party-area dynamics exist.",
+        "Food": "Features the massive C4C Dining Center with 10 international micro-kitchens, local/organic emphasis, and top-tier variety."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "University of Colorado Boulder", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 33384 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 68931, "admits": 52534, "enrolled": 7432, "acceptance_rate_pct": 76.2, "yield_rate_pct": 14.1 },
-        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1180-1390", "act_composite_25_75": "27-33" },
-        "gpa": { "average_hs_gpa": 3.79, "pct_submitting_gpa": 99.6, "distribution_pct": { "4.0": 44.0, "3.75-3.99": 23.0, "3.50-3.74": 18.0, "3.25-3.49": 10.0, "3.00-3.24": 4.0, "below_3.0": 2.0 }, "class_rank_top_10_pct": 30.0 },
-        "cost_annual": { "tuition_in_state": 11976, "tuition_out_of_state": 40320, "required_fees": 1646, "room_and_board_on_campus": 17794, "books_supplies": 1200, "transportation": 1376, "est_full_coa_in_state": 35738, "est_full_coa_out_of_state": 64082 },
-        "outcomes": { "first_year_retention_pct": 90.0, "grad_rate_4yr_pct": 57.0, "grad_rate_6yr_pct": 74.0, "student_to_faculty_ratio": "19.1 to 1" }
+        "general": {
+          "official_name": "University of Colorado Boulder",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 33384
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 68931,
+          "admits": 52534,
+          "enrolled": 7432,
+          "acceptance_rate_pct": 76.2,
+          "yield_rate_pct": 14.1
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted",
+          "sat_composite_25_75": "1180-1390",
+          "act_composite_25_75": "27-33"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.79,
+          "pct_submitting_gpa": 99.6,
+          "distribution_pct": {
+            "4.0": 44.0,
+            "3.75-3.99": 23.0,
+            "3.50-3.74": 18.0,
+            "3.25-3.49": 10.0,
+            "3.00-3.24": 4.0,
+            "below_3.0": 2.0
+          },
+          "class_rank_top_10_pct": 30.0
+        },
+        "cost_annual": {
+          "tuition_in_state": 11976,
+          "tuition_out_of_state": 40320,
+          "required_fees": 1646,
+          "room_and_board_on_campus": 17794,
+          "books_supplies": 1200,
+          "transportation": 1376,
+          "est_full_coa_in_state": 35738,
+          "est_full_coa_out_of_state": 64082
+        },
+        "outcomes": {
+          "first_year_retention_pct": 90.0,
+          "grad_rate_4yr_pct": 57.0,
+          "grad_rate_6yr_pct": 74.0,
+          "student_to_faculty_ratio": "19.1 to 1"
+        }
       }
     },
     {
@@ -147,11 +258,23 @@
         "link_appily": "https://www.appily.com/colleges/university-of-arizona"
       },
       "grades": {
-        "Cost": "D", "Support": "B", "Social": "A", "Weather": "B", "Biology": "B", "CLS": "B", "Spirit": "B", "Admissions": "A", "CultureShock": "A", "Outdoors": "C", "GoHome": "B", "Safety": "C"
+        "Cost": "D",
+        "Support": "B",
+        "Social": "A",
+        "Weather": "B",
+        "Biology": "B",
+        "CLS": "B",
+        "Spirit": "B",
+        "Admissions": "A",
+        "CultureShock": "A",
+        "Outdoors": "C",
+        "GoHome": "B",
+        "Safety": "C",
+        "Food": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$65,900 - $67,770 (Out-of-State). Offers the Arizona Excellence Award ($6k-$18k/yr) for non-residents based on GPA. Cost could lower.",
-        "Support": "Solid standard public performance showing an 83% retention rate and a 66% graduation rate, supported by standard large-university frameworks.",
+        "Support": "Strong freshman retention infrastructure via the Thrive Center, dedicated Bio/Chem tutoring hubs, and accessible pre-health advising.",
         "Social": "Massive Greek life, pool parties, and a wild bar scene on Fourth Ave.",
         "Weather": "~175 nice days. Lovely winters but brutal Jun-Sep heat (110F+) penalized",
         "Biology": "BIO5 Institute heavy-hitter; exceptional interdisciplinary labs, pre-health tracks, and growing AZ bioscience ties.",
@@ -161,16 +284,59 @@
         "CultureShock": "Desert sun, palm trees, and massive California student population; seamless cultural transition.",
         "Outdoors": "Great desert hiking and stargazing, but heavily landlocked and extremely hot.",
         "GoHome": "Moderate: 3.5hr trip via 1.25hr flight + Uber ($175-$275).",
-        "Safety": "Tucson urban proximity and regional border-city property stats pull down off-campus safety indexes."
+        "Safety": "Tucson urban proximity and regional border-city property stats pull down off-campus safety indexes.",
+        "Food": "Retail-heavy model featuring the country's largest Student Union packed with brand names like Chick-fil-A, Panda Express, and local taco spots."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "The University of Arizona", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 45025 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 58339, "admits": 50252, "enrolled": 9240, "acceptance_rate_pct": 86.1, "yield_rate_pct": 18.4 },
-        "test_scores": { "policy": "Not required for admission, but consider if submitted", "sat_composite_25_75": "1130-1340", "act_composite_25_75": "21-28" },
-        "gpa": { "average_hs_gpa": 3.47, "pct_submitting_gpa": 97.5, "distribution_pct": { "4.0": 14.0, "3.75-3.99": 24.0, "3.50-3.74": 17.0, "3.25-3.49": 14.0, "3.00-3.24": 12.0, "below_3.0": 19.0 }, "class_rank_top_10_pct": 33.0 },
-        "cost_annual": { "tuition_in_state": 11835, "tuition_out_of_state": 38165, "required_fees": 1738, "room_and_board_on_campus": 16746, "books_supplies": 600, "transportation": 2350, "est_full_coa_in_state": 35369, "est_full_coa_out_of_state": 61699 },
-        "outcomes": { "first_year_retention_pct": 82.8, "grad_rate_4yr_pct": 49.9, "grad_rate_6yr_pct": 68.0, "student_to_faculty_ratio": "20 to 1" }
+        "general": {
+          "official_name": "The University of Arizona",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 45025
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 58339,
+          "admits": 50252,
+          "enrolled": 9240,
+          "acceptance_rate_pct": 86.1,
+          "yield_rate_pct": 18.4
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but consider if submitted",
+          "sat_composite_25_75": "1130-1340",
+          "act_composite_25_75": "21-28"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.47,
+          "pct_submitting_gpa": 97.5,
+          "distribution_pct": {
+            "4.0": 14.0,
+            "3.75-3.99": 24.0,
+            "3.50-3.74": 17.0,
+            "3.25-3.49": 14.0,
+            "3.00-3.24": 12.0,
+            "below_3.0": 19.0
+          },
+          "class_rank_top_10_pct": 33.0
+        },
+        "cost_annual": {
+          "tuition_in_state": 11835,
+          "tuition_out_of_state": 38165,
+          "required_fees": 1738,
+          "room_and_board_on_campus": 16746,
+          "books_supplies": 600,
+          "transportation": 2350,
+          "est_full_coa_in_state": 35369,
+          "est_full_coa_out_of_state": 61699
+        },
+        "outcomes": {
+          "first_year_retention_pct": 82.8,
+          "grad_rate_4yr_pct": 49.9,
+          "grad_rate_6yr_pct": 68.0,
+          "student_to_faculty_ratio": "20 to 1"
+        }
       }
     },
     {
@@ -200,11 +366,23 @@
         "link_appily": "https://www.appily.com/colleges/arizona-state-university-campus-immersion"
       },
       "grades": {
-        "Cost": "C", "Support": "B", "Social": "A", "Weather": "C", "Biology": "B", "CLS": "A", "Spirit": "B", "Admissions": "A", "CultureShock": "A", "Outdoors": "C", "GoHome": "A", "Safety": "C"
+        "Cost": "C",
+        "Support": "C",
+        "Social": "A",
+        "Weather": "B",
+        "Biology": "B",
+        "CLS": "A",
+        "Spirit": "B",
+        "Admissions": "A",
+        "CultureShock": "A",
+        "Outdoors": "C",
+        "GoHome": "A",
+        "Safety": "C",
+        "Food": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$55,091 - $57,000 (Out-of-State). Tempe main campus does NOT offer WUE, but provides generous New American University merit scholarships based on GPA.",
-        "Support": "Modern large-scale support framework maintaining an 86% retention rate and a 58% graduation rate amidst high enrollment volume.",
+        "Support": "Standard large-scale public model with 250-300+ student lecture halls and high-volume advising pools; requires proactive self-advocacy to access tutoring and faculty support.",
         "Social": "The ultimate nightlife scale: Mill Ave, massive concerts, and huge Greek presence.",
         "Weather": "~150 nice days. Phoenix heat island makes bad days worse than Tucson",
         "Biology": "Biodesign Institute engine; cutting-edge facilities and strong health-tech pipelines in the Phoenix metro.",
@@ -214,16 +392,59 @@
         "CultureShock": "Sunny year-round, giant SoCal transplant crowd, and familiar desert/coastal lifestyle blend.",
         "Outdoors": "Highly urbanized; great city amenities but requires driving out of the metro for real nature escapes.",
         "GoHome": "Easy: 5.5hr drive (~$55 gas) or 3.5hr trip via 1.25hr flight ($40-$80).",
-        "Safety": "Sprawling urban Phoenix and Tempe metro footprint leads to higher volume of surrounding property crime."
+        "Safety": "Sprawling urban Phoenix and Tempe metro footprint leads to higher volume of surrounding property crime.",
+        "Food": "High-end dining headlined by the Barrett Honors Dining Center (gourmet woks, brick ovens, gelato) and widespread M&G dollars across campus retail."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "Arizona State University Campus Immersion", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 65450 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 70928, "admits": 63756, "enrolled": 14099, "acceptance_rate_pct": 89.9, "yield_rate_pct": 22.1 },
-        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": null, "act_composite_25_75": null },
-        "gpa": { "average_hs_gpa": 3.53, "pct_submitting_gpa": 97.1, "distribution_pct": { "4.0": 9.3, "3.75-3.99": 27.8, "3.50-3.74": 22.7, "3.25-3.49": 16.5, "3.00-3.24": 13.4, "below_3.0": 10.4 }, "class_rank_top_10_pct": 29.2 },
-        "cost_annual": { "tuition_in_state": 11478, "tuition_out_of_state": 32394, "required_fees": 745, "room_and_board_on_campus": 16712, "books_supplies": 1320, "transportation": 1582, "est_full_coa_in_state": 31837, "est_full_coa_out_of_state": 52753 },
-        "outcomes": { "first_year_retention_pct": 86.6, "grad_rate_4yr_pct": 55.8, "grad_rate_6yr_pct": 70.1, "student_to_faculty_ratio": "18.0 to 1" }
+        "general": {
+          "official_name": "Arizona State University Campus Immersion",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 65450
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 70928,
+          "admits": 63756,
+          "enrolled": 14099,
+          "acceptance_rate_pct": 89.9,
+          "yield_rate_pct": 22.1
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted",
+          "sat_composite_25_75": null,
+          "act_composite_25_75": null
+        },
+        "gpa": {
+          "average_hs_gpa": 3.53,
+          "pct_submitting_gpa": 97.1,
+          "distribution_pct": {
+            "4.0": 9.3,
+            "3.75-3.99": 27.8,
+            "3.50-3.74": 22.7,
+            "3.25-3.49": 16.5,
+            "3.00-3.24": 13.4,
+            "below_3.0": 10.4
+          },
+          "class_rank_top_10_pct": 29.2
+        },
+        "cost_annual": {
+          "tuition_in_state": 11478,
+          "tuition_out_of_state": 32394,
+          "required_fees": 745,
+          "room_and_board_on_campus": 16712,
+          "books_supplies": 1320,
+          "transportation": 1582,
+          "est_full_coa_in_state": 31837,
+          "est_full_coa_out_of_state": 52753
+        },
+        "outcomes": {
+          "first_year_retention_pct": 86.6,
+          "grad_rate_4yr_pct": 55.8,
+          "grad_rate_6yr_pct": 70.1,
+          "student_to_faculty_ratio": "18.0 to 1"
+        }
       }
     },
     {
@@ -253,11 +474,23 @@
         "link_appily": "https://www.appily.com/colleges/colorado-state-university-fort-collins"
       },
       "grades": {
-        "Cost": "B", "Support": "B", "Social": "B", "Weather": "C", "Biology": "B", "CLS": "B", "Spirit": "C", "Admissions": "A", "CultureShock": "B", "Outdoors": "A", "GoHome": "C", "Safety": "A"
+        "Cost": "B",
+        "Support": "B",
+        "Social": "B",
+        "Weather": "C",
+        "Biology": "B",
+        "CLS": "B",
+        "Spirit": "C",
+        "Admissions": "A",
+        "CultureShock": "B",
+        "Outdoors": "A",
+        "GoHome": "C",
+        "Safety": "A",
+        "Food": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$50,000 - $53,294 (Out-of-State). Participates in WUE (3.2+ GPA required). High likelihood of cost lowering.",
-        "Support": "Reliable college-town support systems yielding an 85% freshman retention rate and a 69% graduation rate.",
+        "Support": "Welcoming, community-oriented freshman transition with strong residential learning communities and proactive advising.",
         "Social": "Laid-back brewery and live music town; missing the massive blowout party reputation.",
         "Weather": "~155 nice days. Cold winters and high plains wind offset the sun",
         "Biology": "Legendary vet-med, microbiology, and animal science programs; exceptional hands-on labs across the Front Range.",
@@ -267,16 +500,59 @@
         "CultureShock": "Great laid-back outdoor culture; feels slightly more local/traditional Colorado than Boulder.",
         "Outdoors": "Immediate access to Horsetooth Reservoir, Rocky Mountain trails, and outdoor recreation.",
         "GoHome": "Moderate: 6hr trip via 2.5hr flight + shuttle ($115-$175).",
-        "Safety": "Fort Collins consistently ranks among the safest mid-sized cities and campuses in the country."
+        "Safety": "Fort Collins consistently ranks among the safest mid-sized cities and campuses in the country.",
+        "Food": "Standard public university dining; clean and reliable residential dining centers with good local sourcing, but typical campus rotation."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "Colorado State University", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 26500 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 38520, "admits": 34118, "enrolled": 5429, "acceptance_rate_pct": 88.6, "yield_rate_pct": 15.9 },
-        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1060-1280", "act_composite_25_75": "22-29" },
-        "gpa": { "average_hs_gpa": 3.69, "pct_submitting_gpa": 99.9, "distribution_pct": { "4.0": 30.1, "3.75-3.99": 17.8, "3.50-3.74": 16.9, "3.25-3.49": 14.3, "3.00-3.24": 12.6, "below_3.0": 8.4 }, "class_rank_top_10_pct": 20.0 },
-        "cost_annual": { "tuition_in_state": 10609, "tuition_out_of_state": 32297, "required_fees": 2773, "room_and_board_on_campus": 14740, "books_supplies": 1460, "transportation": 1548, "est_full_coa_in_state": 31130, "est_full_coa_out_of_state": 52818 },
-        "outcomes": { "first_year_retention_pct": 85.9, "grad_rate_4yr_pct": 46.7, "grad_rate_6yr_pct": 66.5, "student_to_faculty_ratio": "17 to 1" }
+        "general": {
+          "official_name": "Colorado State University",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 26500
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 38520,
+          "admits": 34118,
+          "enrolled": 5429,
+          "acceptance_rate_pct": 88.6,
+          "yield_rate_pct": 15.9
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted",
+          "sat_composite_25_75": "1060-1280",
+          "act_composite_25_75": "22-29"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.69,
+          "pct_submitting_gpa": 99.9,
+          "distribution_pct": {
+            "4.0": 30.1,
+            "3.75-3.99": 17.8,
+            "3.50-3.74": 16.9,
+            "3.25-3.49": 14.3,
+            "3.00-3.24": 12.6,
+            "below_3.0": 8.4
+          },
+          "class_rank_top_10_pct": 20.0
+        },
+        "cost_annual": {
+          "tuition_in_state": 10609,
+          "tuition_out_of_state": 32297,
+          "required_fees": 2773,
+          "room_and_board_on_campus": 14740,
+          "books_supplies": 1460,
+          "transportation": 1548,
+          "est_full_coa_in_state": 31130,
+          "est_full_coa_out_of_state": 52818
+        },
+        "outcomes": {
+          "first_year_retention_pct": 85.9,
+          "grad_rate_4yr_pct": 46.7,
+          "grad_rate_6yr_pct": 66.5,
+          "student_to_faculty_ratio": "17 to 1"
+        }
       }
     },
     {
@@ -284,7 +560,7 @@
       "location": "Columbia, SC",
       "profile": {
         "photo_1": "https://www.usnews.com/dims4/USNEWS/aa1ed7b/17177859217/resize/800x540%3E/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2Ffb%2Fce%2F8e7fde4944adb8527bd0fd7065b8%2Fuscb-aerial.jpg",
-        "photo_2": "https://gamecocksonline.com/imgproxy/fHr9rKla3n6cDfyHi_JPPFIzMF8muKKWnyU7tIjwgKk/fit/5000/5000/ce/0/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dhbWVjb2Nrc29ubGluZS1jb20vMjAyMS8wNS9jNDdhMjEwNi13aWxsaWFtc19icmljZV9wYXJhbGxheF8yMi5qcGc.png",
+        "photo_2": "https://gamecocksonline.com/imgproxy/fHr9rKla3n6cDfyHi_JPPFIzMF8muKKWnyU7tIjwgKk/fit/5000/5000/ce/0/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dhbWVjb2Nrc29ubGluZS1jb20vMjAyMS8wNS9jNDdhMjEwNi13aWxsaWFms19icmljZV9wYXJhbGxheF8yMi5qcGc.png",
         "photo_3": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/2a/63/1c/usc.jpg?w=1200&h=-1&s=1",
         "video_url": "https://www.youtube.com/embed/CdX2AJ82X1I",
         "topology": "Compact, historic urban-campus layout featuring brick pathways, shaded quads (The Horseshoe), and relatively flat walking terrain. Outdoors: Access to the Congaree River and Lake Murray for kayaking and boating; flat local wooded trails, but no significant mountains or skiing within a reasonable day trip; coastal beaches are roughly 2 hours away.",
@@ -306,13 +582,25 @@
         "link_appily": "https://www.appily.com/colleges/university-of-south-carolina-columbia"
       },
       "grades": {
-        "Cost": "C", "Support": "A", "Social": "A", "Weather": "D", "Biology": "C", "CLS": "B", "Spirit": "A", "Admissions": "D", "CultureShock": "D", "Outdoors": "C", "GoHome": "D", "Safety": "C"
+        "Cost": "C",
+        "Support": "A",
+        "Social": "A",
+        "Weather": "B",
+        "Biology": "C",
+        "CLS": "B",
+        "Spirit": "A",
+        "Admissions": "D",
+        "CultureShock": "D",
+        "Outdoors": "C",
+        "GoHome": "D",
+        "Safety": "C",
+        "Food": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$55,800 (Out-of-State). Offers aggressive non-resident merit scholarships for high GPAs that can lower out-of-state tuition close to in-state rates.",
-        "Support": "Elite flagship infrastructure backed by a 92% retention rate and a 79% graduation rate, indicating strong student engagement.",
+        "Support": "National gold standard for first-year experience; iconic University 101 (U101) seminar keeps cohorts tight, connected, and academically supported from day one.",
         "Social": "Elite SEC Greek life and chaotic Five Points bar scene right off campus.",
-        "Weather": "~130 nice days. Humid muggy summers drag the score down hard",
+        "Weather": "Nice weather while in school, humid hot summers are after school session is over.",
         "Biology": "Solid pre-med tracks and regional hospital networks, but lacks a dense local corporate biotech corridor.",
         "CLS": "Solid pre-med/bio curriculum; easily covers core prereqs with in-state clinical pipelines.",
         "Spirit": "Elite SEC football religion; iconic Five Points tailgating and intense, stadium-shaking spirit.",
@@ -320,16 +608,59 @@
         "CultureShock": "Significant shift to SEC Greek life, traditional Southern pacing, and a completely different social ecosystem.",
         "Outdoors": "River systems and parklands are about 30-45 minutes away in flat midlands terrain.",
         "GoHome": "Hard: 8+hr trip via multi-leg flights; expensive ($275-$475+).",
-        "Safety": "Downtown Columbia setting requires street smarts, sitting right on the border of standard urban safety risks."
+        "Safety": "Downtown Columbia setting requires street smarts, sitting right on the border of standard urban safety risks.",
+        "Food": "A+ destination dining featuring over 40 venues, famous 'Chicken Finger Wednesdays', food truck fleets, and top-ranked first-year dining."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "University of South Carolina", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 30187 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 52703, "admits": 31701, "enrolled": 7272, "acceptance_rate_pct": 60.2, "yield_rate_pct": 22.9 },
-        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1190-1350", "act_composite_25_75": "26-32" },
-        "gpa": { "average_hs_gpa": 3.69, "pct_submitting_gpa": 97.87, "distribution_pct": { "4.0": 16.0, "3.75-3.99": 34.0, "3.50-3.74": 28.0, "3.25-3.49": 15.0, "3.00-3.24": 6.0, "below_3.0": 1.0 }, "class_rank_top_10_pct": 29.0 },
-        "cost_annual": { "tuition_in_state": null, "tuition_out_of_state": null, "required_fees": null, "room_and_board_on_campus": null, "books_supplies": null, "transportation": null, "est_full_coa_in_state": null, "est_full_coa_out_of_state": null },
-        "outcomes": { "first_year_retention_pct": 92.0, "grad_rate_4yr_pct": 69.8, "grad_rate_6yr_pct": 79.0, "student_to_faculty_ratio": "19 to 1" }
+        "general": {
+          "official_name": "University of South Carolina",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 30187
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 52703,
+          "admits": 31701,
+          "enrolled": 7272,
+          "acceptance_rate_pct": 60.2,
+          "yield_rate_pct": 22.9
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted",
+          "sat_composite_25_75": "1190-1350",
+          "act_composite_25_75": "26-32"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.69,
+          "pct_submitting_gpa": 97.87,
+          "distribution_pct": {
+            "4.0": 16.0,
+            "3.75-3.99": 34.0,
+            "3.50-3.74": 28.0,
+            "3.25-3.49": 15.0,
+            "3.00-3.24": 6.0,
+            "below_3.0": 1.0
+          },
+          "class_rank_top_10_pct": 29.0
+        },
+        "cost_annual": {
+          "tuition_in_state": null,
+          "tuition_out_of_state": null,
+          "required_fees": null,
+          "room_and_board_on_campus": null,
+          "books_supplies": null,
+          "transportation": null,
+          "est_full_coa_in_state": null,
+          "est_full_coa_out_of_state": null
+        },
+        "outcomes": {
+          "first_year_retention_pct": 92.0,
+          "grad_rate_4yr_pct": 69.8,
+          "grad_rate_6yr_pct": 79.0,
+          "student_to_faculty_ratio": "19 to 1"
+        }
       }
     },
     {
@@ -359,11 +690,23 @@
         "link_appily": "https://www.appily.com/colleges/oregon-state-university"
       },
       "grades": {
-        "Cost": "C", "Support": "B", "Social": "B", "Weather": "D", "Biology": "B", "CLS": "A", "Spirit": "B", "Admissions": "B", "CultureShock": "B", "Outdoors": "B", "GoHome": "C", "Safety": "A"
+        "Cost": "C",
+        "Support": "B",
+        "Social": "B",
+        "Weather": "D",
+        "Biology": "B",
+        "CLS": "A",
+        "Spirit": "B",
+        "Admissions": "B",
+        "CultureShock": "B",
+        "Outdoors": "B",
+        "GoHome": "C",
+        "Safety": "A",
+        "Food": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$58,668 (Out-of-State). Participates in WUE based on high school GPA. High likelihood of cost lowering.",
-        "Support": "Functional, steady support infrastructure anchored by an 83% retention rate and a 67% graduation rate.",
+        "Support": "Structured BioHealth Sciences cohort advising and steady first-year support pathways in a self-contained college town environment.",
         "Social": "Quiet, subdued campus nightlife; mostly smaller house parties and local pubs.",
         "Weather": "~105 nice days. Relentless PNW grey and rain",
         "Biology": "Elite ag/forestry research with massive federal grants; top-tier environmental biology and biochemistry labs.",
@@ -373,16 +716,59 @@
         "CultureShock": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
         "Outdoors": "Great access to the Cascades and coast, but persistent rain limits daily outdoor consistency.",
         "GoHome": "Hard: 6.5hr trip via 2.5hr flight + long shuttle ($170-$210).",
-        "Safety": "Corvallis is an exceptionally secure, low-crime Pacific Northwest college town."
+        "Safety": "Corvallis is an exceptionally secure, low-crime Pacific Northwest college town.",
+        "Food": "Standard debit-style meal plan across McNary and Arnold dining halls; functional but considered average/repetitive by students."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "Oregon State University", "academic_calendar": "Quarter" },
-        "enrollment": { "undergraduate_total": 31253 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 30293, "admits": 23418, "enrolled": 4778, "acceptance_rate_pct": 77.3, "yield_rate_pct": 20.4 },
-        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1160-1390", "act_composite_25_75": "24-31" },
-        "gpa": { "average_hs_gpa": 3.7, "pct_submitting_gpa": 98.0, "distribution_pct": { "4.0": 13.0, "3.75-3.99": 38.0, "3.50-3.74": 25.0, "3.25-3.49": 15.0, "3.00-3.24": 7.0, "below_3.0": 2.0 }, "class_rank_top_10_pct": 29.0 },
-        "cost_annual": { "tuition_in_state": null, "tuition_out_of_state": null, "required_fees": null, "room_and_board_on_campus": null, "books_supplies": null, "transportation": null, "est_full_coa_in_state": null, "est_full_coa_out_of_state": null },
-        "outcomes": { "first_year_retention_pct": 87.8, "grad_rate_4yr_pct": 47.2, "grad_rate_6yr_pct": 70.1, "student_to_faculty_ratio": "17 to 1" }
+        "general": {
+          "official_name": "Oregon State University",
+          "academic_calendar": "Quarter"
+        },
+        "enrollment": {
+          "undergraduate_total": 31253
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 30293,
+          "admits": 23418,
+          "enrolled": 4778,
+          "acceptance_rate_pct": 77.3,
+          "yield_rate_pct": 20.4
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted",
+          "sat_composite_25_75": "1160-1390",
+          "act_composite_25_75": "24-31"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.7,
+          "pct_submitting_gpa": 98.0,
+          "distribution_pct": {
+            "4.0": 13.0,
+            "3.75-3.99": 38.0,
+            "3.50-3.74": 25.0,
+            "3.25-3.49": 15.0,
+            "3.00-3.24": 7.0,
+            "below_3.0": 2.0
+          },
+          "class_rank_top_10_pct": 29.0
+        },
+        "cost_annual": {
+          "tuition_in_state": null,
+          "tuition_out_of_state": null,
+          "required_fees": null,
+          "room_and_board_on_campus": null,
+          "books_supplies": null,
+          "transportation": null,
+          "est_full_coa_in_state": null,
+          "est_full_coa_out_of_state": null
+        },
+        "outcomes": {
+          "first_year_retention_pct": 87.8,
+          "grad_rate_4yr_pct": 47.2,
+          "grad_rate_6yr_pct": 70.1,
+          "student_to_faculty_ratio": "17 to 1"
+        }
       }
     },
     {
@@ -412,11 +798,23 @@
         "link_appily": "https://www.appily.com/colleges/san-diego-state-university"
       },
       "grades": {
-        "Cost": "A", "Support": "A", "Social": "A", "Weather": "A", "Biology": "A", "CLS": "A", "Spirit": "B", "Admissions": "F", "CultureShock": "A", "Outdoors": "B", "GoHome": "A", "Safety": "B"
+        "Cost": "A",
+        "Support": "C",
+        "Social": "A",
+        "Weather": "A",
+        "Biology": "A",
+        "CLS": "A",
+        "Spirit": "B",
+        "Admissions": "F",
+        "CultureShock": "A",
+        "Outdoors": "B",
+        "GoHome": "A",
+        "Safety": "B",
+        "Food": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$37,324 - $38,938 (In-State CA). Final cost is largely fixed unless eligible for local/need-based aid.",
-        "Support": "Robust student success tracking featuring a 91% retention rate and a 76% graduation rate above regional averages.",
+        "Support": "Highly impacted majors and high student-to-faculty ratios (24:1); standard residential tracking, but requires independent navigation.",
         "Social": "Massive Southern California party reputation and huge local nightlife access.",
         "Weather": "~250 nice days. Peak SoCal perfection, minimal bad days",
         "Biology": "Leverages San Diego’s top-3 global biotech hub (Torrey Pines Mesa) for unmatched local interning and lab access.",
@@ -426,16 +824,59 @@
         "CultureShock": "Zero adjustment; home turf in San Diego with familiar local network, weather, and coastal lifestyle.",
         "Outdoors": "Great year-round access to Pacific beaches, coastal paths, and nearby trails within a 15-25 minute drive.",
         "GoHome": "Easy: 45min drive; zero flight friction.",
-        "Safety": "San Diego urban integration brings standard petty crime considerations, but overall municipal safety is solid."
+        "Safety": "San Diego urban integration brings standard petty crime considerations, but overall municipal safety is solid.",
+        "Food": "Modern meal plan built around high-density retail options (Trader Joe's, Chipotle, local eateries) rather than traditional large dining halls."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "San Diego State University", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 34637 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 90509, "admits": 32561, "enrolled": 6629, "acceptance_rate_pct": 36.0, "yield_rate_pct": 20.4 },
-        "test_scores": { "policy": "Not considered for admission, even if submitted", "sat_composite_25_75": "N/A", "act_composite_25_75": "N/A" },
-        "gpa": { "average_hs_gpa": 3.84, "pct_submitting_gpa": 100.0, "distribution_pct": { "4.0": 37.0, "3.75-3.99": 30.0, "3.50-3.74": 20.0, "3.25-3.49": 9.0, "3.00-3.24": 3.0, "below_3.0": 1.0 }, "class_rank_top_10_pct": 30.0 },
-        "cost_annual": { "tuition_in_state": 6450, "tuition_out_of_state": 19770, "required_fees": 3000, "room_and_board_on_campus": 23736, "books_supplies": 970, "transportation": 1170, "est_full_coa_in_state": 37594, "est_full_coa_out_of_state": 50914 },
-        "outcomes": { "first_year_retention_pct": 91.0, "grad_rate_4yr_pct": 56.3, "grad_rate_6yr_pct": 76.0, "student_to_faculty_ratio": "24 to 1" }
+        "general": {
+          "official_name": "San Diego State University",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 34637
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 90509,
+          "admits": 32561,
+          "enrolled": 6629,
+          "acceptance_rate_pct": 36.0,
+          "yield_rate_pct": 20.4
+        },
+        "test_scores": {
+          "policy": "Not considered for admission, even if submitted",
+          "sat_composite_25_75": "N/A",
+          "act_composite_25_75": "N/A"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.84,
+          "pct_submitting_gpa": 100.0,
+          "distribution_pct": {
+            "4.0": 37.0,
+            "3.75-3.99": 30.0,
+            "3.50-3.74": 20.0,
+            "3.25-3.49": 9.0,
+            "3.00-3.24": 3.0,
+            "below_3.0": 1.0
+          },
+          "class_rank_top_10_pct": 30.0
+        },
+        "cost_annual": {
+          "tuition_in_state": 6450,
+          "tuition_out_of_state": 19770,
+          "required_fees": 3000,
+          "room_and_board_on_campus": 23736,
+          "books_supplies": 970,
+          "transportation": 1170,
+          "est_full_coa_in_state": 37594,
+          "est_full_coa_out_of_state": 50914
+        },
+        "outcomes": {
+          "first_year_retention_pct": 91.0,
+          "grad_rate_4yr_pct": 56.3,
+          "grad_rate_6yr_pct": 76.0,
+          "student_to_faculty_ratio": "24 to 1"
+        }
       }
     },
     {
@@ -465,11 +906,23 @@
         "link_appily": "https://www.appily.com/colleges/university-of-utah"
       },
       "grades": {
-        "Cost": "B", "Support": "B", "Social": "F", "Weather": "C", "Biology": "A", "CLS": "A", "Spirit": "B", "Admissions": "B", "CultureShock": "C", "Outdoors": "A", "GoHome": "C", "Safety": "B"
+        "Cost": "B",
+        "Support": "C",
+        "Social": "F",
+        "Weather": "D",
+        "Biology": "A",
+        "CLS": "A",
+        "Spirit": "B",
+        "Admissions": "B",
+        "CultureShock": "C",
+        "Outdoors": "A",
+        "GoHome": "C",
+        "Safety": "B",
+        "Food": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$45,415 - $51,135 (Out-of-State). Eligible for WUE with a 3.30+ GPA, capping tuition at 150% of in-state. High likelihood of cost lowering.",
-        "Support": "Solid baseline operational metrics with an 86% retention rate and a 69% graduation rate, providing standard public support pathways.",
+        "Support": "Standard large state school advising; heavy local commuter population dilutes campus-wide freshman cohort support outside of specific dorm clusters.",
         "Social": "Very muted nightlife due to local liquor laws and a heavy commuter population.",
         "Weather": "~150 nice days. Cold winters plus inversions hurt air quality badly",
         "Biology": "World-renowned genetics and biochemistry labs with direct ties to U of U Health and Intermountain West biotech.",
@@ -479,16 +932,59 @@
         "CultureShock": "Progressive college pockets, but embedded in a distinct regional and religious cultural backdrop.",
         "Outdoors": "Unbeatable access to world-class ski canyons within 30 minutes of campus.",
         "GoHome": "Moderate: 4hr trip via 2hr flight; tickets pricey ($200-$300).",
-        "Safety": "Secure foothill campus setting in a safer major metropolitan area."
+        "Safety": "Secure foothill campus setting in a safer major metropolitan area.",
+        "Food": "United Heights Dining provides solid weekday options, but dining options quiet down significantly on weekends due to commuters."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "University of Utah", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 28064 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 26822, "admits": 23062, "enrolled": 6001, "acceptance_rate_pct": 86.0, "yield_rate_pct": 26.0 },
-        "test_scores": { "policy": "Not required for admission, but consider if submitted", "sat_composite_25_75": "1200-1370", "act_composite_25_75": "22-29" },
-        "gpa": { "average_hs_gpa": 3.67, "pct_submitting_gpa": 97.0, "distribution_pct": { "4.0": 10.0, "3.75-3.99": 38.0, "3.50-3.74": 25.0, "3.25-3.49": 18.0, "3.00-3.24": 7.0, "below_3.0": 2.0 }, "class_rank_top_10_pct": null },
-        "cost_annual": { "tuition_in_state": null, "tuition_out_of_state": null, "required_fees": null, "room_and_board_on_campus": null, "books_supplies": null, "transportation": null, "est_full_coa_in_state": null, "est_full_coa_out_of_state": null },
-        "outcomes": { "first_year_retention_pct": 86.0, "grad_rate_4yr_pct": 35.1, "grad_rate_6yr_pct": 65.0, "student_to_faculty_ratio": "19 to 1" }
+        "general": {
+          "official_name": "University of Utah",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 28064
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 26822,
+          "admits": 23062,
+          "enrolled": 6001,
+          "acceptance_rate_pct": 86.0,
+          "yield_rate_pct": 26.0
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but consider if submitted",
+          "sat_composite_25_75": "1200-1370",
+          "act_composite_25_75": "22-29"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.67,
+          "pct_submitting_gpa": 97.0,
+          "distribution_pct": {
+            "4.0": 10.0,
+            "3.75-3.99": 38.0,
+            "3.50-3.74": 25.0,
+            "3.25-3.49": 18.0,
+            "3.00-3.24": 7.0,
+            "below_3.0": 2.0
+          },
+          "class_rank_top_10_pct": null
+        },
+        "cost_annual": {
+          "tuition_in_state": null,
+          "tuition_out_of_state": null,
+          "required_fees": null,
+          "room_and_board_on_campus": null,
+          "books_supplies": null,
+          "transportation": null,
+          "est_full_coa_in_state": null,
+          "est_full_coa_out_of_state": null
+        },
+        "outcomes": {
+          "first_year_retention_pct": 86.0,
+          "grad_rate_4yr_pct": 35.1,
+          "grad_rate_6yr_pct": 65.0,
+          "student_to_faculty_ratio": "19 to 1"
+        }
       }
     },
     {
@@ -518,13 +1014,25 @@
         "link_appily": "https://www.appily.com/colleges/auburn-university"
       },
       "grades": {
-        "Cost": "C", "Support": "A", "Social": "A", "Weather": "D", "Biology": "C", "CLS": "B", "Spirit": "A", "Admissions": "D", "CultureShock": "D", "Outdoors": "C", "GoHome": "D", "Safety": "A"
+        "Cost": "C",
+        "Support": "A",
+        "Social": "A",
+        "Weather": "B",
+        "Biology": "C",
+        "CLS": "B",
+        "Spirit": "A",
+        "Admissions": "D",
+        "CultureShock": "D",
+        "Outdoors": "C",
+        "GoHome": "D",
+        "Safety": "A",
+        "Food": "A"
       },
       "details": {
         "Cost": "Est. Total COA: ~$56,706 - $58,000 (Out-of-State). Offers structured non-resident merit scholarships based on GPA and test scores. Cost could lower.",
-        "Support": "Excellent personal-touch framework boasting a 95% retention rate and an 82% graduation rate, paired with a favorable 10:1 faculty ratio.",
+        "Support": "Gold-standard SEC hand-holding with structured freshman orientation, personal advising, mandatory peer tutoring, and an exceptionally welcoming community.",
         "Social": "Legendary SEC tailgating and massive traditional Greek life dominance.",
-        "Weather": "~125 nice days. Deep South heat and humidity punish the bad days",
+        "Weather": "Nice warm school-year weathers, VERY hot in summer.",
         "Biology": "Strong pre-vet and agricultural tracks, but traditional corporate biotech/industrial bio networking lags behind.",
         "CLS": "Main campus covers core prereqs in Biomedical Sci; full NAACLS MLS is at Auburn Montgomery.",
         "Spirit": "Peak SEC tradition; Toomers Corner, legendary tailgating, and total town-wide football immersion.",
@@ -532,16 +1040,59 @@
         "CultureShock": "Significant shift to SEC Greek life, traditional Southern pacing, and a completely different social ecosystem.",
         "Outdoors": "Local state parks, rolling hills, and lake access within 20-30 minutes.",
         "GoHome": "Hard: 7.5hr trip via flight + shuttle; expensive ($200-$400+).",
-        "Safety": "Quiet, traditional, highly secure southern college town environment."
+        "Safety": "Quiet, traditional, highly secure southern college town environment.",
+        "Food": "A-grade food scene featuring the 800-seat Edge at Central Dining mega-hall and Hey Day Market artisan food hall with local vendors."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "Auburn University", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 27907 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 55056, "admits": 25284, "enrolled": 6103, "acceptance_rate_pct": 45.9, "yield_rate_pct": 24.1 },
-        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1260-1380", "act_composite_25_75": "26-31" },
-        "gpa": { "average_hs_gpa": 4.09, "pct_submitting_gpa": 99.98, "distribution_pct": { "4.0": 63.98, "3.75-3.99": 19.88, "3.50-3.74": 10.52, "3.25-3.49": 3.83, "3.00-3.24": 1.41, "below_3.0": 0.37 }, "class_rank_top_10_pct": 35.0 },
-        "cost_annual": { "tuition_in_state": 11016, "tuition_out_of_state": 33048, "required_fees": 1874, "room_and_board_on_campus": 16626, "books_supplies": 1200, "transportation": 3154, "est_full_coa_in_state": 36882, "est_full_coa_out_of_state": 58914 },
-        "outcomes": { "first_year_retention_pct": 94.7, "grad_rate_4yr_pct": 60.4, "grad_rate_6yr_pct": 82.0, "student_to_faculty_ratio": "21 to 1" }
+        "general": {
+          "official_name": "Auburn University",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 27907
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 55056,
+          "admits": 25284,
+          "enrolled": 6103,
+          "acceptance_rate_pct": 45.9,
+          "yield_rate_pct": 24.1
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted",
+          "sat_composite_25_75": "1260-1380",
+          "act_composite_25_75": "26-31"
+        },
+        "gpa": {
+          "average_hs_gpa": 4.09,
+          "pct_submitting_gpa": 99.98,
+          "distribution_pct": {
+            "4.0": 63.98,
+            "3.75-3.99": 19.88,
+            "3.50-3.74": 10.52,
+            "3.25-3.49": 3.83,
+            "3.00-3.24": 1.41,
+            "below_3.0": 0.37
+          },
+          "class_rank_top_10_pct": 35.0
+        },
+        "cost_annual": {
+          "tuition_in_state": 11016,
+          "tuition_out_of_state": 33048,
+          "required_fees": 1874,
+          "room_and_board_on_campus": 16626,
+          "books_supplies": 1200,
+          "transportation": 3154,
+          "est_full_coa_in_state": 36882,
+          "est_full_coa_out_of_state": 58914
+        },
+        "outcomes": {
+          "first_year_retention_pct": 94.7,
+          "grad_rate_4yr_pct": 60.4,
+          "grad_rate_6yr_pct": 82.0,
+          "student_to_faculty_ratio": "21 to 1"
+        }
       }
     },
     {
@@ -571,11 +1122,23 @@
         "link_appily": "https://www.appily.com/colleges/university-of-oregon"
       },
       "grades": {
-        "Cost": "D", "Support": "B", "Social": "B", "Weather": "D", "Biology": "B", "CLS": "B", "Spirit": "A", "Admissions": "B", "CultureShock": "B", "Outdoors": "B", "GoHome": "B", "Safety": "B"
+        "Cost": "D",
+        "Support": "B",
+        "Social": "B",
+        "Weather": "D",
+        "Biology": "B",
+        "CLS": "B",
+        "Spirit": "A",
+        "Admissions": "B",
+        "CultureShock": "B",
+        "Outdoors": "B",
+        "GoHome": "B",
+        "Safety": "B",
+        "Food": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$68,931 - $74,325 (Out-of-State). Does not participate in WUE, but offers automatic Apex/Summit merit scholarships based on GPA. Cost could lower.",
-        "Support": "Dependable regional public framework featuring an 85% retention rate and a 70% graduation rate.",
+        "Support": "Solid regional public framework with accessible advising and good residence hall communities, though standard large-school self-advocacy is required.",
         "Social": "Strong house party and bar scene, but lacks the sheer massive scale of ASU or LSU.",
         "Weather": "~105 nice days. Wet PNW marine climate, relentlessly grey",
         "Biology": "Respectable molecular biology and neuroscience (Institute of Molecular Biology), but smaller overall scope than peers.",
@@ -585,16 +1148,59 @@
         "CultureShock": "West Coast outdoorsy vibe; heavily aligned with SoCal lifestyle values despite the regional shift.",
         "Outdoors": "Deep PNW recreation in the Cascades, though winter rain dampens daily outdoor activities.",
         "GoHome": "Moderate: 4.5hr trip via 2.5hr flight + Uber ($175-$275).",
-        "Safety": "Eugene has typical Pacific Northwest property crime issues, but campus operations are tightly managed."
+        "Safety": "Eugene has typical Pacific Northwest property crime issues, but campus operations are tightly managed.",
+        "Food": "Good quality local sourcing and modern venues like Unthank Hall dining, providing a solid B-grade experience."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "University of Oregon", "academic_calendar": "Quarter" },
-        "enrollment": { "undergraduate_total": 24404 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 40021, "admits": 35337, "enrolled": 5087, "acceptance_rate_pct": 88.3, "yield_rate_pct": 14.4 },
-        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1130-1360", "act_composite_25_75": "23-30" },
-        "gpa": { "average_hs_gpa": 3.73, "pct_submitting_gpa": 99.94, "distribution_pct": { "4.0": 33.26, "3.75-3.99": 20.85, "3.50-3.74": 16.86, "3.25-3.49": 12.75, "3.00-3.24": 9.38, "below_3.0": 6.91 }, "class_rank_top_10_pct": null },
-        "cost_annual": { "tuition_in_state": 12726, "tuition_out_of_state": 39922, "required_fees": 2594, "room_and_board_on_campus": 16611, "books_supplies": 1362, "transportation": 444, "est_full_coa_in_state": 36275, "est_full_coa_out_of_state": 63471 },
-        "outcomes": { "first_year_retention_pct": 86.4, "grad_rate_4yr_pct": 58.2, "grad_rate_6yr_pct": 72.0, "student_to_faculty_ratio": "18 to 1" }
+        "general": {
+          "official_name": "University of Oregon",
+          "academic_calendar": "Quarter"
+        },
+        "enrollment": {
+          "undergraduate_total": 24404
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 40021,
+          "admits": 35337,
+          "enrolled": 5087,
+          "acceptance_rate_pct": 88.3,
+          "yield_rate_pct": 14.4
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted",
+          "sat_composite_25_75": "1130-1360",
+          "act_composite_25_75": "23-30"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.73,
+          "pct_submitting_gpa": 99.94,
+          "distribution_pct": {
+            "4.0": 33.26,
+            "3.75-3.99": 20.85,
+            "3.50-3.74": 16.86,
+            "3.25-3.49": 12.75,
+            "3.00-3.24": 9.38,
+            "below_3.0": 6.91
+          },
+          "class_rank_top_10_pct": null
+        },
+        "cost_annual": {
+          "tuition_in_state": 12726,
+          "tuition_out_of_state": 39922,
+          "required_fees": 2594,
+          "room_and_board_on_campus": 16611,
+          "books_supplies": 1362,
+          "transportation": 444,
+          "est_full_coa_in_state": 36275,
+          "est_full_coa_out_of_state": 63471
+        },
+        "outcomes": {
+          "first_year_retention_pct": 86.4,
+          "grad_rate_4yr_pct": 58.2,
+          "grad_rate_6yr_pct": 72.0,
+          "student_to_faculty_ratio": "18 to 1"
+        }
       }
     },
     {
@@ -624,11 +1230,23 @@
         "link_appily": "https://www.appily.com/colleges/louisiana-state-university-shreveport"
       },
       "grades": {
-        "Cost": "C", "Support": "B", "Social": "A", "Weather": "F", "Biology": "C", "CLS": "A", "Spirit": "A", "Admissions": "C", "CultureShock": "F", "Outdoors": "F", "GoHome": "F", "Safety": "D"
+        "Cost": "C",
+        "Support": "B",
+        "Social": "A",
+        "Weather": "F",
+        "Biology": "C",
+        "CLS": "A",
+        "Spirit": "A",
+        "Admissions": "C",
+        "CultureShock": "F",
+        "Outdoors": "F",
+        "GoHome": "F",
+        "Safety": "D",
+        "Food": "B"
       },
       "details": {
         "Cost": "Est. Total COA: ~$56,122 - $58,256 (Out-of-State). Offers automatic non-resident merit scholarships and fee waivers for high GPAs and test scores. Cost could lower.",
-        "Support": "Standard SEC foundational support systems with an 85% retention rate and a 69% graduation rate.",
+        "Support": "Standard SEC foundational support systems with residential colleges, though large student body size requires personal initiative.",
         "Social": "Tigerland and SEC tailgating create one of the most intense party environments in the country.",
         "Weather": "~95 nice days. Subtropical humidity makes bad days genuinely oppressive",
         "Biology": "Solid regional bio departments and local medical ties, but institutional biotech research funding is relatively limited.",
@@ -638,16 +1256,59 @@
         "CultureShock": "Largest cultural shift on the list: heavy Cajun/subtropical environment, unique local customs, and deep-rooted SEC identity.",
         "Outdoors": "Flat, swampy, and intensely humid; virtually zero traditional dynamic outdoor recreation.",
         "GoHome": "Hard: 9hr trip via multi-leg flights; very expensive ($325-$525+).",
-        "Safety": "Baton Rouge consistently registers high violent and property crime rates per capita, requiring extreme off-campus vigilance."
+        "Safety": "Baton Rouge consistently registers high violent and property crime rates per capita, requiring extreme off-campus vigilance.",
+        "Food": "Authentic Cajun/Southern options in The 459 Commons and an on-campus Raising Cane's hub, though quality varies across older halls."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "Louisiana State University", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 34242 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 47065, "admits": 34513, "enrolled": 7925, "acceptance_rate_pct": 73.3, "yield_rate_pct": 23.0 },
-        "test_scores": { "policy": "Not required for admission, but considered if submitted", "sat_composite_25_75": "1180-1320", "act_composite_25_75": "24-30" },
-        "gpa": { "average_hs_gpa": 3.83, "pct_submitting_gpa": 99.32, "distribution_pct": { "4.0": 36.56, "3.75-3.99": 21.8, "3.50-3.74": 17.79, "3.25-3.49": 13.9, "3.00-3.24": 9.07, "below_3.0": 0.88 }, "class_rank_top_10_pct": 26.0 },
-        "cost_annual": { "tuition_in_state": 8038, "tuition_out_of_state": 24715, "required_fees": 3916, "room_and_board_on_campus": 15142, "books_supplies": 1084, "transportation": 3840, "est_full_coa_in_state": 36064, "est_full_coa_out_of_state": 52741 },
-        "outcomes": { "first_year_retention_pct": 84.7, "grad_rate_4yr_pct": 50.3, "grad_rate_6yr_pct": 68.8, "student_to_faculty_ratio": "21 to 1" }
+        "general": {
+          "official_name": "Louisiana State University",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 34242
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 47065,
+          "admits": 34513,
+          "enrolled": 7925,
+          "acceptance_rate_pct": 73.3,
+          "yield_rate_pct": 23.0
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted",
+          "sat_composite_25_75": "1180-1320",
+          "act_composite_25_75": "24-30"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.83,
+          "pct_submitting_gpa": 99.32,
+          "distribution_pct": {
+            "4.0": 36.56,
+            "3.75-3.99": 21.8,
+            "3.50-3.74": 17.79,
+            "3.25-3.49": 13.9,
+            "3.00-3.24": 9.07,
+            "below_3.0": 0.88
+          },
+          "class_rank_top_10_pct": 26.0
+        },
+        "cost_annual": {
+          "tuition_in_state": 8038,
+          "tuition_out_of_state": 24715,
+          "required_fees": 3916,
+          "room_and_board_on_campus": 15142,
+          "books_supplies": 1084,
+          "transportation": 3840,
+          "est_full_coa_in_state": 36064,
+          "est_full_coa_out_of_state": 52741
+        },
+        "outcomes": {
+          "first_year_retention_pct": 84.7,
+          "grad_rate_4yr_pct": 50.3,
+          "grad_rate_6yr_pct": 68.8,
+          "student_to_faculty_ratio": "21 to 1"
+        }
       }
     },
     {
@@ -677,13 +1338,25 @@
         "link_appily": "https://www.appily.com/colleges/florida-atlantic-university"
       },
       "grades": {
-        "Cost": "B", "Support": "C", "Social": "F", "Weather": "B", "Biology": "C", "CLS": "B", "Spirit": "C", "Admissions": "C", "CultureShock": "D", "Outdoors": "B", "GoHome": "C", "Safety": "C"
+        "Cost": "B",
+        "Support": "C",
+        "Social": "F",
+        "Weather": "A",
+        "Biology": "C",
+        "CLS": "B",
+        "Spirit": "C",
+        "Admissions": "C",
+        "CultureShock": "D",
+        "Outdoors": "B",
+        "GoHome": "C",
+        "Safety": "C",
+        "Food": "C"
       },
       "details": {
         "Cost": "Est. Total COA: ~$42,382 - $46,422 (Out-of-State). Offers non-resident merit scholarships based on GPA. Cost could lower after admission.",
-        "Support": "Developing completion infrastructure reflecting an 80% retention rate and a ~50-53% graduation rate, tracking slightly behind major flagships.",
+        "Support": "Developing completion infrastructure tracking slightly behind major flagships; larger commuter proportion means less centralized freshman cohort structure.",
         "Social": "Sleepy campus in a wealthy suburb; requires a drive to Miami/Fort Lauderdale for real nightlife.",
-        "Weather": "~175 nice days. Beautiful winters but summer humidity and hurricane risk penalized",
+        "Weather": "Beautiful winters at the beach and out of school for summer humidity.",
         "Biology": "Decent regional Florida pre-health tracks, but lacks a heavy research corridor or major biotech pipeline.",
         "CLS": "Solid Medical Biology tracks; good access to regional Florida hospital MLS internship sites.",
         "Spirit": "Subdued athletic culture; smaller commuter crowds and minimal traditional game-day energy.",
@@ -691,69 +1364,160 @@
         "CultureShock": "Familiar sunny coastal/beach lifestyle, but a distinct East Coast/suburban adjustment away from the West Coast vibe.",
         "Outdoors": "Top-tier coastal and water lifestyle with Atlantic beaches and intracoastal waterways 10-15 minutes away.",
         "GoHome": "Hard: 7.5hr trip via 5hr flight + train/Uber ($155-$290).",
-        "Safety": "Boca Raton is generally safe, but open regional commuter access introduces consistent property crime profiles."
+        "Safety": "Boca Raton is generally safe, but open regional commuter access introduces consistent property crime profiles.",
+        "Food": "Clean Atlantic Dining Hall plus standard chains (Chick-fil-A, Dunkin'), but standard cafeteria rotation that gets repetitive."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "Florida Atlantic University", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 24942 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 31511, "admits": 20838, "enrolled": 4232, "acceptance_rate_pct": 66.1, "yield_rate_pct": 20.3 },
-        "test_scores": { "policy": "Required to be considered for admission", "sat_composite_25_75": "1110-1210", "act_composite_25_75": "21-26" },
-        "gpa": { "average_hs_gpa": 3.83, "pct_submitting_gpa": 99.79, "distribution_pct": { "4.0": 37.3, "3.75-3.99": 19.77, "3.50-3.74": 19.56, "3.25-3.49": 13.83, "3.00-3.24": 8.26, "below_3.0": 1.28 }, "class_rank_top_10_pct": 16.64 },
-        "cost_annual": { "tuition_in_state": 6099, "tuition_out_of_state": 21655, "required_fees": 0, "room_and_board_on_campus": 15860, "books_supplies": 1320, "transportation": 2424, "est_full_coa_in_state": 31157, "est_full_coa_out_of_state": 46713 },
-        "outcomes": { "first_year_retention_pct": 84.0, "grad_rate_4yr_pct": 49.6, "grad_rate_6yr_pct": 63.0, "student_to_faculty_ratio": "24 to 1" }
+        "general": {
+          "official_name": "Florida Atlantic University",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 24942
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 31511,
+          "admits": 20838,
+          "enrolled": 4232,
+          "acceptance_rate_pct": 66.1,
+          "yield_rate_pct": 20.3
+        },
+        "test_scores": {
+          "policy": "Required to be considered for admission",
+          "sat_composite_25_75": "1110-1210",
+          "act_composite_25_75": "21-26"
+        },
+        "gpa": {
+          "average_hs_gpa": 3.83,
+          "pct_submitting_gpa": 99.79,
+          "distribution_pct": {
+            "4.0": 37.3,
+            "3.75-3.99": 19.77,
+            "3.50-3.74": 19.56,
+            "3.25-3.49": 13.83,
+            "3.00-3.24": 8.26,
+            "below_3.0": 1.28
+          },
+          "class_rank_top_10_pct": 16.64
+        },
+        "cost_annual": {
+          "tuition_in_state": 6099,
+          "tuition_out_of_state": 21655,
+          "required_fees": 0,
+          "room_and_board_on_campus": 15860,
+          "books_supplies": 1320,
+          "transportation": 2424,
+          "est_full_coa_in_state": 31157,
+          "est_full_coa_out_of_state": 46713
+        },
+        "outcomes": {
+          "first_year_retention_pct": 84.0,
+          "grad_rate_4yr_pct": 49.6,
+          "grad_rate_6yr_pct": 63.0,
+          "student_to_faculty_ratio": "24 to 1"
+        }
       }
     },
     {
-      "school": "FIU",
-      "location": "Miami, FL",
+      "school": "SBCC",
+      "location": "Santa Barbara, CA",
       "profile": {
-        "photo_1": "https://www.fiu.edu/_assets/images/student-life/fountain.jpg",
-        "photo_2": "https://centralreservations.fiu.edu/venues/_assets/img/fiu-football-stadium1.jpg",
-        "photo_3": "https://localist-images.azureedge.net/photos/43701775596688/card/d46f4fef4092355bb66715ba99f78d64cc10bdc6.jpg",
-        "video_url": "https://www.youtube.com/embed/CIoBSbRVJ-M?si=LyNY7AOqHtQrN_AF",
-        "topology": "Sprawling, flat urban-suburban South Florida campus layout featuring modern architecture and lush tropical landscaping. Outdoors: Minutes from the Everglades and a short drive to Miami beaches for swimming and coastal recreation; flat local landscape with zero mountains or skiing anywhere in Florida.",
-        "airport_distance": "12 miles (~20-25 min drive) to Miami International Airport (MIA).",
-        "transit_options": "FIUs Panther Express shuttle system and local Miami-Dade transit buses connecting students across the metro region.",
-        "neighborhood_vibe": "A massive urban-suburban setting in West Miami. The campus acts as a dense, high-energy city hub surrounded by vibrant South Florida culture, dense commercial corridors, and immediate access to Miami.",
-        "housing_status": "Freshman housing features large modern residential complexes like Parkview and University Towers. Off-campus housing consists heavily of dense student apartment complexes and suburban rentals across the Miami metro, requiring cars or shuttles for transit.",
-        "medical_access": "Full clinical integration anchored directly by the Herbert Wertheim College of Medicine and extensive partnerships with Baptist Health and Jackson Health System.",
+        "photo_1": "https://www.sbcc.edu/newsandevents/files/campus-drone-photo.jpg",
+        "photo_2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhhmDZCWIKfsK-DJYPA7wGQ90m8boppa6DUiNOTUpFcPNFnNbC_B8aTSc&s=10",
+        "photo_3": "https://www.sbcc.edu/library/images/girlreading.png",
+        "video_url": "https://www.youtube.com/embed/_0c01NEuat4",
+        "topology": "Coastal oceanfront cliff campus overlooking Leadbetter Beach; beautiful walking grounds but requires self-navigated off-campus housing arrangements.",
+        "airport_distance": "10 miles (~12 min drive) to Santa Barbara Municipal Airport (SBA).",
+        "transit_options": "MTD local bus passes provided for students, connects to nearby Isla Vista and downtown Santa Barbara.",
+        "neighborhood_vibe": "Beach town lifestyle; students mingle directly with UCSB students in Isla Vista and Leadbetter Beach.",
+        "housing_status": "No university-owned dorms; students rent in private student apartment complexes (e.g., Tropicana Del Norte) or off-campus apartments in Isla Vista.",
+        "medical_access": "Local community clinics and Santa Barbara Cottage Hospital access.",
         "academics": {
-          "carnegie_classification": "R1 Doctoral University (Very High Research Activity)",
-          "biology_and_pre_med": "R1 research infrastructure with solid federal funding and clinical medical school networks on campus.",
-          "clinical_and_medical_access": "Full clinical integration anchored directly by the Herbert Wertheim College of Medicine and extensive partnerships with Baptist Health and Jackson Health System.",
-          "flagship_programs": "Biological Sciences, Biomedical Engineering, Public Health, Nursing."
+          "carnegie_classification": "Associate's College / Community College",
+          "biology_and_pre_med": "Solid lower-division science transfers; TAG pathway into UCSB for upper-division biology/health majors.",
+          "clinical_and_medical_access": "Local community clinics and Santa Barbara Cottage Hospital access.",
+          "flagship_programs": "Biological Sciences Transfer, TAG to UCSB, Marine Biology Preparation."
         },
-        "link_admissions": "https://admissions.fiu.edu",
-        "link_bio_dept": "https://case.fiu.edu/biology/",
-        "link_official_site": "https://www.fiu.edu",
-        "school_logo": "https://logos-world.net/wp-content/uploads/2020/06/FIU-Panthers-Logo.png",
-        "link_appily": "https://www.appily.com/colleges/florida-international-university"
+        "link_admissions": "https://www.sbcc.edu/admissions/",
+        "link_bio_dept": "https://www.sbcc.edu/biologicalsciences/",
+        "link_official_site": "https://www.sbcc.edu",
+        "school_logo": "https://i.pinimg.com/474x/91/ae/5d/91ae5d222093d3455cd99fd8ca4a5ebb.jpg",
+        "link_appily": "https://www.appily.com/colleges/santa-barbara-city-college"
       },
       "grades": {
-        "Cost": "B", "Support": "C", "Social": "F", "Weather": "B", "Biology": "B", "CLS": "B", "Spirit": "C", "Admissions": "D", "CultureShock": "D", "Outdoors": "B", "GoHome": "C", "Safety": "C"
+        "Cost": "A",
+        "Support": "F",
+        "Social": "C",
+        "Weather": "A",
+        "Biology": "D",
+        "CLS": "F",
+        "Spirit": "F",
+        "Admissions": "A",
+        "CultureShock": "A",
+        "Outdoors": "A",
+        "GoHome": "A",
+        "Safety": "B",
+        "Food": "F"
       },
       "details": {
-        "Cost": "Est. Total COA: ~$41,500 - $45,000 (Out-of-State). Offers competitive non-resident merit scholarships based on GPA and test scores.",
-        "Support": "Massive institutional scale operating with an 89% freshman retention rate, though large student-to-adviser ratios impact upper-division navigation.",
-        "Social": "On-campus social life is severely limited by a massive commuter culture.",
-        "Weather": "~175 nice days. Sunny tropical winters, but heavy summer humidity and hurricane season risks.",
-        "Biology": "R1 research infrastructure with solid federal funding and clinical medical school networks, though trailing elite West Coast biological powerhouses.",
-        "CLS": "Solid biological tracks and Biomedical Engineering intersections, with clinical exposure via major Miami hospital networks.",
-        "Spirit": "Growing Conference USA athletic presence, but largely a commuter-heavy vibe lacking traditional all-consuming sports culture.",
-        "Admissions": "Target: ~60% acceptance rate; selective index-based review heavily weighting GPA and test scores, SAT required",
-        "CultureShock": "High-energy urban Miami demographic shift; intense cultural melting pot distinctly different from Southern California pacing.",
-        "Outdoors": "Great coastal and beach access in Miami, though completely flat with zero elevation or mountain recreation.",
-        "GoHome": "Hard: 7.5hr trip via 5hr flight + transit; expensive tickets ($180-$320).",
-        "Safety": "Suburban campus footprint with standard major metropolitan property and urban crime considerations in the surrounding Miami area."
+        "Cost": "California Promise program offers free tuition for eligible CA residents; off-campus Santa Barbara housing/rent is expensive.",
+        "Support": "Commuter community college structure requiring complete self-advocacy; lacks university-managed dorm RAs, mandatory freshman advising, or cohort retention programs.",
+        "Social": "Shared social scene with UCSB students in Isla Vista, but lacks central campus Greek life/football culture.",
+        "Weather": "~220 nice days. Mild coastal sun, minimal bad days",
+        "Biology": "Lower-division transfer preparation only; no upper-division research labs or graduate facilities.",
+        "CLS": "Does not award bachelor degrees or upper-division CLS prerequisites.",
+        "Spirit": "No major D1 athletic program or game-day stadium culture.",
+        "Admissions": "Open enrollment community college; near 100% acceptance rate.",
+        "CultureShock": "Identical coastal SoCal beach culture, easy adjustment.",
+        "Outdoors": "Immediate access to Leadbetter Beach surfing and Santa Barbara mountains.",
+        "GoHome": "Easy: 4hr drive (~$40 gas) or 3hr flight (~$135).",
+        "Safety": "Safe coastal campus, though off-campus party neighborhoods require standard caution.",
+        "Food": "Single poolside cafeteria at private Tropicana complex; zero on-campus brand-name variety, food trucks, or university meal plan scale."
       },
       "cds_2024_2025": {
-        "general": { "official_name": "Florida International University", "academic_calendar": "Semester" },
-        "enrollment": { "undergraduate_total": 44904 },
-        "admissions": { "cohort": "Fall 2024", "applicants": 32855, "admits": 17957, "enrolled": 5238, "acceptance_rate_pct": 54.7, "yield_rate_pct": 29.2 },
-        "test_scores": { "policy": "Required to be considered for admission", "sat_composite_25_75": "1070-1250", "act_composite_25_75": "21-27" },
-        "gpa": { "average_hs_gpa": 4.1, "pct_submitting_gpa": 99.0, "distribution_pct": { "4.0": 68.0, "3.75-3.99": 16.0, "3.50-3.74": 13.0, "3.25-3.49": 3.0, "3.00-3.24": 0.0, "below_3.0": 0.0 }, "class_rank_top_10_pct": 25.0 },
-        "cost_annual": { "tuition_in_state": 6168, "tuition_out_of_state": 18566, "required_fees": 398, "room_and_board_on_campus": 13080, "books_supplies": 1350, "transportation": 2460, "est_full_coa_in_state": 26362, "est_full_coa_out_of_state": 38760 },
-        "outcomes": { "first_year_retention_pct": 93.0, "grad_rate_4yr_pct": 59.0, "grad_rate_6yr_pct": 74.0, "student_to_faculty_ratio": "22 to 1" }
+        "general": {
+          "official_name": "Santa Barbara City College",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 12500
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": null,
+          "admits": null,
+          "enrolled": null,
+          "acceptance_rate_pct": 100.0,
+          "yield_rate_pct": null
+        },
+        "test_scores": {
+          "policy": "Not considered for admission",
+          "sat_composite_25_75": "N/A",
+          "act_composite_25_75": "N/A"
+        },
+        "gpa": {
+          "average_hs_gpa": null,
+          "pct_submitting_gpa": null,
+          "distribution_pct": null,
+          "class_rank_top_10_pct": null
+        },
+        "cost_annual": {
+          "tuition_in_state": 1380,
+          "tuition_out_of_state": 9500,
+          "required_fees": 100,
+          "room_and_board_on_campus": 18000,
+          "books_supplies": 1100,
+          "transportation": 1200,
+          "est_full_coa_in_state": 20580,
+          "est_full_coa_out_of_state": 28700
+        },
+        "outcomes": {
+          "first_year_retention_pct": 65.0,
+          "grad_rate_4yr_pct": null,
+          "grad_rate_6yr_pct": null,
+          "student_to_faculty_ratio": "22 to 1"
+        }
       }
     }
   ]
