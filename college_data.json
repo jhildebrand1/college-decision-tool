@@ -150,7 +150,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-colorado-boulder"
       },
       "grades": {
-        "Cost": "D",
+        "Cost": "F",
         "Support": "B",
         "Social": "A",
         "Weather": "C",
@@ -1122,7 +1122,7 @@
         "link_appily": "https://www.appily.com/colleges/university-of-oregon"
       },
       "grades": {
-        "Cost": "D",
+        "Cost": "F",
         "Support": "B",
         "Social": "B",
         "Weather": "D",
@@ -1517,6 +1517,114 @@
           "grad_rate_4yr_pct": null,
           "grad_rate_6yr_pct": null,
           "student_to_faculty_ratio": "22 to 1"
+        }
+      }
+    },
+    {
+      "school": "UNCW",
+      "location": "Wilmington, NC",
+      "profile": {
+        "photo_1": "https://www.uncw.edu/media/images/universal/uncw-20200706-dji-0044-universal.jpg",
+        "photo_2": "https://mcadamsco.com/wp-content/uploads/2017/02/DSC_0023-scaled.jpg",
+        "photo_3": "https://www.uncw.edu/media/images/universal/campus-2025-20240829-0387-universal.jpg",
+        "video_url": "https://www.youtube.com/embed/92XFfb_7BuA",
+        "topology": "Flat, modern coastal plain campus featuring Georgian-style architecture, pine groves, and paved boardwalk paths; exceptionally pedestrian and bike-friendly. Outdoors: 10–15 minutes from Wrightsville Beach and Carolina Beach for surfing, paddleboarding, and coastal waterway recreation.",
+        "airport_distance": "7 miles (~12 min drive) to Wilmington International Airport (ILM).",
+        "transit_options": "WAVE Transit buses connect campus to Wrightsville Beach and downtown Wilmington; heavy reliance on personal cars, mopeds, and bicycles.",
+        "neighborhood_vibe": "Relaxed coastal beach town combined with a historic Cape Fear riverfront district; vibrant surf culture and off-campus coastal dining.",
+        "housing_status": "Freshmen live in vibrant residential halls such as Seahawk Crossing, Terrapin, or Graham-Hewlett. Housing is required for first-year and second-year students, after which most transition to nearby off-campus apartments.",
+        "medical_access": "Strong local medical affiliation with Novant Health New Hanover Regional Medical Center, offering clinical clinical placement, shadowing, and lab access.",
+        "academics": {
+          "carnegie_classification": "R2 Doctoral University (High Research Activity)",
+          "biology_and_pre_med": "Strong Marine Biology, Molecular Biology, and Pre-Health tracks supported by the Center for Marine Science (CMS).",
+          "clinical_and_medical_access": "Direct access to Novant Health NHRMC and extensive regional clinical trial corridors via UNCW's Clinical Research program.",
+          "flagship_programs": "Marine Biology, Clinical Research, Nursing, Business Administration."
+        },
+        "link_admissions": "https://uncw.edu/admissions/",
+        "link_bio_dept": "https://uncw.edu/academics/colleges/cse/departments/biology-marine-biology/",
+        "link_official_site": "https://www.uncw.edu",
+        "school_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEx7YW3qeE6oEK29P0XwcPOL0sLP4u9v3v-eWaTaPYqg&s=10",
+        "link_appily": "https://www.appily.com/colleges/university-of-north-carolina-wilmington"
+      },
+      "grades": {
+        "Cost": "C",
+        "Support": "A",
+        "Social": "B",
+        "Weather": "A",
+        "Biology": "B",
+        "CLS": "B",
+        "Spirit": "C",
+        "Admissions": "B",
+        "CultureShock": "C",
+        "Outdoors": "A",
+        "GoHome": "D",
+        "Safety": "B",
+        "Food": "B"
+      },
+      "details": {
+        "Cost": "Est. Out-of-State COA: ~$41,200+ (Tuition & Fees ~$24,152 + Room & Board ~$14,268). High OOS cost relative to aid availability.",
+        "Support": "Strong first-year structure centered around UNI 101 seminar, Living-Learning Communities, and dedicated pre-health advising tracks.",
+        "Social": "Vibrant Wrightsville Beach town culture, Greek life (~11-14%), house parties, and bustling downtown riverfront bar scene.",
+        "Weather": "~210+ pleasant days. Mild coastal winters, humid summers, and comfortable autumn/spring terms.",
+        "Biology": "Renowned Marine Biology and solid Molecular/Cellular tracks with direct research facilities on the coastal Intracoastal Waterway.",
+        "CLS": "Offers Clinical Research BS and formal Clinical Laboratory Science pathways affiliated with regional health systems.",
+        "Spirit": "No football team, but energetic D1 CAA basketball game days ('Seahawk Nation') at Trask Coliseum.",
+        "Admissions": "Moderately selective: ~64% acceptance rate with average admitted GPA around 4.06 (weighted).",
+        "CultureShock": "East Coast beach vibe with distinct Southern regional dynamics, though shares SoCal's surf-and-outdoors lifestyle.",
+        "Outdoors": "Unmatched immediate access to coastal surfing, boating, fishing, and water sports at Wrightsville Beach.",
+        "GoHome": "Challenging: ~5.5+ hour travel time with 1 layover flight from ILM to SAN, or flying out of RDU/MYR.",
+        "Safety": "Suburban campus with active University Police (UPD), emergency blue lights, and safe surrounding residential areas.",
+        "Food": "Wagoner Hall ('Wag') and Dub's Cafe dining commons, plus campus retail spots like Chick-fil-A and Starbucks."
+      },
+      "cds_2024_2025": {
+        "general": {
+          "official_name": "University of North Carolina Wilmington",
+          "academic_calendar": "Semester"
+        },
+        "enrollment": {
+          "undergraduate_total": 15254
+        },
+        "admissions": {
+          "cohort": "Fall 2024",
+          "applicants": 20393,
+          "admits": 13101,
+          "enrolled": 2754,
+          "acceptance_rate_pct": 64.24,
+          "yield_rate_pct": 21.02
+        },
+        "test_scores": {
+          "policy": "Not required for admission, but considered if submitted (Test Optional with GPA conditions)",
+          "sat_composite_25_75": "1230-1340",
+          "act_composite_25_75": "24-29"
+        },
+        "gpa": {
+          "average_hs_gpa": 4.06,
+          "pct_submitting_gpa": 98.8,
+          "distribution_pct": {
+            "4.0": 57.1,
+            "3.75-3.99": 26.3,
+            "3.50-3.74": 13.6,
+            "3.25-3.49": 2.2,
+            "3.00-3.24": 0.6,
+            "below_3.0": 0.2
+          },
+          "class_rank_top_10_pct": 18.1
+        },
+        "cost_annual": {
+          "tuition_in_state": "$4,443",
+          "tuition_out_of_state": "$21,318",
+          "required_fees": "$2,834",
+          "room_and_board_on_campus": "$14,268",
+          "books_supplies": "$860",
+          "transportation": "$1,300",
+          "est_full_coa_in_state": "$23,705",
+          "est_full_coa_out_of_state": "$40,580"
+        },
+        "outcomes": {
+          "first_year_retention_pct": 88.2,
+          "grad_rate_4yr_pct": 56.4,
+          "grad_rate_6yr_pct": 70.6,
+          "student_to_faculty_ratio": "17 to 1"
         }
       }
     }
